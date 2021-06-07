@@ -13,7 +13,7 @@ namespace ConsoleApp2
             //Program.ModulRegistr(a);
             if (a == 9)
             {
-
+                Console.WriteLine("Циклы");
             }
             Program.EndInStart();
         }
