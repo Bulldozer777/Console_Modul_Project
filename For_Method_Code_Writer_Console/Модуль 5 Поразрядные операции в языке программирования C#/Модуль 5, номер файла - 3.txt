@@ -1,0 +1,10 @@
+   public static void E_5_Bitwise_Operations_Create_Logic_OR()
+        {
+            Console.WriteLine("Операция исключающего \"или\" или XOR");
+            int x3 = 45;   //0101101
+            int key = 102; //1100110
+            int encrypt = x3 ^ key; // 1001011 - 75 (сравниваются 2 числа и если числа разные то возвращает 1 )
+            Console.WriteLine(encrypt);
+            int decrypt = encrypt ^ key; //можно шифровать
+            Console.WriteLine(decrypt);
+        }

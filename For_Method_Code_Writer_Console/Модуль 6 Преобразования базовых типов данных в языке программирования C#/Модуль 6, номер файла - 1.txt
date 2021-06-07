@@ -1,0 +1,22 @@
+ public static void Check_1()
+        {
+            byte a = 4;
+            byte b = (byte)(a + 70);            
+            Console.WriteLine(b);
+            try
+            {
+                int k = 33;
+                int y = 600;
+                byte l = checked((byte)(k + y));
+                Console.WriteLine(l);
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Недоступный диапазон");
+            }
+//Ключевое слово checked проверяет не теряется ли диапазон, если теряется то выводит ошибку
+            short b1 = (short)(a + 70);
+//byte/short/int - при произведении операции используется тип int
+//изначально в byte переменной при созданиии 1 байт а при операции типа int там уже 4 байта 
+            Console.WriteLine(b1);                                       
+        }

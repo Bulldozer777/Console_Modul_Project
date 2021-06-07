@@ -1,0 +1,7 @@
+public static void E_5_Bitwise_Operations_Create_Logic_Inversion()
+        {
+            Console.WriteLine("Логическое отрицание или инверсия"); //операция над 1 операндом
+            int x = 9; //1001 при инверсии 0110 - переменная инт содержит не 4 бита а 32 и в итоге -10
+            Console.WriteLine(~x); //-10
+            Console.WriteLine(Convert.ToString(-10,2)); //данное число интепритируется как -10
+        }

@@ -1,0 +1,49 @@
+ public static string Comparison_Operations()
+        {
+            //  == Сравнивает два операнда на равенство.
+            //  Если они равны, то операция возвращает true, если не равны, то возвращается false:";
+            int a = 10;
+            int b = 4;
+            bool c = a == b; // false
+            string a2 = Convert.ToString($"bool c = a == b - {c}");
+            //  != Сравнивает два операнда и возвращает true,
+            //  если операнды не равны, и false, если они равны.";
+            int a11 = 10;
+            int b11 = 4;
+            bool c11 = a11 != b11;    // true
+            bool d11 = a11 != 10;     // false
+            string a4 = Convert.ToString($"bool c11 = a11 != b11 - {c11}");
+            string a5 = Convert.ToString($"bool d11 = a11 != 10 - {d11}");
+            //  < Операция \"меньше чем\".Возвращает true,
+            //  если первый операнд меньше второго, и false, если первый операнд больше второго: ";
+            int a22 = 10;
+            int b22 = 4;
+            bool c22 = a22 < b22; // false
+            string a7 = Convert.ToString($"bool c22 = a22 < b22 - {c22}");
+            //  > Операция \"больше чем\".Сравнивает два операнда и возвращает true,
+            //  если первый операнд больше второго, иначе возвращает false:";
+            int a33 = 10;
+            int b33 = 4;
+            bool c33 = a33 > b33;     // true
+            bool d33 = a33 > 25;    // false
+            string a9 = Convert.ToString($"bool c33 = a33 > b33 - {c33}");
+            string a10 = Convert.ToString($"bool d33 = a33 > 25 - {d33}");
+            //  <= Операция \"меньше или равно\".Сравнивает два операнда и возвращает true,
+            //  если первый операнд меньше или равен второму.Иначе возвращает false.";
+            int a44 = 10;
+            int b44 = 4;
+            bool c44 = a44 <= b44;     // false
+            bool d44 = a44 <= 25;    // true
+            string a13 = Convert.ToString($"bool c44 = a44 <= b44 - {c44}");
+            string a14 = Convert.ToString($"bool d44 = a44 <= 25 - {d44}");
+            //  >= Операция \"больше или равно\".Сравнивает два операнда и возвращает true,
+            //  если первый операнд больше или равен второму, иначе возвращается false:";
+            int a55 = 10;
+            int b55 = 4;
+            bool c55 = a55 >= b55;     // true
+            bool d55 = a55 >= 25;    // false
+            string a16 = Convert.ToString($"bool c55 = a55 >= b55 - {c55}");
+            string a17 = Convert.ToString($"bool d55 = a55 >= 25 - {d55}");
+            string a18 = "Операции <, > <=, >= имеют больший приоритет, чем == и !=.";
+            return  "\n" + a2   + "\n" + a4 + "\n" + a5  + "\n" + a7  + "\n" + a9 + "\n" + a10  + "\n" + a13 + "\n" + a14  + "\n" + a16 + "\n" + a17 + "\n" + a18 + "\n";
+        }

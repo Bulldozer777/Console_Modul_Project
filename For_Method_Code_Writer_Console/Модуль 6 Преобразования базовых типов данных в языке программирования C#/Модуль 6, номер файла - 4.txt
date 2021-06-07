@@ -1,0 +1,22 @@
+public static string Task()
+        {
+            byte a = 89;
+            byte b = (byte)(a + 70); 
+            string a1 = Convert.ToString(b);
+            string a11 = "";
+            string a12 = "";
+            try
+            {
+                int k = 33;
+                int y = 6000;
+                byte l = checked((byte)(k + y));
+                a11 = Convert.ToString(l);
+            }
+            catch (OverflowException)
+            {
+                a12 = "Недоступный диапазон";
+            }
+            short b1 = (short)(a + 70); 
+            string a2 = Convert.ToString(b1);
+            return "\n" + a1 + "\n" + a2 + "\n" + a11 + "\n" + a12 + "\n";
+        }

@@ -1,0 +1,43 @@
+public static void H_8_Conditional_Constructions_Create()
+        {
+            //if ... else swith ... case
+            int num1 = 8;
+                int num2 = 16;
+            if (num1 > num2)
+                Console.WriteLine("num1 больше чем num2");  
+            //если блок кода, выполняемый после if или после else,
+            //состоит из 1 строки, то фигурные скобки необязательны 
+            if (num1 > num2 && num1 == 8) //условие может выглядеть так
+                Console.WriteLine("num1 больше чем num2");
+            else if (num1 < num2)
+                Console.WriteLine($"{num1} меньше чем {num2}");
+            else
+                Console.WriteLine($"{num1} равно {num2}");
+            Console.WriteLine("Нажмите Y или N");
+            string selection = Console.ReadLine();
+            //каждый case должен завершаться оператором перехода 
+            //break, goto case, return - если мы хотим выйти из программы, throw - генерирует ошибку
+            switch (selection)
+            {
+                case "Y":
+                    Console.WriteLine("Вы нажали клавишу Y");
+                    goto case "N";
+                case "N":
+                    Console.WriteLine("Вы нажали клавишу N");
+                    break; 
+                default:
+                    Console.WriteLine("Вы нажали неизвестную клавишу");
+                    break;
+            }
+            //Тернарный оператор - требует наличние 3ех операндов
+            //op1?op:op3
+            int x = 3;
+            int y = 2;
+            
+            Console.WriteLine("Нажмите + или -");
+            string selection2 = Console.ReadLine();
+            int z = selection2 == "+" ? (x + y) : (x - y);
+            //Если пользователь ввел + то выполняется (х + y) т е второй операнд, 
+            //Если бы пользователь ввел - то выполнилось (x - y) т е третий операнд
+                Console.WriteLine(z);
+        }
