@@ -17,6 +17,7 @@ namespace ConsoleApp2
                 operation_Create_Method_1 = Code_Writer_Console(a, 1);
                 Eight.Method_Modul_Start_1();
                 Generation_Operation.EndInStart();
+                Console.WriteLine("githab");
             }           
         }
         public override void Create_Method()
