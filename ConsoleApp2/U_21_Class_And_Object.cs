@@ -75,14 +75,19 @@ namespace ConsoleApp2
         }
     }
     class Modul_Struct
-    {
-        public static string name_Info_Method_1;
+    {//public delegate void Method_Void();
+        //public Method_Void void_method_Examples;
+        //void_method_Examples = I_9_Cycles.Method_Void;       
+        public static string name_Info_Method_1;  //сюда вводятся имена методов, используемые в Create_Method()
         public static string name_Create_Method_1;
         public static string name_Create_Method_2;
         public static string name_Create_Method_3;
         public static string name_Create_Method_4;
         public static string name_Create_Method_5;
         public static string name_Tasks_Method_3;
+        public static string name_Examples_Method_1; //сюда вводятся имена методов, используемые в Examples_Method()
+        public static string name_Examples_Method_2;
+        public static string name_Examples_Method_3;
         public static string name_Examples_Method_4;
         public static string name_Examples_Method_5;
         public static string operation_Info_Method_1;
@@ -93,14 +98,26 @@ namespace ConsoleApp2
         public static string operation_Create_Method_5;
         public static string operation_Tasks_Method_3;
         public static string operation_Tasks_Method_4;
+        public static string operation_Examples_Method_1; //сюда вводятся методы, работа которых используется в Examples_Method()
+        public static string operation_Examples_Method_2;
+        public static string operation_Examples_Method_3;
         public static string operation_Examples_Method_4;
         public static string operation_Examples_Method_5;
+        public static string operation_Examples_Method_6;
+        public static string operation_Examples_Method_7;
         public static string create_Create_Method_1;
         public static string create_Create_Method_2;
         public static string create_Create_Method_3;
         public static string create_Create_Method_4;
         public static string create_Create_Method_5;
         public static string create_Create_Method_6;
+        public static string create_Examples_Method_1;
+        public static string create_Examples_Method_2;
+        public static string create_Examples_Method_3;
+        public static string create_Examples_Method_4;
+        public static string create_Examples_Method_5;
+        public static string create_Examples_Method_6;
+        public static object m2;
 
         //public Modul_Struct(string operation_Info_Method_1, string operation_Create_Method_2, string operation_Tasks_Method_3, string operation_Examples_Method_4)
         //{
