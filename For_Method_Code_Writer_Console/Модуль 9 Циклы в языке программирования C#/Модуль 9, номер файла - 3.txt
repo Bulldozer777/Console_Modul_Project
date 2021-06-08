@@ -1,0 +1,13 @@
+public static void Factorial_in_Cycles()
+        {
+            Console.WriteLine("Введите число");
+            int n = int.Parse(Console.ReadLine());
+            int result = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                result = result * i;
+            }
+            Console.WriteLine($"Факториал {n} = {result}"); 
+          
+          
+        }

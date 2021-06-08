@@ -1,0 +1,14 @@
+       public static void Password_Cycles_2()
+        {
+            Console.WriteLine("\nПрограмма будет спрашивать пароль до тех пор, пока не будет введен пароль: \"root\"");
+            Console.WriteLine("через do ... while");
+            string a2 = "";
+            do
+            {
+                Console.WriteLine("Введите пароль");
+                a2 = Console.ReadLine();
+            }
+            while (a2 != "root");
+            Console.WriteLine("Правильный пароль");
+        }
+        //через do ... while

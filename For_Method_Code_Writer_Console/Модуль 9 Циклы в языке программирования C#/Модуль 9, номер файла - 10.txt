@@ -1,0 +1,19 @@
+ public static void Sequence()
+        {
+            int t;
+            Console.WriteLine("Введите 1 элемент последовательности");
+            t = int.Parse(Console.ReadLine());
+            int u;
+            Console.WriteLine("Введите количество элементов последовательности");
+            u = int.Parse(Console.ReadLine());
+            int z;
+            Console.WriteLine("Введите на сколько должен увеличиваться каждый элемент последовательности");
+            z = int.Parse(Console.ReadLine());
+            int r = t + z * u;
+            Console.WriteLine(" ");
+            List<int> teams = new List<int>(r) { };
+            for (int i = 1; i < teams.Capacity; i = i + z)
+            {
+                Console.WriteLine($"{i} - элемент последовательности {((i) / 3) + 1}   ");
+            }
+        }

@@ -1,0 +1,16 @@
+public static void Password_Cycles_3()
+        {
+            //Через for
+            Console.WriteLine("\nПрограмма будет спрашивать пароль до тех пор, пока не будет введен пароль: \"root\"");
+            Console.WriteLine("Через for");
+            string a3 = " ";
+            Console.WriteLine("Введите пароль");
+            a3 = Console.ReadLine();
+            for (int i = 0; a3 != "root"; i++)
+            {
+                Console.WriteLine("Введите пароль");
+                a3 = Console.ReadLine();
+            }
+            Console.WriteLine("Правильный пароль");
+        }
+    

@@ -1,0 +1,15 @@
+        public static void RandomString()
+        {
+            Console.WriteLine("Введите длину рандомной строки");
+           int length = int.Parse(Console.ReadLine());
+
+            var result = new char[length];
+            var r = new Random();
+            for (int i = 0; i < result.Length; i++)
+            {
+                do
+                    result[i] = (char)r.Next(127);
+                while (result[i] < '!');
+            }
+            Console.WriteLine(result);
+        }

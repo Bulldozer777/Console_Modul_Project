@@ -1,0 +1,16 @@
+  public static int FibbCreate()
+        {
+            Console.WriteLine("Введите порядковый номер числа Фиббоначи");
+            int Fibb1 = int.Parse(Console.ReadLine());
+            int[] Fib = new int[100];
+            Fib[0] = 0;
+            Fib[1] = 1;
+            for (int i = 2; i < Fib.Length; i++)
+            {
+                Fib[i] = Fib[i - 1] + Fib[i - 2];
+            }
+            int bb = Fibb1;
+            int m;
+            m = Fib[bb];
+            return m;
+        }
