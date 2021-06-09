@@ -1,0 +1,13 @@
+ public static void Conclusion_Mas()
+        {           
+            int[] numbers = new int[] { 1, 2, 3, 4, 5 }; //через for
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+            Console.WriteLine("\n");
+            foreach (int i in numbers)          //через foreach
+            {
+                Console.WriteLine(i);
+            }
+        }

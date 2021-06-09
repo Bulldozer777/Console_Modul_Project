@@ -1,0 +1,27 @@
+public static void Create_Mas()
+        {
+            Console.WriteLine("Начальный массив");
+            int[] mas = new int[10];
+            Random u = new Random();
+            for (int i = 0; i < mas.Length; i++)
+            {
+                mas[i] = u.Next(-245, 35);
+            }
+            foreach (int i in mas)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine($"Минимальный элемент массива - {MassMin(mas)}");
+        }       
+        public static int MassMin(int[] mas)
+        {
+            int min = mas[0];
+            for (int i = 1; i < mas.Length; i++)
+            {
+                if (mas[i] < min)
+                {
+                    min = mas[i];
+                }
+            }
+            return min;
+        }
