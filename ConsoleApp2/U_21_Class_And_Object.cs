@@ -96,6 +96,8 @@ namespace ConsoleApp2
         public static string operation_Create_Method_3;
         public static string operation_Create_Method_4;
         public static string operation_Create_Method_5;
+        public static string operation_Tasks_Method_1;
+        public static string operation_Tasks_Method_2;
         public static string operation_Tasks_Method_3;
         public static string operation_Tasks_Method_4;
         public static string operation_Examples_Method_1; //сюда вводятся методы, работа которых используется в Examples_Method()
@@ -126,18 +128,57 @@ namespace ConsoleApp2
         //    this.operation_Tasks_Method_3 = operation_Tasks_Method_3;
         //    this.operation_Examples_Method_4 = operation_Examples_Method_4;
         //}
+
+        //public Modul_Struct(string name_Create_Method_1, string operation_Create_Method_1, string create_Create_Method_1)
+        //{
+        //    this.name_Create_Method_1 = name_Create_Method_1;
+        //    this.operation_Create_Method_1 = operation_Create_Method_1;
+        //    this.create_Create_Method_1 = create_Create_Method_1;
+        //}
+        //public Modul_Struct(string operation_Info_Method_1, string operation_Create_Method_2, string operation_Tasks_Method_3, string operation_Examples_Method_4)
+        //{
+        //    this.operation_Info_Method_1 = operation_Info_Method_1;
+        //    this.operation_Create_Method_2 = operation_Create_Method_2;
+        //    this.operation_Tasks_Method_3 = operation_Tasks_Method_3;
+        //    this.operation_Examples_Method_4 = operation_Examples_Method_4;
+        //}
         public static void Method_Modul_Start()
         {
             Console.WriteLine("\n");
-            Console.WriteLine($"Чтобы запустить Info_Method нажмите 1 ");
-            Console.WriteLine($"Чтобы запустить Create_Method нажмите 2 ");
-            Console.WriteLine($"Чтобы запустить Tasks_Method нажмите 3 ");
-            Console.WriteLine($"Чтобы запустить Examples_Method нажмите 4 ");
+            //if (operation_Info_Method_1 == null & operation_Create_Method_1 == null & operation_Tasks_Method_1 == null & operation_Examples_Method_1 == null)
+            //{
+            //    Console.WriteLine("Не заполнено ни одно поле класса Modul_Struct, заполните поля класса для запуска модуля");
+            //}
+            if (operation_Info_Method_1 != null)
+            {
+                Console.WriteLine($"Чтобы запустить Info_Method нажмите 1 ");
+            }
+            if (operation_Create_Method_1 != null)
+            {
+                Console.WriteLine($"Чтобы запустить Create_Method нажмите 2 ");
+            }
+            if (operation_Tasks_Method_1 != null)
+            {
+                Console.WriteLine($"Чтобы запустить Tasks_Method нажмите 3 ");
+            }
+            if (operation_Examples_Method_1 != null)
+            {
+                Console.WriteLine($"Чтобы запустить Examples_Method нажмите 4 ");
+            }
             Console.WriteLine("Чтобы перейти в выбору другого модуля нажмите 5");
 
         }
+        public static void M1(object Modul_Struct)
+        {
+            Console.WriteLine(Modul_Struct);
+        }
         public virtual void Method_Modul_Start_1()
         {
+            if (operation_Info_Method_1 == null & operation_Create_Method_1 == null & operation_Tasks_Method_1 == null & operation_Examples_Method_1 == null)
+            {
+                Console.WriteLine("\nПустой модуль");
+                Console.WriteLine("Не заполнено ни одно поле класса Modul_Struct, заполните поля класса для запуска модуля");
+            }
             Method_Modul_Start();
             int x = int.Parse(Console.ReadLine());
             if (x == 1)
@@ -174,60 +215,54 @@ namespace ConsoleApp2
                 Method_Modul_Start_1();
             }
         }
-      //  public int MyProperty { get; set; }
         public static void Info_Method()
         {
             Console.WriteLine($"{operation_Info_Method_1}");
         }
         public virtual void Create_Method()
         {
-            Console.WriteLine($"Чтобы запустить {name_Create_Method_1} нажмите 1 ");
-            Console.WriteLine($"Чтобы запустить {name_Create_Method_2} нажмите 2 ");
-            Console.WriteLine($"Чтобы запустить {name_Create_Method_3} нажмите 3 ");
-            Console.WriteLine($"Чтобы запустить {name_Create_Method_4} нажмите 4 ");
-            Console.WriteLine($"Чтобы запустить {name_Create_Method_5} нажмите 5 ");
+            if (name_Create_Method_1 != null)
+            {
+                Console.WriteLine($"Чтобы запустить {name_Create_Method_1} нажмите 1 ");
+            }
+            if (name_Create_Method_2 != null)
+            {
+                Console.WriteLine($"Чтобы запустить {name_Create_Method_2} нажмите 2 ");
+            }
+            if (name_Create_Method_3 != null)
+            {
+                Console.WriteLine($"Чтобы запустить {name_Create_Method_3} нажмите 3 ");
+            }
+            if (name_Create_Method_4 != null)
+            {
+                Console.WriteLine($"Чтобы запустить {name_Create_Method_4} нажмите 4 ");
+            }
+            if (name_Create_Method_5 != null)
+            {
+                Console.WriteLine($"Чтобы запустить {name_Create_Method_5} нажмите 5 ");
+            }
             Console.WriteLine("Чтобы перейти в выбору другогой темы модуля модуля нажмите 6");
             Console.WriteLine("Чтобы перейти в выбору другого модуля модуля нажмите 7");
             int x = int.Parse(Console.ReadLine());
             if (x == 1)
             {
-                Console.Clear();
-                Console.WriteLine($"{operation_Create_Method_1}");
-                Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_1}\" на консоль ");
-                Console.WriteLine($"{create_Create_Method_1}");
-                Create_Method();
+                Coddition_Create_1();
             }
             if (x == 2)
             {
-                //  Console.Clear();
-                Console.WriteLine($"{operation_Create_Method_2}");
-                Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_2}\" на консоль");
-                Console.WriteLine($"{create_Create_Method_2}");
-                Create_Method();
+                Coddition_Create_2();
             }
             if (x == 3)
             {
-                Console.Clear();
-                Console.WriteLine($"{operation_Create_Method_3}");
-                Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_3}\" на консоль");
-                Console.WriteLine($"{create_Create_Method_3}");
-                Create_Method();
+                Coddition_Create_3();
             }
             if (x == 4)
             {
-                Console.Clear();
-                Console.WriteLine($"{operation_Create_Method_4}");
-                Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_4}\" на консоль");
-                Console.WriteLine($"{create_Create_Method_4}");
-                Create_Method();
+                Coddition_Create_4();
             }
             if (x == 5)
             {
-                Console.Clear();
-                Console.WriteLine($"{operation_Create_Method_5}");
-                Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_5}\" на консоль");
-                Console.WriteLine($"{create_Create_Method_5}");
-                Create_Method();
+                Coddition_Create_5();
             }
             if (x == 6)
             {
@@ -239,12 +274,72 @@ namespace ConsoleApp2
                 Console.Clear();
                 Generation_Operation.EndInStart();
             }
-            
+
             if (x > 7 || x < 1)
             {
-                Console.WriteLine("Вы ввели неверное число, введите число от 1-5, чтобы запустить необходимый метод");
+                Console.WriteLine("Вы ввели неверное число, введите число от 1-7, чтобы запустить необходимый метод");
                 Method_Modul_Start_1();
             }
+        }
+        public virtual void Coddition_Create_1()
+        {
+            Console.Clear();
+            Console.WriteLine($"{operation_Create_Method_1}");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_1}\" на консоль ");
+            Coddition_Create_Type_Method_1();
+            Create_Method();
+        }
+        public virtual void Coddition_Create_Type_Method_1()
+        {
+            Console.WriteLine($"{create_Create_Method_1}");
+        }
+        public virtual void Coddition_Create_2()
+        {
+            Console.Clear();
+            Console.WriteLine($"{operation_Create_Method_2}");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_2}\" на консоль ");
+            Coddition_Create_Type_Method_2();
+            Create_Method();
+        }
+        public virtual void Coddition_Create_Type_Method_2()
+        {
+            Console.WriteLine($"{create_Create_Method_2}");
+        }
+        public virtual void Coddition_Create_3()
+        {
+            Console.Clear();
+            Console.WriteLine($"{operation_Create_Method_3}");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_3}\" на консоль ");
+            Coddition_Create_Type_Method_3();
+            Create_Method();
+        }
+        public virtual void Coddition_Create_Type_Method_3()
+        {
+            Console.WriteLine($"{create_Create_Method_3}");
+        }
+        public virtual void Coddition_Create_4()
+        {
+            Console.Clear();
+            Console.WriteLine($"{operation_Create_Method_4}");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_4}\" на консоль ");
+            Coddition_Create_Type_Method_4();
+            Create_Method();
+        }
+        public virtual void Coddition_Create_Type_Method_4()
+        {
+            Console.WriteLine($"{create_Create_Method_4}");
+        }
+        public virtual void Coddition_Create_5()
+        {
+            Console.Clear();
+            Console.WriteLine($"{operation_Create_Method_5}");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_5}\" на консоль ");
+            Coddition_Create_Type_Method_5();
+            Create_Method();
+        }
+        public virtual void Coddition_Create_Type_Method_5()
+        {
+            Console.WriteLine($"{create_Create_Method_5}");
         }
         public virtual void Tasks_Method()
         {
@@ -252,7 +347,125 @@ namespace ConsoleApp2
         }
         public virtual void Examples_Method()
         {
+            if (name_Examples_Method_1 != null)
+            {
+                Console.WriteLine($"Чтобы запустить {name_Examples_Method_1} нажмите 1 ");
+            }
+            if (name_Examples_Method_2 != null)
+            {
+                Console.WriteLine($"Чтобы запустить {name_Examples_Method_2} нажмите 2 ");
+            }
+            if (name_Examples_Method_3 != null)
+            {
+                Console.WriteLine($"Чтобы запустить {name_Examples_Method_3} нажмите 3 ");
+            }
+            if (name_Examples_Method_4 != null)
+            {
+                Console.WriteLine($"Чтобы запустить {name_Examples_Method_4} нажмите 4 ");
+            }
+            if (name_Examples_Method_5 != null)
+            {
+                Console.WriteLine($"Чтобы запустить {name_Examples_Method_5} нажмите 5 ");
+            }
+            Console.WriteLine("Чтобы перейти в выбору другогой темы модуля модуля нажмите 6");
+            Console.WriteLine("Чтобы перейти в выбору другого модуля модуля нажмите 7");
+            int x = int.Parse(Console.ReadLine());
+            if (x == 1)
+            {
+                Coddition_Examples_1();
+            }
+            if (x == 2)
+            {
+                Coddition_Examples_2();
+            }
+            if (x == 3)
+            {
+                Coddition_Examples_3();
+            }
+            if (x == 4)
+            {
+                Coddition_Examples_4();
+            }
+            if (x == 5)
+            {
+                Coddition_Examples_5();
+            }
+            if (x == 6)
+            {
+                Console.Clear();
+                Method_Modul_Start_1();
+            }
+            if (x == 7)
+            {
+                Console.Clear();
+                Generation_Operation.EndInStart();
+            }
+
+            if (x > 7 || x < 1)
+            {
+                Console.WriteLine("Вы ввели неверное число, введите число от 1-7, чтобы запустить необходимый метод");
+                Method_Modul_Start_1();
+            }
+        }
+        public virtual void Coddition_Examples_1()
+        {
+            Console.Clear();
+            Console.WriteLine($"{operation_Examples_Method_1}");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_1}\" на консоль ");
+            Coddition_Examples_Type_Method_1();
+            Examples_Method();
+        }
+        public virtual void Coddition_Examples_Type_Method_1()
+        {
+            Console.WriteLine($"{create_Examples_Method_1}");
+        }
+        public virtual void Coddition_Examples_2()
+        {
+            Console.Clear();
+            Console.WriteLine($"{operation_Examples_Method_2}");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_2}\" на консоль ");
+            Coddition_Examples_Type_Method_2();
+            Examples_Method();
+        }
+        public virtual void Coddition_Examples_Type_Method_2()
+        {
+            Console.WriteLine($"{create_Examples_Method_2}");
+        }
+        public virtual void Coddition_Examples_3()
+        {
+            Console.Clear();
+            Console.WriteLine($"{operation_Examples_Method_3}");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_3}\" на консоль ");
+            Coddition_Examples_Type_Method_3();
+            Examples_Method();
+        }
+        public virtual void Coddition_Examples_Type_Method_3()
+        {
+            Console.WriteLine($"{create_Examples_Method_3}");
+        }
+        public virtual void Coddition_Examples_4()
+        {
+            Console.Clear();
             Console.WriteLine($"{operation_Examples_Method_4}");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_4}\" на консоль ");
+            Coddition_Examples_Type_Method_4();
+            Examples_Method();
+        }
+        public virtual void Coddition_Examples_Type_Method_4()
+        {
+            Console.WriteLine($"{create_Examples_Method_4}");
+        }
+        public virtual void Coddition_Examples_5()
+        {
+            Console.Clear();
+            Console.WriteLine($"{operation_Examples_Method_5}");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_5}\" на консоль ");
+            Coddition_Examples_Type_Method_5();
+            Examples_Method();
+        }
+        public virtual void Coddition_Examples_Type_Method_5()
+        {
+            Console.WriteLine($"{create_Examples_Method_5}");
         }
         public static string Code_Writer_Console(int x, int e)
         {
