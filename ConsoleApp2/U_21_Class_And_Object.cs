@@ -285,7 +285,7 @@ namespace ConsoleApp2
         {
             Console.Clear();
             Console.WriteLine($"{operation_Create_Method_1}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_1}\" на консоль ");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_1}\" на консоль\n");
             Coddition_Create_Type_Method_1();
             Create_Method();
         }
@@ -297,7 +297,7 @@ namespace ConsoleApp2
         {
             Console.Clear();
             Console.WriteLine($"{operation_Create_Method_2}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_2}\" на консоль ");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_2}\" на консоль \n");
             Coddition_Create_Type_Method_2();
             Create_Method();
         }
@@ -309,7 +309,7 @@ namespace ConsoleApp2
         {
             Console.Clear();
             Console.WriteLine($"{operation_Create_Method_3}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_3}\" на консоль ");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_3}\" на консоль \n");
             Coddition_Create_Type_Method_3();
             Create_Method();
         }
@@ -321,7 +321,7 @@ namespace ConsoleApp2
         {
             Console.Clear();
             Console.WriteLine($"{operation_Create_Method_4}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_4}\" на консоль ");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_4}\" на консоль \n");
             Coddition_Create_Type_Method_4();
             Create_Method();
         }
@@ -333,7 +333,7 @@ namespace ConsoleApp2
         {
             Console.Clear();
             Console.WriteLine($"{operation_Create_Method_5}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_5}\" на консоль ");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_5}\" на консоль\n ");
             Coddition_Create_Type_Method_5();
             Create_Method();
         }
@@ -411,7 +411,7 @@ namespace ConsoleApp2
         {
             Console.Clear();
             Console.WriteLine($"{operation_Examples_Method_1}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_1}\" на консоль ");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_1}\" на консоль \n");
             Coddition_Examples_Type_Method_1();
             Examples_Method();
         }
@@ -423,7 +423,7 @@ namespace ConsoleApp2
         {
             Console.Clear();
             Console.WriteLine($"{operation_Examples_Method_2}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_2}\" на консоль ");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_2}\" на консоль \n");
             Coddition_Examples_Type_Method_2();
             Examples_Method();
         }
@@ -435,7 +435,7 @@ namespace ConsoleApp2
         {
             Console.Clear();
             Console.WriteLine($"{operation_Examples_Method_3}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_3}\" на консоль ");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_3}\" на консоль \n");
             Coddition_Examples_Type_Method_3();
             Examples_Method();
         }
@@ -447,7 +447,7 @@ namespace ConsoleApp2
         {
             Console.Clear();
             Console.WriteLine($"{operation_Examples_Method_4}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_4}\" на консоль ");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_4}\" на консоль\n ");
             Coddition_Examples_Type_Method_4();
             Examples_Method();
         }
@@ -459,7 +459,7 @@ namespace ConsoleApp2
         {
             Console.Clear();
             Console.WriteLine($"{operation_Examples_Method_5}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_5}\" на консоль ");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_5}\" на консоль \n");
             Coddition_Examples_Type_Method_5();
             Examples_Method();
         }

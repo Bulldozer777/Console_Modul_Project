@@ -1,0 +1,46 @@
+
+            int z = 5;
+            int d = 6;
+            Console.WriteLine($"Intermal value z = {z}"); //5
+            AdditionVal(z, d); 
+
+//Метод создает копию переменной z в памяти и работает с копией ,
+//переменная z после отработки метода не меняет свое значение
+
+            Console.WriteLine($"AdditionVal z = {z}"); //5
+            AdditionRef(ref z, d); 
+
+//Метод работает с самой переменной z и переменная z 
+//после отработки метода меняет свое значение  ,
+//ref передача значения по ссылке,
+//ключевое слово ref ставиться в параметрах метода и 
+//при работе(выводе) метода в месте объявления параметров
+
+            Console.WriteLine($"AdditionRef z = {z}"); 
+
+//Переменной z передается значение переменной x
+//т к эти переменные 
+//используют одну и ту же область в памяти и
+//если переменная х стал равен 11,
+//то переменная z тоже становиться равена 11
+
+            Console.WriteLine("Выполним AdditionRef 10 раз"); 
+
+//чтобы увидеть как z меняет значение выполним AdditionRef 10 раз
+
+            for (int i = 0; i < 10; i++)
+            {
+                AdditionRef(ref z, d);
+                Console.WriteLine($"\nAdditionRef z = {z}"); 
+            }           
+
+ public static void AdditionRef(ref int x, int y)
+        {
+            x = x + y;
+            Console.WriteLine($"AdditionRef x = {x}");              
+        }
+        public static void AdditionVal(int x, int y)
+        {
+            x = x + y;
+            Console.WriteLine($"AdditionVal x = {x}");
+        }

@@ -1,0 +1,18 @@
+    // Именованные параметры 
+
+//x:2 , происходит указание какому именно параметру мы присваиваем значение,
+// могут идти не по порядку, можем  изменить порядок передачи значений параметрам,
+// по умолчанию они(параметры) передаются по позиции
+
+            int d1 = Optional(s: 1, y: 2, z: 3, x: 4);
+            int d2 = Optional(1, 2, 3);
+            int d3 = Optional(1, 2);
+            Console.WriteLine(d1); 
+            Console.WriteLine(d2); 
+            Console.WriteLine(d3); 
+
+ public static int Optional(int x, int y,  int z = 5,  int s = 7)
+        {
+            return x + y + z + s;
+
+        }

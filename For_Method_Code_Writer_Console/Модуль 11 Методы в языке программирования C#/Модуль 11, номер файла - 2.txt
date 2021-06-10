@@ -1,0 +1,29 @@
+public static void K_11_Methods_Create()
+        {
+            Method1();
+            Method2(); //метод Method2 надо сделать static , иначе он не доступен в public static void K_11_Methods_Create()
+                       //и любом другом статическом методе
+            string s = Hello();
+            Console.WriteLine(s);
+            int c = Sum();
+            Console.WriteLine(c);
+        }
+        static void Method1()
+        {
+            Console.WriteLine("Method1");
+        }
+        static void Method2()
+        {
+            Console.WriteLine("Method2");
+        }
+        static string Hello() //Такой метод называется функцией, который возвращает значение
+        {
+            return "hello world!";
+        }
+        static int Sum() //Такой метод называется функцией, который возвращает значение
+        {
+            int x = 2;
+            int y = 3;
+            int z = x + y;
+            return z;
+        }

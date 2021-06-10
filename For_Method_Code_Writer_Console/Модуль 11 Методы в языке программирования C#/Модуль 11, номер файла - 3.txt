@@ -1,0 +1,29 @@
+     FizzBizz(Mas_for_FizzBizz());
+
+public static int[] Mas_for_FizzBizz()
+        {
+            int[] news = new int[10];// {1, 2,5,6,4,2,6,8,9,20};
+            return news;
+        }
+        public static void FizzBizz(int[] news)
+        {
+            for (int i = 1; i < news.Length; i++)
+            {
+                news[i] = i;
+            }
+            foreach (int news1 in news)
+            {
+                if ((news1 + 1) % 3 == 0)
+                {
+                    Console.WriteLine("fizz");
+                }
+                else if ((news1 + 1) % 5 == 0)
+                {
+                    Console.WriteLine("bizz");
+                }
+                else
+                {
+                    Console.WriteLine(news1 + 1);
+                }
+            }            
+        }

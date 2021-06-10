@@ -1,0 +1,17 @@
+
+            int area;
+            int perimeter;
+            GetData(12, 130, out area, out perimeter);
+
+//выходные параметры заданы не return, а ключевым словом out,
+//созданы пустые переменные такие же как и в методе и заполены результатом выполнения метода  
+ 
+            Console.WriteLine($"Area - {area}");
+            Console.WriteLine($"Perimeter - {perimeter}");
+            Console.WriteLine("Необязательные параметры");
+
+      public static void GetData(int width, int height, out int area, out int perimeter)
+        {
+            perimeter = (width + height) * 2;
+            area = width * height;
+        }

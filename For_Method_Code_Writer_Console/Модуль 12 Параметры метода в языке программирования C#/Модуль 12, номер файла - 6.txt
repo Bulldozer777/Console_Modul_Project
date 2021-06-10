@@ -1,0 +1,92 @@
+ 
+            string amount_total;
+            string amount_without_plywood_thickness;
+            string amount_without_plywood_and_pipe;
+            string pure_amount;
+            Calculating_The_Volume_Of_A_Box_1(out amount_total, out amount_without_plywood_thickness, out amount_without_plywood_and_pipe, out pure_amount);
+            Console.WriteLine($"Объем общий - {amount_total}");
+            Console.WriteLine($"Объем без учета толщины фанеры равен - {amount_without_plywood_thickness}");
+            Console.WriteLine($"Объем c учетом толщины фанеры равен и вытеснетия объема трубы - {amount_without_plywood_and_pipe}");
+            Console.WriteLine($"Чистый объем короба с динамиком внутри, динамик Т15, 10 литров - {pure_amount}\n");
+
+ public static void Calculating_The_Volume_Of_A_Box_1(out string a1, out string a2, out string a3, out  string a4) 
+        {
+            Console.WriteLine("Метод Calculating_The_Volume_Of_A_Box()");
+            Console.WriteLine("Считает чистый объем короба под сабвуфер");
+            a1 = "";
+            a2 = "";
+            a3 = "";
+            a4 = "";
+            int a;
+            Console.WriteLine("Введите длину (mm):");
+            a = Convert.ToInt32(Console.ReadLine());
+            int c;
+            Console.WriteLine("Введите высоту (mm):");
+            c = Convert.ToInt32(Console.ReadLine());
+
+            int b;
+            Console.WriteLine("Введите ширину (mm):");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            int e;
+            Console.WriteLine("Введите толщину фанеры (mm):");
+            e = Convert.ToInt32(Console.ReadLine());
+
+            int o;
+            Console.WriteLine("Введите диаметр трубы (mm):");
+            o = Convert.ToInt32(Console.ReadLine());
+
+            int l;
+            Console.WriteLine("Введите длину трубы (mm):");
+            l = Convert.ToInt32(Console.ReadLine());
+            string y;
+            Console.WriteLine("Наличие двойного лба у короба (да или нет):");
+            y = Convert.ToString(Console.ReadLine());
+            if (y != "да" & y != "нет")
+            {
+                Console.WriteLine("Наличие двойного лба у короба (да или нет):");
+                y = Convert.ToString(Console.ReadLine());
+            }
+            if (y == "да")
+            {
+                int d = a * b * c;
+                int r = ((a - e * 2) * (b - e * 2) * (c - e * 2)) - ((b - e * 2) * (a - e * 2) * e);
+                var k = r - (3.14 * o * o * 0.25 * l);
+                int u;
+                int p;
+                int z;
+                int m;
+                Box_volume(d, r,k, out u, out p, out z, out m);
+                a1 = Convert.ToString(u);
+                a2 = Convert.ToString(p);
+                a3 = Convert.ToString(m);
+                a4 = Convert.ToString(z);
+            }
+            else if (y == "нет")
+            {
+                int d = a * b * c;
+                int r = ((a - e * 2) * (b - e * 2) * (c - e * 2));
+                var k = r - (3.14 * o * o * 0.25 * l);
+                int u;
+                int p;
+                int z;
+                int m;
+                Box_volume(d, r, k, out u, out p, out z, out m);
+                a1 = Convert.ToString(u);
+                a2 = Convert.ToString(p);
+                a3 = Convert.ToString(m);
+                a4 = Convert.ToString(z);
+            }
+            else
+            {
+                Console.WriteLine("Введите верный ответ");
+            }
+        }
+        public static void Box_volume(int d , int r , double k, out int u, out int p, out int z, out int m)
+        {
+             u = Convert.ToInt32(Math.Floor(d * 0.0001) * 0.01); // = 25.01
+             p = Convert.ToInt32(Math.Floor(r * 0.0001) * 0.01); // = 25.01
+             m = Convert.ToInt32(Math.Floor(k * 0.0001) * 0.01); // = 25.01
+            var s = k - 10000000;
+             z = Convert.ToInt32(Math.Floor(s * 0.0001) * 0.01); // = 25.01
+        }
