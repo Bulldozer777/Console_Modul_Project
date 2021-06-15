@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class T_20_Variables_Links_And_Getting_Links
     {
         public static void Variables_Info(int a)
         {
-            Program.ModulRegistr(a);
             if (a == 20)
             {
                 int x = 5;
@@ -28,7 +27,7 @@ namespace ConsoleApp2
 
 
             }
-            Program.EndInStart();
+            Generation_Operation.EndInStart();
         }
         public static ref int Variables_Links(int[] numbers, int number)
         {

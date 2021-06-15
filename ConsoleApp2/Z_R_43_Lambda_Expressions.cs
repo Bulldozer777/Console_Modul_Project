@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Training_Csharp
 {
-    class Z_P_41_Events
+    class Z_R_43_Lambda_Expressions
     {
-        public static void Z_P_41_Events_Info(int a)
-        {
-            if (a == 41)
+        public static void Z_R_43_Lambda_Expressions_Info(int a)
+        {       
+            if (a == 43)
             {
-                G_7_If_Else_Operation.Calculating_The_Volume_Of_A_Box();
+
             }
             Generation_Operation.EndInStart();
         }
-        public static void Z_P_41_Events_Create()
+        public static void Z_R_43_Lambda_Expressions_Create()
         {
 
         }

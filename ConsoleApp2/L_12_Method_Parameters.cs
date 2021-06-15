@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class L_12_Method_Parameters : Modul_Struct
     {
@@ -38,7 +38,7 @@ namespace ConsoleApp2
                                //Метод создает копию переменной z в памяти и работает с копией ,
                                //переменная z после отработки метода не меняет свое значение
             Console.WriteLine($"AdditionVal z = {z}"); //5
-            AdditionRef(ref z, d);
+            AdditionRef(ref z, d); 
             //Метод работает с самой переменной z и переменная z после отработки метода меняет свое значение  ,
             //ref передача значения по ссылке,
             //ключевое слово ref ставиться в параметрах метода и при работе(выводе) метода в месте объявления параметров
@@ -51,8 +51,8 @@ namespace ConsoleApp2
             for (int i = 0; i < 10; i++)
             {
                 AdditionRef(ref z, d);
-                Console.WriteLine($"\nAdditionRef z = {z}");
-            }
+                Console.WriteLine($"\nAdditionRef z = {z}"); 
+            }           
         }
         public override void Coddition_Create_Type_Method_2()
         {
@@ -68,7 +68,7 @@ namespace ConsoleApp2
         public override void Coddition_Create_Type_Method_3()
         {
             //Необязательные параметры
-
+        
             int d1 = Optional(1, 2, 3, 4);
             int d2 = Optional(1, 2, 3);
             int d3 = Optional(1, 2);
@@ -86,9 +86,9 @@ namespace ConsoleApp2
             int d1 = Optional(s: 1, y: 2, z: 3, x: 4);
             int d2 = Optional(1, 2, 3);
             int d3 = Optional(1, 2);
-            Console.WriteLine(d1);
-            Console.WriteLine(d2);
-            Console.WriteLine(d3);
+            Console.WriteLine(d1); 
+            Console.WriteLine(d2); 
+            Console.WriteLine(d3); 
         }
         public override void Coddition_Examples_Type_Method_1()
         {
@@ -105,7 +105,7 @@ namespace ConsoleApp2
         public static void AdditionRef(ref int x, int y)
         {
             x = x + y;
-            Console.WriteLine($"AdditionRef x = {x}");
+            Console.WriteLine($"AdditionRef x = {x}");              
         }
         public static void AdditionVal(int x, int y)
         {
@@ -117,12 +117,12 @@ namespace ConsoleApp2
             perimeter = (width + height) * 2;
             area = width * height;
         }
-        public static int Optional(int x, int y, int z = 5, int s = 7)
+        public static int Optional(int x, int y,  int z = 5,  int s = 7)
         {
             return x + y + z + s;
 
         }
-        public static void Calculating_The_Volume_Of_A_Box_1(out string a1, out string a2, out string a3, out string a4)
+        public static void Calculating_The_Volume_Of_A_Box_1(out string a1, out string a2, out string a3, out  string a4) 
         {
             Console.WriteLine("Метод Calculating_The_Volume_Of_A_Box()");
             Console.WriteLine("Считает чистый объем короба под сабвуфер\n");
@@ -169,7 +169,7 @@ namespace ConsoleApp2
                 int p;
                 int z;
                 int m;
-                Box_volume(d, r, k, out u, out p, out z, out m);
+                Box_volume(d, r,k, out u, out p, out z, out m);
                 a1 = Convert.ToString(u);
                 a2 = Convert.ToString(p);
                 a3 = Convert.ToString(m);
@@ -195,13 +195,13 @@ namespace ConsoleApp2
                 Console.WriteLine("Введите верный ответ");
             }
         }
-        public static void Box_volume(int d, int r, double k, out int u, out int p, out int z, out int m)
+        public static void Box_volume(int d , int r , double k, out int u, out int p, out int z, out int m)
         {
-            u = Convert.ToInt32(Math.Floor(d * 0.0001) * 0.01); // = 25.01
-            p = Convert.ToInt32(Math.Floor(r * 0.0001) * 0.01); // = 25.01
-            m = Convert.ToInt32(Math.Floor(k * 0.0001) * 0.01); // = 25.01
+             u = Convert.ToInt32(Math.Floor(d * 0.0001) * 0.01); // = 25.01
+             p = Convert.ToInt32(Math.Floor(r * 0.0001) * 0.01); // = 25.01
+             m = Convert.ToInt32(Math.Floor(k * 0.0001) * 0.01); // = 25.01
             var s = k - 10000000;
-            z = Convert.ToInt32(Math.Floor(s * 0.0001) * 0.01); // = 25.01
+             z = Convert.ToInt32(Math.Floor(s * 0.0001) * 0.01); // = 25.01
         }
     }
 }

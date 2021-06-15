@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class Z_C_29_Operator_Overloading
     {
         public static void Z_C_29_Operator_Overloading_Info(int a)
         {
-            Program.ModulRegistr(a);
             if (a == 29)
             {
                 Z_C_29_Counter c1 = new Z_C_29_Counter {Value = 4 };
@@ -24,7 +23,7 @@ namespace ConsoleApp2
               int y = 20 + c2; // разобраться с этим случаем , возможна ошибка
                 Console.WriteLine(y);
             }
-            Program.EndInStart();
+            Generation_Operation.EndInStart();
         }
         public static void Z_C_29_Operator_Overloading_Create()
         {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class F_6_Create_Base_Type_Data : Modul_Struct
     {

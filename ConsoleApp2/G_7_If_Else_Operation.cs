@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class G_7_If_Else_Operation : Modul_Struct
     {
@@ -164,7 +164,6 @@ namespace ConsoleApp2
                 GetEnd(i);
             }
         }
-
         public static void GetEnd(int x)
         {
         //    IfElseStart();
@@ -225,7 +224,6 @@ namespace ConsoleApp2
                 Console.WriteLine("Наличие двойного лба у короба (да или нет):");
                 y = Convert.ToString(Console.ReadLine());
             }
-
             if (y == "да")
             {
                 int d = a * b * c;

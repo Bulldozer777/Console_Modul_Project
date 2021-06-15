@@ -4,20 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class S_19_Exceptions
     {
         public static void ExceptionsInfo(int a)
         {
-            Program.ModulRegistr(a);
             if (a == 19)
             {
                 //try ... catch ... finally
                 ExceptionsCreate();
                 ExceptionsCreate1();
             }
-            Program.EndInStart();
+            Generation_Operation.EndInStart();
         }
         public static void ExceptionsCreate()
         {

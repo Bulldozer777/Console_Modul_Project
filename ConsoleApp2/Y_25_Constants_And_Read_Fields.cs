@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class Y_25_Constants_And_Read_Fields
     {
         public static void Y_25_Constants_And_Read_Fields_Info(int a)
         {
-            Program.ModulRegistr(a);
             if (a == 25)
             {
                 int r = MathLib.T;
@@ -20,7 +19,7 @@ namespace ConsoleApp2
                 int u = Obj.p; // можно только присвоить
                 Console.WriteLine($"Поле Readonly - {u} \nПоле константа {r}");
             }
-            Program.EndInStart();
+            Generation_Operation.EndInStart();
         }
         public static void Y_25_Constants_And_Read_Fields_Create(int a)
         {

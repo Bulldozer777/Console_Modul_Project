@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class X_24_Access_Modifiers
     {
         public static void X_24_Access_Modifiers_Info(int a)
         {
-            Program.ModulRegistr(a);
             if (a == 24)
             {
                 Person_X_24 person = new Person_X_24();
@@ -21,7 +20,7 @@ namespace ConsoleApp2
                 Console.WriteLine(Q_17_Structures.Structures_Create("Модификатор internal: класс и члены класса с подобным модификатором доступны из любого места кода в той же сборке, однако он недоступен для других программ и сборок (как в случае с модификатором public)."));
                 Console.WriteLine(Q_17_Structures.Structures_Create("protected internal: совмещает функционал двух модификаторов.Классы и члены класса с таким модификатором доступны из текущей сборки и из производных классов."));
             }
-            Program.EndInStart();
+            Generation_Operation.EndInStart();
         }
         public static void X_24_Access_Modifiers_Create(int a)
         {

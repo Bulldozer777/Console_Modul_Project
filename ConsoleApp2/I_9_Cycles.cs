@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class I_9_Cycles : Modul_Struct
     {
         public static void I_9_Cycles_Info(int a)
         {
-
             //Program.ModulRegistr(a);
             if (a == 9)
             {
@@ -45,7 +44,7 @@ namespace ConsoleApp2
             Console.WriteLine("Чтобы запустить метод Factorial_in_Cycles() и увидеть его код Нажмите 2\n");
             Console.WriteLine("Чтобы перейти в выбору другогой темы модуля модуля нажмите 3");
             Console.WriteLine("Чтобы перейти в выбору другого модуля модуля нажмите 4");
-            int y = int.Parse(Console.ReadLine());
+            int y = int.Parse(Console.ReadLine());           
             if (y == 1)
             {
                 Console.WriteLine("Код метода I_9_Cycles_Create()");
@@ -72,6 +71,7 @@ namespace ConsoleApp2
                 Console.Clear();
                 Generation_Operation.EndInStart();
             }
+
             if (y > 5 || y < 1)
             {
                 Console.WriteLine("Вы ввели неверное число, введите число от 1-7, чтобы запустить необходимый метод");
@@ -97,7 +97,7 @@ namespace ConsoleApp2
                 Console.WriteLine($"{operation_Examples_Method_1}");
                 Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_1}\" на консоль ");
                 RandomString();
-
+               
                 Examples_Method();
             }
             if (x == 2)
@@ -110,7 +110,7 @@ namespace ConsoleApp2
             }
             if (x == 3)
             {
-                Console.Clear();
+                Console.Clear();               
                 Console.WriteLine($"Чтобы запустить пример через цикл while нажмите 1 ");
                 Console.WriteLine($"Чтобы запустить пример через цикл do ... while нажмите 2 ");
                 Console.WriteLine($"Чтобы запустить пример через цикл for нажмите 3 ");
@@ -160,7 +160,7 @@ namespace ConsoleApp2
         public static void RandomString()
         {
             Console.WriteLine("Введите длину рандомной строки");
-            int length = int.Parse(Console.ReadLine());
+           int length = int.Parse(Console.ReadLine());
 
             var result = new char[length];
             var r = new Random();
@@ -203,7 +203,7 @@ namespace ConsoleApp2
 
             Console.WriteLine("Правильный пароль");
         }
-        public static void Password_Cycles_2()
+            public static void Password_Cycles_2()
         {
             Console.WriteLine("\nПрограмма будет спрашивать пароль до тех пор, пока не будет введен пароль: \"root\"");
             Console.WriteLine("через do ... while");
@@ -233,7 +233,7 @@ namespace ConsoleApp2
             }
             Console.WriteLine("Правильный пароль");
         }
-        public static void Sequence()
+    public static void Sequence()
         {
             int t;
             Console.WriteLine("Введите 1 элемент последовательности");
@@ -252,14 +252,15 @@ namespace ConsoleApp2
                 Console.WriteLine($"{i} - элемент последовательности {((i) / 3) + 1}   ");
             }
         }
-        public static void I_9_Cycles_Create()
+public static void I_9_Cycles_Create()
         {
             //for (счетчик; условие; изменение счетчика)
             //{
+
             //}
             for (int i = 0; i < 9; i++)
             {
-                Console.WriteLine($"Квадрат числа - {i} = { i * i}");
+                Console.WriteLine($"Квадрат числа - {i} = { i*i}");
             }
             int j = 0; //счетчик можно бъявить вне цикла
             for (; j < 9; j++)
@@ -267,13 +268,13 @@ namespace ConsoleApp2
                 Console.WriteLine($"Квадрат числа - {j} = { j * j}");
             }
             int k = 0; //счетчик можно бъявить вне цикла
-            for (; k < 9;)
+            for (; k < 9; )
             {
                 k++; //можно опустить приращение(изменение) цикла в сам цикл
                 Console.WriteLine($"Квадрат числа - {k} = { k * k}");
             }
             int e = 6; //счетчик
-            while (e > 0)
+            while(e > 0)
             {
                 Console.WriteLine(e);
                 e--; //изменение цикла
@@ -288,12 +289,12 @@ namespace ConsoleApp2
             int u = 0;
             for (; u < 9; u++)
             {
-                if (u == 5)
+                if(u==5)           
                 {
                     break; //в цикле работают операторы, оператор break завершает работыу цикла,
                            //в данном случае при u=5
                 }
-                if (u == 6)
+                if(u==6)
                 {
                     continue;//оператор continue пропускает итерацию цикла при u=6
                              //в данном случае не выполниться т к выше выполниться оператор break
@@ -310,9 +311,9 @@ namespace ConsoleApp2
             {
                 result = result * i;
             }
-            Console.WriteLine($"Факториал {n} = {result}");
-
-
+            Console.WriteLine($"Факториал {n} = {result}"); 
+          
+          
         }
         public static void Info_TryParse()
         {

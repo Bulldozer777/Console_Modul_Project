@@ -1,12 +1,16 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
+using Training_Csharp.EntityFrameworkCore.Modul_Csharp_Base;
+using System.Linq;
 // System.DateTime;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
-    class Program : Generation_Operation
+    class Program : Generation_Operation 
     {
         static void Main(string[] args)
         {
+            Modul_Base.Modul_Base_Method_1();
             Console.WriteLine(DateTime.Now);
             InStartString();
             InStart3(int.Parse(Console.ReadLine()));

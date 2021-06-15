@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class J_10_Modul_Massive : Modul_Struct
     {
@@ -45,7 +45,7 @@ namespace ConsoleApp2
         }
         public override void Coddition_Create_Type_Method_1()
         {
-            Definition_Mas_Method();
+            Definition_Mas_Method();                
         }
         public override void Coddition_Create_Type_Method_2()
         {
@@ -117,14 +117,14 @@ namespace ConsoleApp2
             int[] nums4 = new[] { 1, 2, 3, 5 };
 
             int[] nums5 = { 1, 2, 3, 5 };
-
+           
             foreach (int i in nums2)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(i); 
             }
         }
         public static void Conclusion_Mas()
-        {
+        {           
             int[] numbers = new int[] { 1, 2, 3, 4, 5 }; //через for
             for (int i = 0; i < numbers.Length; i++)
             {
@@ -175,9 +175,9 @@ namespace ConsoleApp2
             foreach (int i in mas)
             {
                 Console.WriteLine(i);
-            }
+            }          
             Console.WriteLine($"Минимальный элемент массива - {MassMin(mas)}");
-        }
+        }  
         public static void Positive_Elements_Mas()
         {
             int[] numbers = { -4, -3, -2, -1, 0, 1, 2, 3, 4 };
@@ -193,5 +193,5 @@ namespace ConsoleApp2
         }
 
     }
-
 }
+

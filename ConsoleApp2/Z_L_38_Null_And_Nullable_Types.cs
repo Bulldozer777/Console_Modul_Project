@@ -4,18 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class Z_L_38_Null_And_Nullable_Types
     {
         public static void Z_L_38_Null_And_Nullable_Types_Info(int a)
         {
-            Program.ModulRegistr(a);
             if (a == 38)
             {
 
             }
-            Program.EndInStart();
+            Generation_Operation.EndInStart();
         }
         public static void Z_L_38_Null_And_Nullable_Types_Create()
         {

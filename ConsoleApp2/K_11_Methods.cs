@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class K_11_Methods : Modul_Struct
     {
         public static void K_11_Methods_Info(int a)
-        {
+        {          
             if (a == 11)
             {
                 Modul_Struct Eleven = new K_11_Methods();   //нужно создавать объект класса наследника, после ключевого слова new
                 operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
                 name_Create_Method_1 = "Виды методов - void, int, string; модификатор static";
-                operation_Create_Method_1 = Code_Writer_Console(a, 2);
+                operation_Create_Method_1 = Code_Writer_Console(a, 2);             
                 name_Examples_Method_1 = "Метод на вывод массива FizzBizz";
                 operation_Examples_Method_1 = Code_Writer_Console(a, 3);
                 Eleven.Method_Modul_Start_1();
@@ -28,8 +28,8 @@ namespace ConsoleApp2
         }
         public override void Coddition_Examples_Type_Method_1()
         {
-            FizzBizz(Mas_for_FizzBizz());
-        }
+                FizzBizz(Mas_for_FizzBizz());
+        }  
         public static void K_11_Methods_Create()
         {
             Method1();
@@ -84,7 +84,8 @@ namespace ConsoleApp2
                 {
                     Console.WriteLine(news1 + 1);
                 }
-            }
+            }            
         }
+
     }
 }

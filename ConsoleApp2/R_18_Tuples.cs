@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class R_18_Tuples
     {
         public static void TuplesInfo(int a)
         {
-            Program.ModulRegistr(a);
             if (a == 18)
             {
                 var tuple = (5, 10); //определение кортежа 
@@ -31,7 +30,7 @@ namespace ConsoleApp2
                 var tuple4 = GetValue_Tuples1(("tom", 30), 10); //tom 40
                 Console.WriteLine(tuple4);
             }
-            Program.EndInStart();
+            Generation_Operation.EndInStart();
         }
         public static void TuplesCreate()
         {

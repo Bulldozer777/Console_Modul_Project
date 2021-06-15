@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class Z_A_27_Overloading_Methods
     {
         public static void Z_A_27_Overloading_Methods_Info(int a)
         {
-            Program.ModulRegistr(a);
             if (a == 27)
             {
                 //3 версии методов
@@ -18,7 +17,7 @@ namespace ConsoleApp2
                 Z_A_27_Add(2, 4,6);
                 Z_A_27_Add(2, 4.5);
             }
-            Program.EndInStart();
+            Generation_Operation.EndInStart();
         }
         public static void Z_A_27_Overloading_Methods_Create(int a)
         {

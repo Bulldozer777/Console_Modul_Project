@@ -4,18 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class Z_G_33_Abstract_Classes_And_Methods
     {
         public static void Z_G_33_Abstract_Classes_And_Methods_Info(int a)
         {
-            Program.ModulRegistr(a);
             if (a == 33)
             {
 
             }
-            Program.EndInStart();
+            Generation_Operation.EndInStart();
         }
         public static void Z_G_33_Abstract_Classes_And_Methods_Create()
         {

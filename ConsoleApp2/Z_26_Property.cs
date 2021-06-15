@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class Z_26_Property
     {
         public static void Z_26_Property_Info(int a)
         {
-            Program.ModulRegistr(a);
             if (a == 26)
             {
                 Person_Z_26 person = new Person_Z_26();
@@ -28,7 +27,7 @@ namespace ConsoleApp2
                 int r = person.Age1;
                 Console.WriteLine(r);
             }
-            Program.EndInStart();
+            Generation_Operation.EndInStart();
         }
         public static void Z_26_Property_Create(int a)
         {
@@ -101,6 +100,7 @@ namespace ConsoleApp2
             get { return $"{firstName} {lastName}"; } 
            
         }
+        public int MyProperty { get; set; }
 
     }
 }

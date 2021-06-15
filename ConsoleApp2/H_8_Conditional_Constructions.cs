@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class H_8_Conditional_Constructions : Modul_Struct
     {
@@ -17,7 +17,6 @@ namespace ConsoleApp2
                 operation_Create_Method_1 = Code_Writer_Console(a, 1);
                 Eight.Method_Modul_Start_1();
                 Generation_Operation.EndInStart();
-                Console.WriteLine("githab");
             }           
         }
         public override void Create_Method()

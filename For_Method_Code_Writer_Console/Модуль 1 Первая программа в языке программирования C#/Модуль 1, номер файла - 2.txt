@@ -1,0 +1,15 @@
+public static void FirstProgramCreate()
+        {
+                Console.WriteLine("Hello World!");
+                Calculator.Add(2, 3);
+        }
+
+
+ class Calculator
+    {
+        public static void Add(int x, int y)
+        {
+            int z = x + y;
+            Console.WriteLine($"Сумма {x} и {y} равна {z} ");
+        }
+    }

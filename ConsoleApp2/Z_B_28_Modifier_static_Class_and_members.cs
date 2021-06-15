@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class Z_B_28_Modifier_static_Class_and_members
     {
         public static void Z_B_28_Modifier_static_Class_and_members_Info(int a)
         {
-            Program.ModulRegistr(a);
             if (a == 28)
             {
               //  Math.Min(4,6);
@@ -39,7 +38,7 @@ namespace ConsoleApp2
                 Console.WriteLine(user5.Id);
 
             }
-            Program.EndInStart();
+            Generation_Operation.EndInStart();
         }
     }
     class Z_B_28_User

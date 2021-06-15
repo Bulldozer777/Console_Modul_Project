@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class W_23_Class_Objects_As_Method_Parameters
     {
         public static void W_23_Class_Objects_As_Method_Parameters_Info(int a)
         {
-            Program.ModulRegistr(a);
             if (a == 23)
             {
                 User_W_23 user1 = new User_W_23 { name = "Tom", age = 23};
@@ -26,7 +25,7 @@ namespace ConsoleApp2
                 ChangePerson1(ref person1);
                 Console.WriteLine($"{person1.name} - {person1.age}");
             }
-            Program.EndInStart();
+            Generation_Operation.EndInStart();
         }
         public static void W_23_Class_Objects_As_Method_Parameters_Create(int a)
         {

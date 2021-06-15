@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class U_21_Class_And_Object : Modul_Struct
     {
@@ -17,17 +17,20 @@ namespace ConsoleApp2
                 // Create_Directory_Modul(); //создает 43 папки в каждую из которых добавляет по 10 файлов
 
                 //  User_Person tom; //чтобы работать с переменной надо создать объект
-                User_Person tom = new User_Person("Bob"); //создание объекта
-                                                     //User_Person()- конструктор по умолчанию
-                                                     //Если конструктор создан, то контруктор по умолчанию уже нельзя использовать и
-                                                     //надо заполнять при создании конструктор созданный в классе
-                tom.name = "Tom";
-                tom.age = 22;
+                //User_Person tom = new User_Person("Bob"); //создание объекта
+                //                                     //User_Person()- конструктор по умолчанию
+                //                                     //Если конструктор создан, то контруктор по умолчанию уже нельзя использовать и
+                //                                     //надо заполнять при создании конструктор созданный в классе
+                //tom.name = "Tom";
+                //tom.age = 22;
+                //tom.Info();
+                //User_Person bob = new User_Person("Tom") { age = 26 }; //инициализатор { age = 26 }
+                //bob.name = "Bob";
+                //bob.age = 22;
+                //bob.Info();
+                User_Person tom = new User_Person("Bob");
+                tom.name = "Bob";
                 tom.Info();
-                User_Person bob = new User_Person("Tom") { age = 26 }; //инициализатор { age = 26 }
-                bob.name = "Bob";
-                bob.age = 22;
-                bob.Info();
                 //Modul_Struct Modul_Name = new Modul_Struct();
                 Console.WriteLine("\nПример работы класса Modul_Struct:\n");
                 //name_Info_Method_1 = "Modul_Name_Info";
@@ -69,13 +72,29 @@ namespace ConsoleApp2
             name = n; //можно этот код убрать т к благодаря this используется 1 конструктор
             age = a;
         }
+        public void Check()
+        {
+            if (name != null)
+            {
+
+            }
+        }
         public void Info()
         {
-            Console.WriteLine($"{name} - {age}");
+            if (name != null)
+            {
+                Console.WriteLine($"{name}");
+            }
+            if (age != 0)
+            {
+                Console.WriteLine($"{age}");
+            }
+            
         }
     }
     class Modul_Struct
-    {//public delegate void Method_Void();
+    {
+        //public delegate void Method_Void();
         //public Method_Void void_method_Examples;
         //void_method_Examples = I_9_Cycles.Method_Void;       
         public static string name_Info_Method_1;  //сюда вводятся имена методов, используемые в Create_Method()
@@ -88,7 +107,7 @@ namespace ConsoleApp2
         public static string name_Examples_Method_1; //сюда вводятся имена методов, используемые в Examples_Method()
         public static string name_Examples_Method_2;
         public static string name_Examples_Method_3;
-        public static string name_Examples_Method_4;
+        public static string name_Examples_Method_4;  
         public static string name_Examples_Method_5;
         public static string operation_Info_Method_1;
         public static string operation_Create_Method_1;
@@ -100,6 +119,7 @@ namespace ConsoleApp2
         public static string operation_Tasks_Method_2;
         public static string operation_Tasks_Method_3;
         public static string operation_Tasks_Method_4;
+        public static string operation_Tasks_Method_5;
         public static string operation_Examples_Method_1; //сюда вводятся методы, работа которых используется в Examples_Method()
         public static string operation_Examples_Method_2;
         public static string operation_Examples_Method_3;
@@ -120,15 +140,6 @@ namespace ConsoleApp2
         public static string create_Examples_Method_5;
         public static string create_Examples_Method_6;
         public static object m2;
-
-        //public Modul_Struct(string operation_Info_Method_1, string operation_Create_Method_2, string operation_Tasks_Method_3, string operation_Examples_Method_4)
-        //{
-        //    this.operation_Info_Method_1 = operation_Info_Method_1;
-        //    this.operation_Create_Method_2 = operation_Create_Method_2;
-        //    this.operation_Tasks_Method_3 = operation_Tasks_Method_3;
-        //    this.operation_Examples_Method_4 = operation_Examples_Method_4;
-        //}
-
         //public Modul_Struct(string name_Create_Method_1, string operation_Create_Method_1, string create_Create_Method_1)
         //{
         //    this.name_Create_Method_1 = name_Create_Method_1;
@@ -158,7 +169,7 @@ namespace ConsoleApp2
                 Console.WriteLine($"Чтобы запустить Create_Method нажмите 2 ");
             }
             if (operation_Tasks_Method_1 != null)
-            {
+            { 
                 Console.WriteLine($"Чтобы запустить Tasks_Method нажмите 3 ");
             }
             if (operation_Examples_Method_1 != null)
@@ -215,6 +226,7 @@ namespace ConsoleApp2
                 Method_Modul_Start_1();
             }
         }
+      //  public int MyProperty { get; set; }
         public static void Info_Method()
         {
             Console.WriteLine($"{operation_Info_Method_1}");
@@ -229,18 +241,18 @@ namespace ConsoleApp2
             {
                 Console.WriteLine($"Чтобы запустить {name_Create_Method_2} нажмите 2 ");
             }
-            if (name_Create_Method_3 != null)
-            {
-                Console.WriteLine($"Чтобы запустить {name_Create_Method_3} нажмите 3 ");
-            }
-            if (name_Create_Method_4 != null)
-            {
-                Console.WriteLine($"Чтобы запустить {name_Create_Method_4} нажмите 4 ");
-            }
-            if (name_Create_Method_5 != null)
-            {
-                Console.WriteLine($"Чтобы запустить {name_Create_Method_5} нажмите 5 ");
-            }
+                if (name_Create_Method_3 != null)
+                {
+                    Console.WriteLine($"Чтобы запустить {name_Create_Method_3} нажмите 3 ");
+                }
+                    if (name_Create_Method_4 != null)
+                    {
+                        Console.WriteLine($"Чтобы запустить {name_Create_Method_4} нажмите 4 ");
+                    }
+                        if (name_Create_Method_5 != null)
+                        {
+                            Console.WriteLine($"Чтобы запустить {name_Create_Method_5} нажмите 5 ");
+                        }
             Console.WriteLine("Чтобы перейти в выбору другогой темы модуля модуля нажмите 6");
             Console.WriteLine("Чтобы перейти в выбору другого модуля модуля нажмите 7");
             int x = int.Parse(Console.ReadLine());
@@ -283,15 +295,15 @@ namespace ConsoleApp2
         }
         public virtual void Coddition_Create_1()
         {
-            Console.Clear();
-            Console.WriteLine($"{operation_Create_Method_1}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_1}\" на консоль\n");
-            Coddition_Create_Type_Method_1();
-            Create_Method();
+                Console.Clear();
+                Console.WriteLine($"{operation_Create_Method_1}");
+                Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_1}\" на консоль \n");
+                Coddition_Create_Type_Method_1();
+                Create_Method();
         }
         public virtual void Coddition_Create_Type_Method_1()
-        {
-            Console.WriteLine($"{create_Create_Method_1}");
+        {         
+            Console.WriteLine($"{create_Create_Method_1}");          
         }
         public virtual void Coddition_Create_2()
         {
@@ -333,7 +345,7 @@ namespace ConsoleApp2
         {
             Console.Clear();
             Console.WriteLine($"{operation_Create_Method_5}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_5}\" на консоль\n ");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_5}\" на консоль \n");
             Coddition_Create_Type_Method_5();
             Create_Method();
         }
@@ -341,6 +353,7 @@ namespace ConsoleApp2
         {
             Console.WriteLine($"{create_Create_Method_5}");
         }
+
         public virtual void Tasks_Method()
         {
             Console.WriteLine($"{operation_Tasks_Method_3}");
@@ -447,7 +460,7 @@ namespace ConsoleApp2
         {
             Console.Clear();
             Console.WriteLine($"{operation_Examples_Method_4}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_4}\" на консоль\n ");
+            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_4}\" на консоль \n");
             Coddition_Examples_Type_Method_4();
             Examples_Method();
         }
@@ -471,7 +484,7 @@ namespace ConsoleApp2
         {
             string y = Generation_Operation.BaseModul(x);
             y = y.Replace("\n", " ");
-            string Way_To_File = "C:\\Users\\karpo\\OneDrive\\Рабочий стол\\ConsoleApp2\\For_Method_Code_Writer_Console\\" + y + "\\Модуль " + x + ", номер файла - " + e + ".txt";
+            string Way_To_File = "C:\\Users\\Eduard.Karpov\\source\\repos\\ConsoleApp2\\For_Method_Code_Writer_Console\\" + y + "\\Модуль " + x + ", номер файла - " + e + ".txt";
             FileStream file1 = new FileStream(Way_To_File, FileMode.Open); //создаем файловый поток
             StreamReader reader = new StreamReader(file1); // создаем «потоковый читатель» и связываем его с файловым потоком 
             string Code = reader.ReadToEnd();

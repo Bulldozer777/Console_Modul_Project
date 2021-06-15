@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp2
+namespace Training_Csharp
 {
     class E_5_Bitwise_Operations : Modul_Struct
     {
@@ -73,6 +73,7 @@ namespace ConsoleApp2
                 operation_Tasks_Method_3 = "using System;\nnamespace helloapp\n{\nclass Program\n{\nstatic void Main(string[] args)\n{\nConsole.WriteLine(\"Привет мир, задача!\");Console.WriteLine(\"решаем и тренируемся!\");\n}\n}\n}";
                 operation_Examples_Method_4 = "546";
                 Five.Method_Modul_Start_1(); 
+
             }
             Generation_Operation.EndInStart();
         }
