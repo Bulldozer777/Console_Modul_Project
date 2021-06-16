@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 
 
+
 namespace Training_Csharp.EntityFrameworkCore.Modul_Csharp_Base
 {
     class Modul_Base
@@ -57,18 +58,18 @@ namespace Training_Csharp.EntityFrameworkCore.Modul_Csharp_Base
                 }
             }
         }
-            public static void Modul_Base_Method_1()
-            {
+        public static void Modul_Base_Method_1()
+        {
             using (ApplicationContext db = new ApplicationContext())
             {
-                int i = 2;
+                int i = 5;
                 Modul_Struct_Base Modul_2 = new Modul_Struct_Base
                 {
-                    NameCreate1 = "Логическое умножение",
-                    NameCreate2 = "Логическое сложение",
-                    NameCreate3 = "Операция исключающего \"или\" или XOR",
-                    NameCreate4 = "Логическое отрицание или инверсия",
-                    NameCreate5 = "Операции сдвига",
+                    //    NameCreate1 = "Логическое умножение",
+                    //    NameCreate2 = "Логическое сложение",
+                    //    NameCreate3 = "Операция исключающего \"или\" или XOR",
+                    //    NameCreate4 = "Логическое отрицание или инверсия",
+                    //    NameCreate5 = "Операции сдвига",
                     OperationCreate1 = Modul_Struct.Code_Writer_Console(i, 1),
                     OperationCreate2 = Modul_Struct.Code_Writer_Console(i, 2),
                     OperationCreate3 = Modul_Struct.Code_Writer_Console(i, 3),
@@ -81,10 +82,26 @@ namespace Training_Csharp.EntityFrameworkCore.Modul_Csharp_Base
                     CreateCreate5 = E_5_Bitwise_Operations.E_5_Bitwise_Operations_Create_Logic_The_Shift(),
                 };
                 db.Modul_Struct_Bases.Add(Modul_2);
-                db.SaveChanges();
+                db.SaveChanges();                
                 Console.WriteLine("Объекты успешно сохранены");
             }
 
         }
+        public static void Modul_Base_Method_2()
+        {
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                int i = 15;
+                Modul_Struct_Base Modul_15 = new Modul_Struct_Base
+                {
+                    OperationCreate1 = Modul_Struct.Code_Writer_Console(i, 1)
+                };
+                db.Modul_Struct_Bases.Add(Modul_15);
+                db.SaveChanges();
+                Console.WriteLine("Объекты успешно сохранены");
+                Modul_Struct Fifteen = new O_15_Recursive_Functions();
+                Modul_15.OperationCreate1 = Fifteen.operation_Info_Method_1;
+            }
         }
     }
+}

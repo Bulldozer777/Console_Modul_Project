@@ -13,11 +13,11 @@ namespace Training_Csharp
             if (a == 13)
             {
                 Modul_Struct Thirteen = new M_13_Keyword_Params();   //нужно создавать объект класса наследника, после ключевого слова new
-                operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
-                name_Create_Method_1 = "Ключевое слово Params";
-                operation_Create_Method_1 = Code_Writer_Console(a, 2);
-                name_Examples_Method_1 = "Метод на вывод массива FizzBizz";
-                operation_Examples_Method_1 = Code_Writer_Console(a, 3);
+                Thirteen.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
+                Thirteen.name_Create_Method_1 = "Ключевое слово Params";
+                Thirteen.operation_Create_Method_1 = Code_Writer_Console(a, 2);
+                Thirteen.name_Examples_Method_1 = "Метод на вывод массива FizzBizz";
+                Thirteen.operation_Examples_Method_1 = Code_Writer_Console(a, 3);
                 Thirteen.Method_Modul_Start_1();
             }
             Generation_Operation.EndInStart();

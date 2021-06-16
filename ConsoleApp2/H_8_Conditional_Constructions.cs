@@ -13,8 +13,8 @@ namespace Training_Csharp
             if (a == 8)
             {
                 Modul_Struct Eight = new H_8_Conditional_Constructions();   //нужно создавать объект класса наследника, после ключевого слова new
-                operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 2));
-                operation_Create_Method_1 = Code_Writer_Console(a, 1);
+                Eight.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 2));
+                Eight.operation_Create_Method_1 = Code_Writer_Console(a, 1);
                 Eight.Method_Modul_Start_1();
                 Generation_Operation.EndInStart();
             }           

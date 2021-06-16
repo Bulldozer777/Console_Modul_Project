@@ -18,11 +18,11 @@ namespace Training_Csharp
             if (a == 14)
             {
                 Modul_Struct Fourteen = new N_14_Scope_Of_Variables();   //нужно создавать объект класса наследника, после ключевого слова new
-                operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
-                name_Create_Method_1 = "Ключевое слово Params";
-                operation_Create_Method_1 = Code_Writer_Console(a, 2);
-                name_Examples_Method_1 = "Метод на вывод массива FizzBizz";
-                operation_Examples_Method_1 = Code_Writer_Console(a, 3);
+                Fourteen.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
+                Fourteen.name_Create_Method_1 = "Ключевое слово Params";
+                Fourteen.operation_Create_Method_1 = Code_Writer_Console(a, 2);
+                Fourteen.name_Examples_Method_1 = "Метод на вывод массива FizzBizz";
+                Fourteen.operation_Examples_Method_1 = Code_Writer_Console(a, 3);
                 Fourteen.Method_Modul_Start_1();
                 int x = 18;
                 Console.WriteLine(x); // 19 операция инкремента, операция которая определена на уровне метода ,

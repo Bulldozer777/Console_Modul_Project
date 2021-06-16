@@ -14,13 +14,13 @@ namespace Training_Csharp
             if (a == 7)
             {
                 Modul_Struct Seven = new G_7_If_Else_Operation();   //нужно создавать объект класса наследника, после ключевого слова new
-                operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
-                name_Create_Method_1 = "Операции сравнения";
-                name_Create_Method_2 = "Логическое операции";
-                operation_Create_Method_1 = Code_Writer_Console(a, 2);
-                operation_Create_Method_2 = Code_Writer_Console(a, 3);            
-                create_Create_Method_1 = Comparison_Operations();
-                create_Create_Method_2 = Logical_Operations();
+                Seven.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
+                Seven.name_Create_Method_1 = "Операции сравнения";
+                Seven.name_Create_Method_2 = "Логическое операции";
+                Seven.operation_Create_Method_1 = Code_Writer_Console(a, 2);
+                Seven.operation_Create_Method_2 = Code_Writer_Console(a, 3);
+                Seven.create_Create_Method_1 = Comparison_Operations();
+                Seven.create_Create_Method_2 = Logical_Operations();
                 Seven.Method_Modul_Start_1();
                 Generation_Operation.EndInStart();
             }

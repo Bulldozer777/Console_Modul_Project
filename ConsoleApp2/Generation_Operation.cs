@@ -237,8 +237,7 @@ namespace Training_Csharp
                     ModulRegistr(a);
 
                     EndInStart();
-                }
-            
+                }            
         }
             public static void ModulRegistr(int a)
         {

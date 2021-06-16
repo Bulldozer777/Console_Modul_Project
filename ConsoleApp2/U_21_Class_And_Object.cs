@@ -42,10 +42,10 @@ namespace Training_Csharp
                 Modul_Struct l = new Modul_Struct();
                 //      Modul_Struct Class_U21 = new Modul_Struct { operation_Info_Method_1 = "1", operation_Create_Method_2 = "using System;\nnamespace helloapp\n{\nclass Program\n{\nstatic void Main(string[] args)\n{\nConsole.WriteLine(\"Hello World!\");\n}\n}\n}", operation_Tasks_Method_3 = "using System;\nnamespace helloapp\n{\nclass Program\n{\nstatic void Main(string[] args)\n{\nConsole.WriteLine(\"Привет мир, задача!\");Console.WriteLine(\"решаем и тренируемся!\");\n}\n}\n}", operation_Examples_Method_4 = "В задаче выше решается как вывести 2 раза надпись на консоль" } ;
                 //Modul_Struct Class_U22 = new Modul_Struct  (m, "using System;\nnamespace helloapp\n{\nclass Program\n{\nstatic void Main(string[] args)\n{\nConsole.WriteLine(\"Hello World!\");\n}\n}\n}", "using System;\nnamespace helloapp\n{\nclass Program\n{\nstatic void Main(string[] args)\n{\nConsole.WriteLine(\"Привет мир, задача!\");Console.WriteLine(\"решаем и тренируемся!\");\n}\n}\n}", "В задаче выше решается как вывести 2 раза надпись на консоль" );
-                operation_Info_Method_1 = m; //либо поля класса статические, либо создается обЬект класса , выше создание
-                operation_Create_Method_2 = "using System;\nnamespace helloapp\n{\nclass Program\n{\nstatic void Main(string[] args)\n{\nConsole.WriteLine(\"Hello World!\");\n}\n}\n}";
-                operation_Tasks_Method_3 = "using System;\nnamespace helloapp\n{\nclass Program\n{\nstatic void Main(string[] args)\n{\nConsole.WriteLine(\"Привет мир, задача!\");Console.WriteLine(\"решаем и тренируемся!\");\n}\n}\n}";
-                operation_Examples_Method_4 = "В задаче выше решается как вывести 2 раза надпись на консоль";
+                l.operation_Info_Method_1 = m; //либо поля класса статические, либо создается обЬект класса , выше создание
+                l.operation_Create_Method_2 = "using System;\nnamespace helloapp\n{\nclass Program\n{\nstatic void Main(string[] args)\n{\nConsole.WriteLine(\"Hello World!\");\n}\n}\n}";
+                l.operation_Tasks_Method_3 = "using System;\nnamespace helloapp\n{\nclass Program\n{\nstatic void Main(string[] args)\n{\nConsole.WriteLine(\"Привет мир, задача!\");Console.WriteLine(\"решаем и тренируемся!\");\n}\n}\n}";
+                l.operation_Examples_Method_4 = "В задаче выше решается как вывести 2 раза надпись на консоль";
               //  Method_Modul_Start_1();
             }
             Generation_Operation.EndInStart();
@@ -97,49 +97,92 @@ namespace Training_Csharp
         //public delegate void Method_Void();
         //public Method_Void void_method_Examples;
         //void_method_Examples = I_9_Cycles.Method_Void;       
-        public static string name_Info_Method_1;  //сюда вводятся имена методов, используемые в Create_Method()
-        public static string name_Create_Method_1;
-        public static string name_Create_Method_2;
-        public static string name_Create_Method_3;
-        public static string name_Create_Method_4;
-        public static string name_Create_Method_5;
-        public static string name_Tasks_Method_3;
-        public static string name_Examples_Method_1; //сюда вводятся имена методов, используемые в Examples_Method()
-        public static string name_Examples_Method_2;
-        public static string name_Examples_Method_3;
-        public static string name_Examples_Method_4;  
-        public static string name_Examples_Method_5;
-        public static string operation_Info_Method_1;
-        public static string operation_Create_Method_1;
-        public static string operation_Create_Method_2;
-        public static string operation_Create_Method_3;
-        public static string operation_Create_Method_4;
-        public static string operation_Create_Method_5;
-        public static string operation_Tasks_Method_1;
-        public static string operation_Tasks_Method_2;
-        public static string operation_Tasks_Method_3;
-        public static string operation_Tasks_Method_4;
-        public static string operation_Tasks_Method_5;
-        public static string operation_Examples_Method_1; //сюда вводятся методы, работа которых используется в Examples_Method()
-        public static string operation_Examples_Method_2;
-        public static string operation_Examples_Method_3;
-        public static string operation_Examples_Method_4;
-        public static string operation_Examples_Method_5;
-        public static string operation_Examples_Method_6;
-        public static string operation_Examples_Method_7;
-        public static string create_Create_Method_1;
-        public static string create_Create_Method_2;
-        public static string create_Create_Method_3;
-        public static string create_Create_Method_4;
-        public static string create_Create_Method_5;
-        public static string create_Create_Method_6;
-        public static string create_Examples_Method_1;
-        public static string create_Examples_Method_2;
-        public static string create_Examples_Method_3;
-        public static string create_Examples_Method_4;
-        public static string create_Examples_Method_5;
-        public static string create_Examples_Method_6;
-        public static object m2;
+        //public static string name_Info_Method_1;  //сюда вводятся имена методов, используемые в Create_Method()
+        //public static string name_Create_Method_1;
+        //public static string name_Create_Method_2;
+        //public static string name_Create_Method_3;
+        //public static string name_Create_Method_4;
+        //public static string name_Create_Method_5;
+        //public static string name_Tasks_Method_3;
+        //public static string name_Examples_Method_1; //сюда вводятся имена методов, используемые в Examples_Method()
+        //public static string name_Examples_Method_2;
+        //public static string name_Examples_Method_3;
+        //public static string name_Examples_Method_4;  
+        //public static string name_Examples_Method_5;
+        //public static string operation_Info_Method_1;
+        //public static string operation_Create_Method_1;
+        //public static string operation_Create_Method_2;
+        //public static string operation_Create_Method_3;
+        //public static string operation_Create_Method_4;
+        //public static string operation_Create_Method_5;
+        //public static string operation_Tasks_Method_1;
+        //public static string operation_Tasks_Method_2;
+        //public static string operation_Tasks_Method_3;
+        //public static string operation_Tasks_Method_4;
+        //public static string operation_Tasks_Method_5;
+        //public static string operation_Examples_Method_1; //сюда вводятся методы, работа которых используется в Examples_Method()
+        //public static string operation_Examples_Method_2;
+        //public static string operation_Examples_Method_3;
+        //public static string operation_Examples_Method_4;
+        //public static string operation_Examples_Method_5;
+        //public static string operation_Examples_Method_6;
+        //public static string operation_Examples_Method_7;
+        //public static string create_Create_Method_1;
+        //public static string create_Create_Method_2;
+        //public static string create_Create_Method_3;
+        //public static string create_Create_Method_4;
+        //public static string create_Create_Method_5;
+        //public static string create_Create_Method_6;
+        //public static string create_Examples_Method_1;
+        //public static string create_Examples_Method_2;
+        //public static string create_Examples_Method_3;
+        //public static string create_Examples_Method_4;
+        //public static string create_Examples_Method_5;
+        //public static string create_Examples_Method_6;
+        public static object m2;   // для данного поля пока не написана логика     
+        public string name_Info_Method_1 { get; set; }     // для данного поля пока не написана логика 
+        //используется для сопоставление темы и записи в базе данных 
+        public string operation_Info_Method_1 { get; set; } //поле для ввода текста - объяснения или вступленния, по теме модуля
+        public string name_Create_Method_1 { get; set; } //сюда вводятся имена методов, используемые в CreateMethod()
+        public string name_Create_Method_2 { get; set; }
+        public string name_Create_Method_3 { get; set; }
+        public string name_Create_Method_4 { get; set; }
+        public string name_Create_Method_5 { get; set; }
+        public string name_Tasks_Method_3 { get; set; }  
+        public string name_Examples_Method_1 { get; set; } //сюда вводятся имена методов, используемые в Examples_Method()
+        public string name_Examples_Method_2 { get; set; }
+        public string name_Examples_Method_3 { get; set; }
+        public string name_Examples_Method_4 { get; set; }
+        public string name_Examples_Method_5 { get; set; }         
+        public string operation_Create_Method_1 { get; set; }    //сюда вводится код методов CreateMethod()
+        public string operation_Create_Method_2 { get; set; }
+        public string operation_Create_Method_3 { get; set; }
+        public string operation_Create_Method_4 { get; set; }
+        public string operation_Create_Method_5 { get; set; }
+        public string operation_Tasks_Method_1 { get; set; }
+        public string operation_Tasks_Method_2 { get; set; }
+        public string operation_Tasks_Method_3 { get; set; }
+        public string operation_Tasks_Method_4 { get; set; }
+        public string operation_Tasks_Method_5 { get; set; }
+        public string operation_Examples_Method_1 { get; set; } //сюда вводятся методы, работа которых используется в Examples_Method()
+        public string operation_Examples_Method_2 { get; set; }
+        public string operation_Examples_Method_3 { get; set; }
+        public string operation_Examples_Method_4 { get; set; }
+        public string operation_Examples_Method_5 { get; set; }
+        public string operation_Examples_Method_6 { get; set; }
+        public string operation_Examples_Method_7 { get; set; }
+        public string create_Create_Method_1 { get; set; }
+        public string create_Create_Method_2 { get; set; }
+        public string create_Create_Method_3 { get; set; }
+        public string create_Create_Method_4 { get; set; }
+        public string create_Create_Method_5 { get; set; }
+        public string create_Create_Method_6 { get; set; }
+        public string create_Examples_Method_1 { get; set; }
+        public string create_Examples_Method_2 { get; set; }
+        public string create_Examples_Method_3 { get; set; }
+        public string create_Examples_Method_4 { get; set; }
+        public string create_Examples_Method_5 { get; set; }
+        public string create_Examples_Method_6 { get; set; }
         //public Modul_Struct(string name_Create_Method_1, string operation_Create_Method_1, string create_Create_Method_1)
         //{
         //    this.name_Create_Method_1 = name_Create_Method_1;
@@ -153,7 +196,7 @@ namespace Training_Csharp
         //    this.operation_Tasks_Method_3 = operation_Tasks_Method_3;
         //    this.operation_Examples_Method_4 = operation_Examples_Method_4;
         //}
-        public static void Method_Modul_Start()
+        public void Method_Modul_Start()
         {
             Console.WriteLine("\n");
             //if (operation_Info_Method_1 == null & operation_Create_Method_1 == null & operation_Tasks_Method_1 == null & operation_Examples_Method_1 == null)
@@ -227,9 +270,9 @@ namespace Training_Csharp
             }
         }
       //  public int MyProperty { get; set; }
-        public static void Info_Method()
+        public void Info_Method()
         {
-            Console.WriteLine($"{operation_Info_Method_1}");
+            Console.WriteLine($"{Q_17_Structures.Structures_Create(operation_Info_Method_1)}");
         }
         public virtual void Create_Method()
         {

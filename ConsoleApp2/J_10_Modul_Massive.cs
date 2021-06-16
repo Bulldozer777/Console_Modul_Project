@@ -14,19 +14,19 @@ namespace Training_Csharp
             if (a == 10)
             {
                 Modul_Struct Ten = new J_10_Modul_Massive();   //нужно создавать объект класса наследника, после ключевого слова new
-                operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
-                name_Create_Method_1 = "Определение массива";
-                operation_Create_Method_1 = Code_Writer_Console(a, 2);
-                name_Create_Method_2 = "Вывод массива";
-                operation_Create_Method_2 = Code_Writer_Console(a, 3);
-                name_Create_Method_3 = "Многомерные массивы";
-                operation_Create_Method_3 = Code_Writer_Console(a, 4);
-                name_Create_Method_3 = "Зубчатые массивы";
-                operation_Create_Method_3 = Code_Writer_Console(a, 5);
-                name_Examples_Method_1 = "Программа создает массив из 10 элементов и выводит минимальный элемент";
-                operation_Examples_Method_1 = Code_Writer_Console(a, 6);
-                name_Examples_Method_2 = "Программа выводит количество положительных чисел в массиве:";
-                operation_Examples_Method_2 = Code_Writer_Console(a, 7);
+                Ten.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
+                Ten.name_Create_Method_1 = "Определение массива";
+                Ten.operation_Create_Method_1 = Code_Writer_Console(a, 2);
+                Ten.name_Create_Method_2 = "Вывод массива";
+                Ten.operation_Create_Method_2 = Code_Writer_Console(a, 3);
+                Ten.name_Create_Method_3 = "Многомерные массивы";
+                Ten.operation_Create_Method_3 = Code_Writer_Console(a, 4);
+                Ten.name_Create_Method_3 = "Зубчатые массивы";
+                Ten.operation_Create_Method_3 = Code_Writer_Console(a, 5);
+                Ten.name_Examples_Method_1 = "Программа создает массив из 10 элементов и выводит минимальный элемент";
+                Ten.operation_Examples_Method_1 = Code_Writer_Console(a, 6);
+                Ten.name_Examples_Method_2 = "Программа выводит количество положительных чисел в массиве:";
+                Ten.operation_Examples_Method_2 = Code_Writer_Console(a, 7);
                 Ten.Method_Modul_Start_1();
             }
             Generation_Operation.EndInStart();

@@ -18,21 +18,21 @@ namespace Training_Csharp
                     "\ndo ... while" +
                     "\nforeach");
                 Modul_Struct Nine = new I_9_Cycles();   //нужно создавать объект класса наследника, после ключевого слова new
-                operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
-                operation_Create_Method_1 = Code_Writer_Console(a, 2);
-                operation_Create_Method_2 = Code_Writer_Console(a, 3);
-                name_Examples_Method_1 = "Cоздание рандомной строки"; //сюда вводятся имена методов, используемые в Examples_Method()
-                name_Examples_Method_2 = "Вычисление числа Фиббоначи по порядковому номеру";
-                name_Examples_Method_3 = "Группа методов введите пароль \"root\" с помощью разных циклов";
-                name_Examples_Method_4 = "Последовательность";
+                Nine.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
+                Nine.operation_Create_Method_1 = Code_Writer_Console(a, 2);
+                Nine.operation_Create_Method_2 = Code_Writer_Console(a, 3);
+                Nine.name_Examples_Method_1 = "Cоздание рандомной строки"; //сюда вводятся имена методов, используемые в Examples_Method()
+                Nine.name_Examples_Method_2 = "Вычисление числа Фиббоначи по порядковому номеру";
+                Nine.name_Examples_Method_3 = "Группа методов введите пароль \"root\" с помощью разных циклов";
+                Nine.name_Examples_Method_4 = "Последовательность";
                 //name_Examples_Method_5 = ;
-                operation_Examples_Method_1 = Code_Writer_Console(a, 4);
-                operation_Examples_Method_2 = Code_Writer_Console(a, 5);
-                operation_Examples_Method_3 = Code_Writer_Console(a, 6);
-                operation_Examples_Method_4 = Code_Writer_Console(a, 7);
-                operation_Examples_Method_5 = Code_Writer_Console(a, 8);
-                operation_Examples_Method_6 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 9));
-                operation_Examples_Method_7 = Code_Writer_Console(a, 10);
+                Nine.operation_Examples_Method_1 = Code_Writer_Console(a, 4);
+                Nine.operation_Examples_Method_2 = Code_Writer_Console(a, 5);
+                Nine.operation_Examples_Method_3 = Code_Writer_Console(a, 6);
+                Nine.operation_Examples_Method_4 = Code_Writer_Console(a, 7);
+                Nine.operation_Examples_Method_5 = Code_Writer_Console(a, 8);
+                Nine.operation_Examples_Method_6 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 9));
+                Nine.operation_Examples_Method_7 = Code_Writer_Console(a, 10);
                 Nine.Method_Modul_Start_1();
                 Generation_Operation.EndInStart();
             }

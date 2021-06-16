@@ -14,13 +14,13 @@ namespace Training_Csharp
             if (i == 6)
             {
                 Modul_Struct Six = new F_6_Create_Base_Type_Data();   //нужно создавать объект класса наследника, после ключевого слова new
-                name_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(i, 3));
-                operation_Create_Method_1 = Code_Writer_Console(i, 1);          
-                create_Create_Method_1 = Check();
-                operation_Info_Method_1 = Code_Writer_Console(i, 2);
-                operation_Tasks_Method_3 = Code_Writer_Console(i, 5);
-                operation_Tasks_Method_4 = Code_Writer_Console(i, 6);
-                operation_Examples_Method_4 = Code_Writer_Console(i, 4) + "\n" + "Результат работы тренировочного метода" + Examples(); 
+                Six.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(i, 3));
+                Six.operation_Create_Method_1 = Code_Writer_Console(i, 1);
+                Six.create_Create_Method_1 = Check();
+                Six.operation_Info_Method_1 = Code_Writer_Console(i, 2);
+                Six.operation_Tasks_Method_3 = Code_Writer_Console(i, 5);
+                Six.operation_Tasks_Method_4 = Code_Writer_Console(i, 6);
+                Six.operation_Examples_Method_4 = Code_Writer_Console(i, 4) + "\n" + "Результат работы тренировочного метода" + Examples(); 
                 Six.Method_Modul_Start_1();
                 Generation_Operation.EndInStart();
             }

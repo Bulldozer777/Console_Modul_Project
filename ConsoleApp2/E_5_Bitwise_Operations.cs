@@ -55,23 +55,23 @@ namespace Training_Csharp
             if (a == 5)
             {
                 Modul_Struct Five = new Modul_Struct();
-                name_Create_Method_1 = "Логическое умножение";
-                name_Create_Method_2 = "Логическое сложение";
-                name_Create_Method_3 = "Операция исключающего \"или\" или XOR";
-                name_Create_Method_4 = "Логическое отрицание или инверсия";
-                name_Create_Method_5 = "Операции сдвига";
-                operation_Create_Method_1 = Code_Writer_Console(a, 1);
-                operation_Create_Method_2 = Code_Writer_Console(a, 2);
-                operation_Create_Method_3 = Code_Writer_Console(a, 3);
-                operation_Create_Method_4 = Code_Writer_Console(a, 4);
-                operation_Create_Method_5 = Code_Writer_Console(a, 5);
-                create_Create_Method_1 = E_5_Bitwise_Operations_Logic_Multiplication();
-                create_Create_Method_2 = E_5_Bitwise_Operations_Create_Logic_Addition();
-                create_Create_Method_3 = E_5_Bitwise_Operations_Create_Logic_OR();
-                create_Create_Method_4 = E_5_Bitwise_Operations_Create_Logic_Inversion();
-                create_Create_Method_5 = E_5_Bitwise_Operations_Create_Logic_The_Shift();
-                operation_Tasks_Method_3 = "using System;\nnamespace helloapp\n{\nclass Program\n{\nstatic void Main(string[] args)\n{\nConsole.WriteLine(\"Привет мир, задача!\");Console.WriteLine(\"решаем и тренируемся!\");\n}\n}\n}";
-                operation_Examples_Method_4 = "546";
+                Five.name_Create_Method_1 = "Логическое умножение";
+                Five.name_Create_Method_2 = "Логическое сложение";
+                Five.name_Create_Method_3 = "Операция исключающего \"или\" или XOR";
+                Five.name_Create_Method_4 = "Логическое отрицание или инверсия";
+                Five.name_Create_Method_5 = "Операции сдвига";
+                Five.operation_Create_Method_1 = Code_Writer_Console(a, 1);
+                Five.operation_Create_Method_2 = Code_Writer_Console(a, 2);
+                Five.operation_Create_Method_3 = Code_Writer_Console(a, 3);
+                Five.operation_Create_Method_4 = Code_Writer_Console(a, 4);
+                Five.operation_Create_Method_5 = Code_Writer_Console(a, 5);
+                Five.create_Create_Method_1 = E_5_Bitwise_Operations_Logic_Multiplication();
+                Five.create_Create_Method_2 = E_5_Bitwise_Operations_Create_Logic_Addition();
+                Five.create_Create_Method_3 = E_5_Bitwise_Operations_Create_Logic_OR();
+                Five.create_Create_Method_4 = E_5_Bitwise_Operations_Create_Logic_Inversion();
+                Five.create_Create_Method_5 = E_5_Bitwise_Operations_Create_Logic_The_Shift();
+                Five.operation_Tasks_Method_3 = "using System;\nnamespace helloapp\n{\nclass Program\n{\nstatic void Main(string[] args)\n{\nConsole.WriteLine(\"Привет мир, задача!\");Console.WriteLine(\"решаем и тренируемся!\");\n}\n}\n}";
+                Five.operation_Examples_Method_4 = "546";
                 Five.Method_Modul_Start_1(); 
 
             }

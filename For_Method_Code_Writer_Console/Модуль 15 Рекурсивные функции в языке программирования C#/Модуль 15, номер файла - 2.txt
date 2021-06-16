@@ -1,0 +1,12 @@
+public static int Factorial(int n)
+        {
+            if (n == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                int z = n * Factorial(n - 1);    //Factorial(5) = 5 * Factorial(4) = 5 * 4 * Factorial(3).;.. = 5 * 4 * 3 * 2 * 1 * 1 ;
+                return z;
+            }
+        }

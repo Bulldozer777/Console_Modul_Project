@@ -10,7 +10,7 @@ namespace Training_Csharp
     {
         static void Main(string[] args)
         {
-            Modul_Base.Modul_Base_Method_1();
+         // Modul_Base.Modul_Base_Method_1();
             Console.WriteLine(DateTime.Now);
             InStartString();
             InStart3(int.Parse(Console.ReadLine()));
