@@ -1,0 +1,22 @@
+ static void Enumeration_Enum_Create(double x, double y, Operation op)  // public модификатор нельзя поставить
+        {
+            double result = 0.0;
+            switch(op)
+            {
+                case Operation.Add:
+                  result = x + y;
+                    break;
+                case Operation.Substract:
+                    result = x - y;
+                    break;
+                case Operation.Multiply:
+                    result = x * y;
+                    break;
+                case Operation.Divide:
+                    result = x / y;
+                    break;
+            }
+            Console.WriteLine(result);
+
+      Enumeration_Enum_Create(10, 15, Operation.Add);  // результат 25
+      Enumeration_Enum_Create(10, 15, Operation.Multiply); //150

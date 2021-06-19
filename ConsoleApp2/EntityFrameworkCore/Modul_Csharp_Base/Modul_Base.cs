@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-
-
+using Training_Csharp;
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
 
 namespace Training_Csharp.EntityFrameworkCore.Modul_Csharp_Base
 {
@@ -13,7 +14,21 @@ namespace Training_Csharp.EntityFrameworkCore.Modul_Csharp_Base
     {
         public static void Modul_Base_Method()
         {
-            using (ApplicationContext db = new ApplicationContext())
+            //var builder = new ConfigurationBuilder();
+            //// установка пути к текущему каталогу
+            //builder.SetBasePath(Directory.GetCurrentDirectory());
+            //// получаем конфигурацию из файла appsettings.json
+            //builder.AddJsonFile("appsettings_Base_Training_Csharp.json");
+            //// создаем конфигурацию
+            //var config = builder.Build();
+            //// получаем строку подключения
+            //string connectionString = config.GetConnectionString("DefaultConnection");
+
+            //var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+            //var options = optionsBuilder
+            //    .UseSqlServer(connectionString)
+            //    .Options; ;
+            using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
             {
                 Modul_Struct_Base Modul_1 = new Modul_Struct_Base
                 {
@@ -58,50 +73,50 @@ namespace Training_Csharp.EntityFrameworkCore.Modul_Csharp_Base
                 }
             }
         }
-        public static void Modul_Base_Method_1()
-        {
-            using (ApplicationContext db = new ApplicationContext())
-            {
-                int i = 5;
-                Modul_Struct_Base Modul_2 = new Modul_Struct_Base
-                {
-                    //    NameCreate1 = "Логическое умножение",
-                    //    NameCreate2 = "Логическое сложение",
-                    //    NameCreate3 = "Операция исключающего \"или\" или XOR",
-                    //    NameCreate4 = "Логическое отрицание или инверсия",
-                    //    NameCreate5 = "Операции сдвига",
-                    OperationCreate1 = Modul_Struct.Code_Writer_Console(i, 1),
-                    OperationCreate2 = Modul_Struct.Code_Writer_Console(i, 2),
-                    OperationCreate3 = Modul_Struct.Code_Writer_Console(i, 3),
-                    OperationCreate4 = Modul_Struct.Code_Writer_Console(i, 4),
-                    OperationCreate5 = Modul_Struct.Code_Writer_Console(i, 5),
-                    CreateCreate1 = E_5_Bitwise_Operations.E_5_Bitwise_Operations_Logic_Multiplication(),
-                    CreateCreate2 = E_5_Bitwise_Operations.E_5_Bitwise_Operations_Create_Logic_Addition(),
-                    CreateCreate3 = E_5_Bitwise_Operations.E_5_Bitwise_Operations_Create_Logic_OR(),
-                    CreateCreate4 = E_5_Bitwise_Operations.E_5_Bitwise_Operations_Create_Logic_Inversion(),
-                    CreateCreate5 = E_5_Bitwise_Operations.E_5_Bitwise_Operations_Create_Logic_The_Shift(),
-                };
-                db.Modul_Struct_Bases.Add(Modul_2);
-                db.SaveChanges();                
-                Console.WriteLine("Объекты успешно сохранены");
-            }
+        //public static void Modul_Base_Method_1()
+        //{
+        //    using (ApplicationContext db = new ApplicationContext(options))
+        //    {
+        //        int i = 5;
+        //        Modul_Struct_Base Modul_2 = new Modul_Struct_Base
+        //        {
+        //            //    NameCreate1 = "Логическое умножение",
+        //            //    NameCreate2 = "Логическое сложение",
+        //            //    NameCreate3 = "Операция исключающего \"или\" или XOR",
+        //            //    NameCreate4 = "Логическое отрицание или инверсия",
+        //            //    NameCreate5 = "Операции сдвига",
+        //            OperationCreate1 = Modul_Struct.Code_Writer_Console(i, 1),
+        //            OperationCreate2 = Modul_Struct.Code_Writer_Console(i, 2),
+        //            OperationCreate3 = Modul_Struct.Code_Writer_Console(i, 3),
+        //            OperationCreate4 = Modul_Struct.Code_Writer_Console(i, 4),
+        //            OperationCreate5 = Modul_Struct.Code_Writer_Console(i, 5),
+        //            CreateCreate1 = E_5_Bitwise_Operations.E_5_Bitwise_Operations_Logic_Multiplication(),
+        //            CreateCreate2 = E_5_Bitwise_Operations.E_5_Bitwise_Operations_Create_Logic_Addition(),
+        //            CreateCreate3 = E_5_Bitwise_Operations.E_5_Bitwise_Operations_Create_Logic_OR(),
+        //            CreateCreate4 = E_5_Bitwise_Operations.E_5_Bitwise_Operations_Create_Logic_Inversion(),
+        //            CreateCreate5 = E_5_Bitwise_Operations.E_5_Bitwise_Operations_Create_Logic_The_Shift(),
+        //        };
+        //        db.Modul_Struct_Bases.Add(Modul_2);
+        //        db.SaveChanges();                
+        //        Console.WriteLine("Объекты успешно сохранены");
+        //    }
 
-        }
-        public static void Modul_Base_Method_2()
-        {
-            using (ApplicationContext db = new ApplicationContext())
-            {
-                int i = 15;
-                Modul_Struct_Base Modul_15 = new Modul_Struct_Base
-                {
-                    OperationCreate1 = Modul_Struct.Code_Writer_Console(i, 1)
-                };
-                db.Modul_Struct_Bases.Add(Modul_15);
-                db.SaveChanges();
-                Console.WriteLine("Объекты успешно сохранены");
-                Modul_Struct Fifteen = new O_15_Recursive_Functions();
-                Modul_15.OperationCreate1 = Fifteen.operation_Info_Method_1;
-            }
-        }
+        //}
+        //public static void Modul_Base_Method_2()
+        //{
+        //    using (ApplicationContext db = new ApplicationContext(Options))
+        //    {
+        //        int i = 15;
+        //        Modul_Struct_Base Modul_15 = new Modul_Struct_Base
+        //        {
+        //            OperationCreate1 = Modul_Struct.Code_Writer_Console(i, 1)
+        //        };
+        //        db.Modul_Struct_Bases.Add(Modul_15);
+        //        db.SaveChanges();
+        //        Console.WriteLine("Объекты успешно сохранены");
+        //        Modul_Struct Fifteen = new O_15_Recursive_Functions();
+        //        Modul_15.OperationCreate1 = Fifteen.operation_Info_Method_1;
+        //    }
+        //}
     }
 }

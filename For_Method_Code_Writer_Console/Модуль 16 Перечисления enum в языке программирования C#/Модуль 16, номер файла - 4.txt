@@ -1,0 +1,35 @@
+namespace Training_Csharp
+{
+    enum Days // int имеет тип по умолчанию 
+    {
+        Monday = 1,   //1
+        Tuesday,    //2
+        Wednesday,    //3
+        Thursday,     //4
+        Friday,
+        Saturday,
+        Sunday
+    }
+    class P_16_Enumeration_Enum : Modul_Struct
+    {
+        enum Days1 // int имеет тип по умолчанию 
+        {
+            Monday ,   //0
+            Tuesday,    //1
+            Wednesday,    //2
+            Thursday,     //3
+            Friday,
+            Saturday,
+            Sunday
+
+        }
+        enum Days2 // int имеет тип по умолчанию 
+        {
+            Monday,   //0
+            Tuesday,    //1
+            Wednesday,    //2
+            Thursday,     //3
+            Friday = 17,
+            Saturday,   //18
+            Sunday
+        }

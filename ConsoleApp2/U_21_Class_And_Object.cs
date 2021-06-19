@@ -527,7 +527,7 @@ namespace Training_Csharp
         {
             string y = Generation_Operation.BaseModul(x);
             y = y.Replace("\n", " ");
-            string Way_To_File = "C:\\Users\\Eduard.Karpov\\source\\repos\\ConsoleApp2\\For_Method_Code_Writer_Console\\" + y + "\\Модуль " + x + ", номер файла - " + e + ".txt";
+            string Way_To_File = "C:\\Users\\Eduard.Karpov\\source\\repos\\ConsoleApp2_17.06.2021\\ConsoleApp2\\For_Method_Code_Writer_Console\\" + y + "\\Модуль " + x + ", номер файла - " + e + ".txt";
             FileStream file1 = new FileStream(Way_To_File, FileMode.Open); //создаем файловый поток
             StreamReader reader = new StreamReader(file1); // создаем «потоковый читатель» и связываем его с файловым потоком 
             string Code = reader.ReadToEnd();

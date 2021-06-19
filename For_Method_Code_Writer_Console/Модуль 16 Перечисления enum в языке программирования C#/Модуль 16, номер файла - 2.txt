@@ -1,0 +1,15 @@
+     enum Days // int имеет тип по умолчанию 
+    {
+        Monday = 1,   //1
+        Tuesday,    //2
+        Wednesday,    //3
+        Thursday,     //4
+        Friday,
+        Saturday,
+        Sunday
+    }         
+
+Days day;   // переменная day
+day = Days.Friday;
+Console.WriteLine(day);
+Console.WriteLine((int)day);

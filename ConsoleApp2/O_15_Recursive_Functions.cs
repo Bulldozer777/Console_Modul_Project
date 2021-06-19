@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,15 +17,24 @@ namespace Training_Csharp
         {
             if (a == 15)
             {
+                //var builder = new ConfigurationBuilder();
+                //builder.SetBasePath(Directory.GetCurrentDirectory());
+                //builder.AddJsonFile("appsettings_Base_Training_Csharp.json");
+                //var config = builder.Build();
+                //string connectionString = config.GetConnectionString("DefaultConnection");
+                //var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+                //var options = optionsBuilder
+                //    .UseSqlServer(connectionString)
+                //    .Options;
                 int identification = 17;
                 string identification_name = Generation_Operation.BaseModul(a);
                 Console.WriteLine(" Введите 1 для заполнения базы," +
                     "\n Введите 2 для получения данных из базы, исходя из совпадения значения столбца Id" +
-                    "\nВведите 3 для получения данных из базы, исходя из совпадения значения столбца NameInfo1");
+                    "\n Введите 3 для получения данных из базы, исходя из совпадения значения столбца NameInfo1");
                 int Key = int.Parse(Console.ReadLine());                          
                 if (Key == 1)
                 {
-                    using (ApplicationContext db = new ApplicationContext())
+                    using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
                     {
                         Modul_Struct_Base Modul_15 = new Modul_Struct_Base
                         {
@@ -34,13 +45,13 @@ namespace Training_Csharp
                             OperationCreate1 = Code_Writer_Console(a, 2),
                             OperationCreate2 = Code_Writer_Console(a, 3),
                         };
-                        Add_Modul_Struct_Bases(Modul_15);
+                        Add_Modul_Struct_Bases(Modul_15, Program.Base_Configuration_On_File_Json());
                         //identification = Modul_15.Id;
                     }
                 }
                 if (Key == 2)
                 {
-                    using (ApplicationContext db = new ApplicationContext())
+                    using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
                     {
                         var Modul_15_1 = db.Modul_Struct_Bases.ToList();
                         Console.WriteLine("Данные после добавления:");
@@ -62,7 +73,7 @@ namespace Training_Csharp
                 }
                 if (Key == 3)
                 {
-                    using (ApplicationContext db = new ApplicationContext())
+                    using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
                     {
                         var Modul_15_1 = db.Modul_Struct_Bases.ToList();
                         Console.WriteLine("Данные после добавления:");
@@ -85,9 +96,9 @@ namespace Training_Csharp
             }          
             Generation_Operation.EndInStart();
         }
-        public static void Add_Modul_Struct_Bases(Modul_Struct_Base Name_Object_Base)
+        public static void Add_Modul_Struct_Bases(Modul_Struct_Base Name_Object_Base, DbContextOptions<ApplicationContext> o)
         {
-            using (ApplicationContext db = new ApplicationContext())
+            using (ApplicationContext db = new ApplicationContext(o))
             {
                 db.Modul_Struct_Bases.Add(Name_Object_Base);
                 db.SaveChanges();
@@ -117,7 +128,7 @@ namespace Training_Csharp
             int k;
             Console.WriteLine("Введите число, факториал которого вы хотите найти");
             k = int.Parse(Console.ReadLine());
-            Console.WriteLine($"Факториал числа {k}, равен: {Factorial(k)}");            
+            Console.WriteLine($"\nФакториал числа {k}, равен: {Factorial(k)}\n");            
         }
         
         

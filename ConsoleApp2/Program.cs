@@ -2,15 +2,40 @@
 using Microsoft.EntityFrameworkCore;
 using Training_Csharp.EntityFrameworkCore.Modul_Csharp_Base;
 using System.Linq;
+using Microsoft.Extensions.Configuration;
+using System.IO;
+using Microsoft.Extensions.Logging;
 // System.DateTime;
 
 namespace Training_Csharp
 {
     class Program : Generation_Operation 
-    {
+    {     
+        public static DbContextOptions<ApplicationContext> Base_Configuration_On_File_Json()
+        {
+            var builder = new ConfigurationBuilder();
+            // установка пути к текущему каталогу
+            builder.SetBasePath(Directory.GetCurrentDirectory());
+            // получаем конфигурацию из файла appsettings.json
+            builder.AddJsonFile("appsettings_Base_Training_Csharp.json");
+            // создаем конфигурацию
+            var config = builder.Build();
+            // получаем строку подключения
+            string connectionString = config.GetConnectionString("DefaultConnection");
+            var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
+            var options = optionsBuilder
+                .UseSqlServer(connectionString)
+                .Options;
+            return options;
+        }
+
+          public static void Log_File_Create(string a)
+        {
+
+        }
+
         static void Main(string[] args)
         {
-         // Modul_Base.Modul_Base_Method_1();
             Console.WriteLine(DateTime.Now);
             InStartString();
             InStart3(int.Parse(Console.ReadLine()));
