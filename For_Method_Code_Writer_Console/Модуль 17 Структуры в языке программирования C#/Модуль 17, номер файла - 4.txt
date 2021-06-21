@@ -1,0 +1,16 @@
+ struct User    //структура
+    {
+        public string name;
+        public int age;
+        // public int mass;
+
+        //public
+        public User(string n, int a)  //конструктор 
+        {
+            name = n; age = a;
+        }
+        public void DisplayInfo()
+        {
+            Console.WriteLine($"name = {name} age = {age}");
+        }
+    }

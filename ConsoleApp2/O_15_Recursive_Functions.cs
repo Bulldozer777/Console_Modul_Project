@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Training_Csharp.EntityFrameworkCore.Modul_Csharp_Base;
-
+using Training_Csharp.Log_Training_Csharp_Base;
 
 namespace Training_Csharp
 {
@@ -17,15 +19,6 @@ namespace Training_Csharp
         {
             if (a == 15)
             {
-                //var builder = new ConfigurationBuilder();
-                //builder.SetBasePath(Directory.GetCurrentDirectory());
-                //builder.AddJsonFile("appsettings_Base_Training_Csharp.json");
-                //var config = builder.Build();
-                //string connectionString = config.GetConnectionString("DefaultConnection");
-                //var optionsBuilder = new DbContextOptionsBuilder<ApplicationContext>();
-                //var options = optionsBuilder
-                //    .UseSqlServer(connectionString)
-                //    .Options;
                 int identification = 17;
                 string identification_name = Generation_Operation.BaseModul(a);
                 Console.WriteLine(" Введите 1 для заполнения базы," +
@@ -36,6 +29,11 @@ namespace Training_Csharp
                 {
                     using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
                     {
+                        //db.GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());
+                        //Выше логгирование устанавливалось локально
+                        //- непосредственно при создании и использовании объкта контекста данных.
+                        //Однако мы можем определить глобальную настройку логгирования непосредственно в контексте
+                        //(Определено в классе ApplicationContext)
                         Modul_Struct_Base Modul_15 = new Modul_Struct_Base
                         {
                             NameInfo1 = identification_name,
@@ -129,9 +127,7 @@ namespace Training_Csharp
             Console.WriteLine("Введите число, факториал которого вы хотите найти");
             k = int.Parse(Console.ReadLine());
             Console.WriteLine($"\nФакториал числа {k}, равен: {Factorial(k)}\n");            
-        }
-        
-        
+        }      
         public static int Fibbonacci(int n)
         {
             if (n == 0 )

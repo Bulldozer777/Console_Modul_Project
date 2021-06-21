@@ -1,0 +1,30 @@
+ struct Subwoofer
+    {
+        public string name_subwoofer;
+        public int price;
+        public int caliber;
+        public int Fs;
+        public double Qts;
+        public int Vas;
+        public int speaker_weight;
+        public int coil_size;
+
+        public Subwoofer(string n, int a, int a1, int a2, double a3, int a4, int a5, int a6)  //конструктор 
+        {
+            name_subwoofer = n; price = a; caliber = a1; Fs = a2; Qts = a3; Vas = a4; speaker_weight = a5; coil_size = a6;
+        }
+        public void Display()
+        {
+            name_subwoofer = name_subwoofer.ToUpper();
+            Console.WriteLine($"\nнаименование сабвуфера = {name_subwoofer}\n \nцена = {price}р. \nкалибр = {caliber}\nрезонансная частота Fs  = {Fs}Hz \nдобротность Qts  = {Qts}\nэквивалентный объем динамика Vas = {Vas}литров\nвес динамика  = {speaker_weight}кг \nразмер катушки = {coil_size}дюйма ");
+        }
+
+    }
+
+   Subwoofer[] speaker = new Subwoofer[2];
+            speaker[0] = new Subwoofer("Pride T15 v3", 30000, 15, 29, 0.45, 100, 30, 3);
+            speaker[1] = new Subwoofer("Pride ST15 v3", 54000, 15, 28, 0.35, 121, 45, 4);
+            foreach (Subwoofer subwoofer in speaker)
+            {
+                subwoofer.Display();
+            }

@@ -8,34 +8,43 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Logging;
 using NLog;
+using Training_Csharp.Log_Training_Csharp_Base;
 
 namespace Training_Csharp.EntityFrameworkCore.Modul_Csharp_Base
 {
     class ApplicationContext : DbContext
     {
-        //public static void Log_File_Create()
-        //{
-        //private readonly File.Create($"C:\\Users\\Eduard.Karpov\\source\\repos\\ConsoleApp2\\ConsoleApp2_17.06.2021\\ConsoleApp2\\ConsoleApp2\\Log_Training_Csharp_Base\\mylog.txt");
-        //}
-        private readonly StreamWriter logStream = new StreamWriter("C:\\Users\\Eduard.Karpov\\source\\repos\\ConsoleApp2_17.06.2021\\ConsoleApp2\\ConsoleApp2\\Log_Training_Csharp_Base\\mylog11.txt", true);
+        public static string Name_Log()
+        {
+            DateTime currentDate = DateTime.Now;
+            string NewDateFormat = currentDate.ToString("yyyy-MM-dd");
+            return NewDateFormat;
+        }
+        private readonly StreamWriter logStream = new StreamWriter($"C:\\Users\\Eduard.Karpov\\source\\repos\\ConsoleApp2_17.06.2021\\ConsoleApp2\\ConsoleApp2\\Log_Training_Csharp_Base\\Training_Scharp_Debug_LOG\\log {Name_Log()}.txt", true);
         public DbSet<Modul_Struct_Base> Modul_Struct_Bases { get; set; }
-
-        //private readonly System.Action<string> a;
-        //public static string a1;
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
         {          
             Database.EnsureCreated();
         }
-        //private static readonly Logger Log = LogManager.GetCurrentClassLogger();
-        ////...
-        ////Log.Info("Log");
-        ////Log.Error("Log");
-        ////Log.Debug("Log");
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.LogTo(logStream.WriteLine, new[] { RelationalEventId.CommandExecuted });
+            optionsBuilder.UseLoggerFactory(MyLoggerFactory);
+            optionsBuilder.LogTo(logStream.WriteLine, Microsoft.Extensions.Logging.LogLevel.Debug);
+            //optionsBuilder.UseLoggerFactory(MyLoggerFactory_Debug_LOG);
         }
+        // устанавливаем фабрику логгера
+        public static readonly ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder =>
+        {
+            builder.AddFilter((category, level) => category == DbLoggerCategory.Database.Command.Name && level == Microsoft.Extensions.Logging.LogLevel.Information)
+      .AddProvider(new MyLoggerProvider());  // указываем наш провайдер логгирования
+        });
+
+        //public static readonly ILoggerFactory MyLoggerFactory_Debug_LOG = LoggerFactory.Create(builder =>
+        //{
+        //    builder.AddFilter((category, level) => category == LoggerCategory())
+        //        .AddProvider(new MyLoggerProvider_Debug_Log());  // указываем наш провайдер логгирования
+        //});
         public override void Dispose()
         {
             base.Dispose();

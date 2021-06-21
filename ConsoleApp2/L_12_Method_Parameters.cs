@@ -63,7 +63,7 @@ namespace Training_Csharp
             //созданы пустые переменные такие же как и в методе и заполены результатом выполнения метода   
             Console.WriteLine($"Area - {area}");
             Console.WriteLine($"Perimeter - {perimeter}");
-            Console.WriteLine("Необязательные параметры");
+            //Console.WriteLine("Необязательные параметры");
         }
         public override void Coddition_Create_Type_Method_3()
         {

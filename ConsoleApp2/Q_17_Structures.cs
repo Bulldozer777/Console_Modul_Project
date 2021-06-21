@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Training_Csharp.EntityFrameworkCore.Modul_Csharp_Base;
 
 namespace Training_Csharp
 {
-
     struct Mass    //структура
     {
         public int mass;
@@ -59,9 +59,8 @@ namespace Training_Csharp
             name_subwoofer = name_subwoofer.ToUpper();
             Console.WriteLine($"\nнаименование сабвуфера = {name_subwoofer}\n \nцена = {price}р. \nкалибр = {caliber}\nрезонансная частота Fs  = {Fs}Hz \nдобротность Qts  = {Qts}\nэквивалентный объем динамика Vas = {Vas}литров\nвес динамика  = {speaker_weight}кг \nразмер катушки = {coil_size}дюйма ");
         }
-
     }
-    class Q_17_Structures
+    class Q_17_Structures : Modul_Struct
     {
         public static string Structures_Create(string a) // метод, который переносит строку на следующию строчку дойдя до заданной длины строк,
                                                        // записанной в переменную klenhth 
@@ -124,93 +123,8 @@ namespace Training_Csharp
                     }
                 }
                 while (a.Length > klenhth);
-                        result = result + a;
-                    
-                
+                        result = result + a;                                 
               }
-
-            //  int k = 1;
-            //  int z = k * 100;
-
-            //if (i > 90 & i < j)  // i достигает 91 и проходит под условие , пишет пробел в строке,
-            //                    // из за чего длина строки растет на +1 и так с каждой итерацией цикла , поэтому цикл бесконечный
-            //                    // стоит сделать цикл i как цикл j с приростом на 90 тогда цикл не будет искать проблел
-            //                    // нужно другое решение
-            //        {
-            //           // int h = -1;
-
-            //           // {
-            //               // h--;
-            //                string subString = "\n";
-            //                a = a.Insert(i, subString);
-            //                a = a.Trim();
-            //                Console.WriteLine($"номер операции {i}");
-            //         //   }
-            //          //  while (h > 0);
-            //        }
-            //    }
-            //int k = 1;
-            //    int z = k * 100;
-
-            //    if ( i < z)  // i достигает 91 и проходит под условие , пишет пробел в строке,
-            //                           // из за чего длина строки растет на +1 и так с каждой итерацией цикла , поэтому цикл бесконечный
-            //                           // стоит сделать цикл i как цикл j с приростом на 90 тогда цикл не будет искать проблел
-            //                           // нужно другое решение
-            //    {
-            //        int h = -1;
-            //        do
-            //        {
-            //            h--;
-            //            string subString = "\n";
-            //            a = a.Insert(i, subString);
-            //            a = a.Trim();
-            //            Console.WriteLine($"номер операции {i}");
-            //        }
-            //        while (h > 0);
-            //    }
-
-
-
-            //}
-
-
-            //for (int i = 0; i < a.Length; i++)
-            //{
-            //    char[] charArr1 = { a[i] };
-            //    string str1 = new string(charArr1);
-            //    string str2 = " ";
-            //    if (str1 == str2)
-            //    {
-            //        if (i > 180 && i < a.Length)
-            //        {
-            //            string subString = "\n";
-            //            a = a.Insert(i, subString);
-            //           a = a.Trim();
-            //            Console.WriteLine($"номер операции {i}");
-            //            break;
-            //        }
-            //    }
-
-            //}
-            //for (int i = 0; i < a.Length; i++)
-            //{
-            //    char[] charArr1 = { a[i] };
-            //    string str1 = new string(charArr1);
-            //    string str2 = " ";
-            //    if (str1 == str2)
-            //    {
-            //        if (i > 270 && i < a.Length)
-            //        {
-            //            string subString = "\n";
-            //            a = a.Insert(i, subString);
-            //           a= a.Trim();
-            //            Console.WriteLine($"номер операции {i}");
-            //            break;
-            //        }
-            //    }
-
-            //}
-            //Console.WriteLine(a.Trim());
             return result;
         }
         public static string String_Create_CompilationMethanit(string a)
@@ -218,7 +132,6 @@ namespace Training_Csharp
             string result = "";
             for (int i = 12; i < a.Length; i = i + 1)
             {
-
                 char[] charArr1 = { a[i] };
                 string str1 = new string(charArr1);
                 string str2 = "}";
@@ -260,64 +173,78 @@ namespace Training_Csharp
             result = result + a;
             return result;
         }
-
         public static void Method2()
         {
             string a = "Поскольку у всех пользователей возвраст больше 20, то переменная result1 будет равна true. В то же время не у всех пользователей имя начинаяется с буквы T, поэтому вторая переменная result2 будет равна false.";
             Console.WriteLine(a.Substring(0,10));
         }
-        //  string name = "Tom";
-        //  int age = 23;
         public static void Structures_Info(int a)
         {
-            Program.ModulRegistr(a);
             if (a == 17)
             {
-                string h = "Довольно большое количество задач, которые могут встретиться при разработке приложений, так";
-                Console.WriteLine(h.Length);
-                Method2();
-                Method1();
-               // Value_Display();
-                //  Mass_Value_Display
-                //Mass add;
-                //add.mass = 0;
-                //add.DisplayInfo();
-                Subwoofer[] speaker = new Subwoofer[2];
-                speaker[0] = new Subwoofer("Pride T15 v3", 30000, 15, 29, 0.45, 100, 30, 3);
-                speaker[1] = new Subwoofer("Pride ST15 v3", 54000, 15, 28, 0.35, 121, 45, 4);
-                foreach (Subwoofer subwoofer in speaker)
-                {
-                    subwoofer.Display();
-                }
-                User tom; // переменная типа user
-                tom.name = "Tom";
-                tom.age = 23;
-                int d = tom.age;
-                tom.DisplayInfo();
-
-                User[] users = new User[2];
-                users[0] = new User("Bob", 20); // обращение к конструктору 
-                                                // users[0].age = 20;
-                users[1].name = "Sam";
-                users[1].age = 25;
-                foreach (User user in users)
-                {
-                    user.DisplayInfo();
-                }
-
-                User rot = new User("Bob", 23);// обращение к конструктору
-                rot.DisplayInfo();
-               
-
-                string primer1 = "Довольно большое количество задач, которые могут встретиться при разработке приложений, так или иначе связано с обработкой строк - парсинг веб-страниц, поиск в тексте, какие-то аналитические задачи, связанные с извлечением нужной информации из текста и т.д. Поэтому в этом плане работе со строками уделяется особое внимание.  ";
-                Structures_Create(primer1);
-
+                Modul_Struct seventeen = new Q_17_Structures();
+                Modul_Struct_Start_With_DB(a, seventeen,                 // использовать именнованные параметры, пример (x:2, y:3)
+                    Structures_Create(Code_Writer_Console(a, 1)) + "\n"
+                    + Code_Writer_Console(a, 2) + Code_Writer_Console(a, 3),
+                    "Структура User",
+                    OperationCreate1_p: Code_Writer_Console(a, 4),
+                    NameCreate2_p: "Вывод структуры через цикл foreach",
+                    OperationCreate2_p: Code_Writer_Console(a, 5),
+                    NameExamples1_p: "Структура - характеристики сабвуфера",
+                    NameCreate3_p: "метод 4",
+                    OperationExamples1_p: Code_Writer_Console(a, 6)
+                    );
             }
-            Program.EndInStart();
+            Generation_Operation.EndInStart();
         }
-        //  = "Довольно большое количество задач, которые могут встретиться при разработке приложений, так или иначе связано с обработкой строк - парсинг веб-страниц, поиск в тексте, какие-то аналитические задачи, связанные с извлечением нужной информации из текста и т.д. Поэтому в этом плане работе со строками уделяется особое внимание.  ";
-        //Structures_Create(primer1);
-
+        public override void Coddition_Create_Type_Method_1()
+        {
+            Console.WriteLine("Вывод метода, который описывает логику структуры User");
+            Struct_User();
+            Console.WriteLine("\n");
+        }
+        public override void Coddition_Create_Type_Method_2()
+        {
+            Console.WriteLine("Вывод метода, который выводит структуру через цикл foreach");
+            Struct_User_Mass();
+            Console.WriteLine("\n");
+        }
+        public override void Coddition_Create_Type_Method_3()
+        {
+            //Console.WriteLine("Вывод метода, который выводит структуру через цикл foreach");         
+        }
+        public override void Coddition_Examples_Type_Method_1()
+        {
+            Subwoofer[] speaker = new Subwoofer[2];
+            speaker[0] = new Subwoofer("Pride T15 v3", 30000, 15, 29, 0.45, 100, 30, 3);
+            speaker[1] = new Subwoofer("Pride ST15 v3", 54000, 15, 28, 0.35, 121, 45, 4);
+            foreach (Subwoofer subwoofer in speaker)
+            {
+                subwoofer.Display();
+            }
+        }
+        public static void Struct_User()
+        {
+            User tom; // переменная типа user
+            tom.name = "Tom";
+            tom.age = 23;
+            int d = tom.age;
+            tom.DisplayInfo();
+        }
+        public static void Struct_User_Mass()
+        {
+            User[] users = new User[2];
+            users[0] = new User("Bob", 20); // обращение к конструктору 
+                                            // users[0].age = 20;
+            users[1].name = "Sam";
+            users[1].age = 25;
+            foreach (User user in users)
+            {
+                user.DisplayInfo();
+            }
+            User rot = new User("Bob", 23);// обращение к конструктору
+            rot.DisplayInfo();
+        }
         public static void Mas_value(int a)
         {
             int[] p = new int[46];
@@ -329,7 +256,6 @@ namespace Training_Csharp
             {
                 Console.WriteLine(i);
             }
-            // return p;
         }
 
         public static void Mass_Value_Display()
@@ -338,10 +264,11 @@ namespace Training_Csharp
             //for (int i = 0; i < o; i++)
             //{
             //    p[i] = a;
-            // Mas_value();
-            //foreach (int i in p)
-            //{
-            //    Console.WriteLine(i);
+            //    Mas_value(a);
+            //    foreach (int i in p)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
             //}
         }
         public static void Checking_for_spaces(string a)
@@ -354,9 +281,7 @@ namespace Training_Csharp
                 if (str1 == str2)
                 {
                   
-                }
-                
-
+                }            
             }
             Console.WriteLine(a);
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-
+using Training_Csharp.EntityFrameworkCore.Modul_Csharp_Base;
 
 namespace Training_Csharp
 {
@@ -140,21 +140,21 @@ namespace Training_Csharp
         //public static string create_Examples_Method_5;
         //public static string create_Examples_Method_6;
         public static object m2;   // для данного поля пока не написана логика     
-        public string name_Info_Method_1 { get; set; }     // для данного поля пока не написана логика 
+        public string name_Info_Method_1 { get; set; }    // для данного поля пока не написана логика 
         //используется для сопоставление темы и записи в базе данных 
-        public string operation_Info_Method_1 { get; set; } //поле для ввода текста - объяснения или вступленния, по теме модуля
+        public string operation_Info_Method_1 { get; set; }  //поле для ввода текста - объяснения или вступленния, по теме модуля
         public string name_Create_Method_1 { get; set; } //сюда вводятся имена методов, используемые в CreateMethod()
         public string name_Create_Method_2 { get; set; }
         public string name_Create_Method_3 { get; set; }
         public string name_Create_Method_4 { get; set; }
         public string name_Create_Method_5 { get; set; }
-        public string name_Tasks_Method_3 { get; set; }  
+        public string name_Tasks_Method_3 { get; set; }   // для данного поля пока не написана логика 
         public string name_Examples_Method_1 { get; set; } //сюда вводятся имена методов, используемые в Examples_Method()
         public string name_Examples_Method_2 { get; set; }
         public string name_Examples_Method_3 { get; set; }
         public string name_Examples_Method_4 { get; set; }
-        public string name_Examples_Method_5 { get; set; }         
-        public string operation_Create_Method_1 { get; set; }    //сюда вводится код методов CreateMethod()
+        public string name_Examples_Method_5 { get; set; }
+        public string operation_Create_Method_1 { get; set; }     //сюда вводится код методов CreateMethod()
         public string operation_Create_Method_2 { get; set; }
         public string operation_Create_Method_3 { get; set; }
         public string operation_Create_Method_4 { get; set; }
@@ -196,6 +196,160 @@ namespace Training_Csharp
         //    this.operation_Tasks_Method_3 = operation_Tasks_Method_3;
         //    this.operation_Examples_Method_4 = operation_Examples_Method_4;
         //}
+        public static void Start_Modul_Create()
+        {
+            Console.WriteLine(" Введите 1 для заполнения базы," +
+                "\n Введите 2 для получения данных из базы, исходя из совпадения значения столбца NameInfo1" +
+                "\n Введите 3 для удаления данных из базы, исходя из совпадения значения столбца NameInfo1");
+        }
+        public static void Modul_Struct_Start_With_DB(int a, Modul_Struct Name, string OperationInfo1_p = null, string NameCreate1_p = null, 
+            string NameCreate2_p = null, string NameCreate3_p = null, string NameCreate4_p = null, string NameCreate5_p = null,
+            string NameExamples1_p = null, string NameExamples2_p = null, string NameExamples3_p = null, string NameExamples4_p = null,
+            string NameExamples5_p = null,
+            string OperationCreate1_p = null, string OperationCreate2_p = null, string OperationCreate3_p = null, string OperationCreate4_p = null,
+            string OperationCreate5_p = null,
+            string OperationTasks1_p = null, string OperationTasks2_p = null, string OperationTasks3_p = null, string OperationTasks4_p = null,
+            string OperationTasks5_p = null,
+            string OperationExamples1_p = null, string OperationExamples2_p = null, string OperationExamples3_p = null,
+            string OperationExamples4_p = null, string OperationExamples5_p = null, string OperationExamples6_p = null,
+            string OperationExamples7_p = null,
+             string CreateCreate1_p = null, string CreateCreate2_p = null, string CreateCreate3_p = null,
+              string CreateCreate4_p = null, string CreateCreate5_p = null, string CreateCreate6_p = null,
+              string CreateExamples1_p = null, string CreateExamples2_p = null,
+              string CreateExamples3_p = null, string CreateExamples4_p = null,
+              string CreateExamples5_p = null, string CreateExamples6_p = null )
+        {
+            Start_Modul_Create();
+            int key = int.Parse(Console.ReadLine());
+            if (key == 1)
+            {
+                using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
+                {
+                    Modul_Struct_Base Razen = new Modul_Struct_Base
+                    {
+                        NameInfo1 = Generation_Operation.BaseModul(a),
+                        NameCreate1 = NameCreate1_p,
+                        NameCreate2 = NameCreate2_p,
+                        NameCreate3 = NameCreate3_p,
+                        NameCreate4 = NameCreate4_p,
+                        NameCreate5 = NameCreate5_p,
+                        NameExamples1 = NameExamples1_p, //сюда вводятся имена методов, используемые в Examples_Method()
+                        NameExamples2 = NameExamples2_p,
+                        NameExamples3 = NameExamples3_p,
+                        NameExamples4 = NameExamples4_p,
+                        NameExamples5 = NameExamples5_p,
+                        OperationInfo1 = OperationInfo1_p,
+                        OperationCreate1 = OperationCreate1_p,
+                        OperationCreate2 = OperationCreate2_p,
+                        OperationCreate3 = OperationCreate3_p,
+                        OperationCreate4 = OperationCreate4_p,
+                        OperationCreate5 = OperationCreate5_p,
+                        OperationTasks1 = OperationTasks1_p,
+                        OperationTasks2 = OperationTasks2_p,
+                        OperationTasks3 = OperationTasks3_p,
+                        OperationTasks4 = OperationTasks4_p,
+                        OperationTasks5 = OperationTasks5_p,
+                        OperationExamples1 = OperationExamples1_p,   //сюда вводятся методы, работа которых используется в Examples_Method()
+                        OperationExamples2 = OperationExamples2_p,
+                        OperationExamples3 = OperationExamples3_p,
+                        OperationExamples4 = OperationExamples4_p,
+                        OperationExamples5 = OperationExamples5_p,
+                        OperationExamples6 = OperationExamples6_p,
+                        OperationExamples7 = OperationExamples7_p,
+                        CreateCreate1 = CreateCreate1_p,
+                        CreateCreate2 = CreateCreate2_p,
+                        CreateCreate3 = CreateCreate3_p,
+                        CreateCreate4 = CreateCreate4_p,
+                        CreateCreate5 = CreateCreate5_p,
+                        CreateCreate6 = CreateCreate6_p,
+                        CreateExamples1 = CreateExamples1_p,
+                        CreateExamples2 = CreateExamples2_p,
+                        CreateExamples3 = CreateExamples3_p,
+                        CreateExamples4 = CreateExamples4_p,
+                        CreateExamples5 = CreateExamples5_p,
+                        CreateExamples6 = CreateExamples6_p,
+                    };
+                    O_15_Recursive_Functions.Add_Modul_Struct_Bases(Razen, Program.Base_Configuration_On_File_Json());
+                    Console.WriteLine("Добавление данных в базу выполненено успешно");
+                }
+            }
+            if (key == 2)
+            {
+                using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
+                {
+                    var Razen = db.Modul_Struct_Bases.ToList();
+                    Console.WriteLine("Получение данных из базы:");
+                    foreach (Modul_Struct_Base u in Razen)
+                    {
+                        if (u.NameInfo1 == Generation_Operation.BaseModul(a))
+                        {
+                           // Modul_Struct Defined_Modul = new Modul_Struct();
+                            Name.name_Create_Method_1 = u.NameCreate1;
+                            Name.name_Create_Method_2 = u.NameCreate2;
+                            Name.name_Create_Method_3 = u.NameCreate3;
+                            Name.name_Create_Method_4 = u.NameCreate4;
+                            Name.name_Create_Method_5 = u.NameCreate5;
+                            Name.name_Examples_Method_1 = u.NameExamples1; //сюда вводятся имена методов, используемые в Examples_Method()
+                            Name.name_Examples_Method_2 = u.NameExamples2;
+                            Name.name_Examples_Method_3 = u.NameExamples3;
+                            Name.name_Examples_Method_4 = u.NameExamples4;
+                            Name.name_Examples_Method_5 = u.NameExamples5;
+                            Name.operation_Info_Method_1 = u.OperationInfo1;
+                            Name.operation_Create_Method_1 = u.OperationCreate1;
+                            Name.operation_Create_Method_2 = u.OperationCreate2;
+                            Name.operation_Create_Method_3 = u.OperationCreate3;
+                            Name.operation_Create_Method_4 = u.OperationCreate4;
+                            Name.operation_Create_Method_5 = u.OperationCreate5;
+                            Name.operation_Tasks_Method_1 = u.OperationTasks1;
+                            Name.operation_Tasks_Method_2 = u.OperationTasks2;
+                            Name.operation_Tasks_Method_3 = u.OperationTasks3;
+                            Name.operation_Tasks_Method_4 = u.OperationTasks4;
+                            Name.operation_Tasks_Method_5 = u.OperationTasks5;
+                            Name.operation_Examples_Method_1 = u.OperationExamples1;   //сюда вводятся методы, работа которых используется в Examples_Method()
+                            Name.operation_Examples_Method_2 = u.OperationExamples2;
+                            Name.operation_Examples_Method_3 = u.OperationExamples3;
+                            Name.operation_Examples_Method_4 = u.OperationExamples4;
+                            Name.operation_Examples_Method_5 = u.OperationExamples5;
+                            Name.operation_Examples_Method_6 = u.OperationExamples6;
+                            Name.operation_Examples_Method_7 = u.OperationExamples7;
+                            Name.create_Create_Method_1 = u.CreateCreate1;
+                            Name.create_Create_Method_2 = u.CreateCreate2;
+                            Name.create_Create_Method_3 = u.CreateCreate3;
+                            Name.create_Create_Method_4 = u.CreateCreate4;
+                            Name.create_Create_Method_5 = u.CreateCreate5;
+                            Name.create_Create_Method_6 = u.CreateCreate6;
+                            Name.create_Examples_Method_1  = u.CreateExamples1;
+                            Name.create_Examples_Method_2 = u.CreateExamples2;
+                            Name.create_Examples_Method_3 = u.CreateExamples3;
+                            Name.create_Examples_Method_4 = u.CreateExamples4;
+                            Name.create_Examples_Method_5 = u.CreateExamples5;
+                            Name.create_Examples_Method_6 = u.CreateExamples6;
+                            Name.Method_Modul_Start_1();
+                        }
+                    }
+                }
+            }
+            if (key == 3)
+            {
+                using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
+                {
+                    var Modul_16_1 = db.Modul_Struct_Bases.ToList();
+                    Console.WriteLine("Получение данных из базы:");
+                    foreach (Modul_Struct_Base u in Modul_16_1)
+                    {
+                        Console.WriteLine($"Выполняется поиск строк с полем NameInfo1 = {Generation_Operation.BaseModul(a)}");
+                        if (u.NameInfo1 == Generation_Operation.BaseModul(a))
+                        {
+                            Console.WriteLine($"Проиходит удаление всех строк с NameInfo1 = {Generation_Operation.BaseModul(a)}");
+                            db.Modul_Struct_Bases.Remove(u);
+                            Console.WriteLine("Выполняется сохранение изменений в базу");
+                            db.SaveChanges();
+                        }
+                    }
+                    Console.WriteLine("Удаление записи, по имени темы выполнено");
+                }
+            }
+        }
         public void Method_Modul_Start()
         {
             Console.WriteLine("\n");
@@ -269,7 +423,7 @@ namespace Training_Csharp
                 Method_Modul_Start_1();
             }
         }
-      //  public int MyProperty { get; set; }
+      //  public int MyProperty =
         public void Info_Method()
         {
             Console.WriteLine($"{Q_17_Structures.Structures_Create(operation_Info_Method_1)}");
@@ -547,13 +701,14 @@ namespace Training_Csharp
         {
             for (int i = 1; i < 44; i++)
             {
+                string a1 = Convert.ToString(DateTime.Today);
                 string y = Generation_Operation.BaseModul(i);
                 y = y.Replace("\n", " ");
-                Directory.CreateDirectory($"C:\\Users\\Eduard.Karpov\\source\\repos\\ConsoleApp2\\For_Method_Code_Writer_Console\\{y}");
+                Directory.CreateDirectory($"C:\\Users\\Eduard.Karpov\\source\\repos\\1\\ConsoleApp2\\For_Method_Code_Writer_Console\\{y}");
                 //создает 43 папки, в папке с приложением, по теме каждого модуля
                 for (int j = 1; j <= 10; j++)
                 {
-                    File.Create($"C:\\Users\\Eduard.Karpov\\source\\repos\\ConsoleApp2\\For_Method_Code_Writer_Console\\{y}\\Модуль {i}, номер файла - {j}.txt");
+                    File.Create($"C:\\Users\\Eduard.Karpov\\source\\repos\\1\\ConsoleApp2\\For_Method_Code_Writer_Console\\{y}\\Модуль {a1}, номер файла - {j}.txt");
                 }
             }
         }

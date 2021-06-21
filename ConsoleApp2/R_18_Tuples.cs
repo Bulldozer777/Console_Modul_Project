@@ -47,10 +47,8 @@ namespace Training_Csharp
         }
         public static (string, int) GetValue_Tuples1((string, int) tuple, int x) //надо изменить чиловое значение параметра кортежа int на значение int x
         {
-
             var result = (name:tuple.Item1,age:tuple.Item2 + x);
             return result;
-
         }
     }
 }

@@ -28,7 +28,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Log_Training_Csharp_Base\" />
+    <Folder Include="Log_Training_Csharp_Base\Training_Scharp_SQL_LOG\" />
+    <Folder Include="Log_Training_Csharp_Base\Training_Scharp_Debug_LOG\" />
   </ItemGroup>
 
 </Project>

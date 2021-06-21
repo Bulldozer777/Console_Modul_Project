@@ -1,0 +1,15 @@
+public static void Struct_User_Mass()
+        {
+            User[] users = new User[2];
+            users[0] = new User("Bob", 20); // обращение к конструктору 
+                                            // users[0].age = 20;
+            users[1].name = "Sam";
+            users[1].age = 25;
+            foreach (User user in users)
+            {
+                user.DisplayInfo();
+            }
+
+            User rot = new User("Bob", 23);// обращение к конструктору
+            rot.DisplayInfo();
+        }

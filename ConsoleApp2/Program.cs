@@ -36,6 +36,7 @@ namespace Training_Csharp
 
         static void Main(string[] args)
         {
+           // U_21_Class_And_Object.Create_Directory_Modul();
             Console.WriteLine(DateTime.Now);
             InStartString();
             InStart3(int.Parse(Console.ReadLine()));
