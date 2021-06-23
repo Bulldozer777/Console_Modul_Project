@@ -36,7 +36,19 @@ namespace Training_Csharp
 
         static void Main(string[] args)
         {
-           // U_21_Class_And_Object.Create_Directory_Modul();
+            ////Modul_Struct seventeen = new Modul_Struct();
+            ////seventeen.name_Create_Method_1 = "";
+            ////Modul_Struct. 
+            //Modul_Struct a1 = new Modul_Struct();
+            //string a = "5";
+            //string b = Convert.ToString(a1);
+            //b = a;
+            //Modul_Struct[] mas = { Modul_Struct.M1(Modul_Struct: Convert.ToString(a1)) };
+            //foreach (Modul_Struct i in mas)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
             Console.WriteLine(DateTime.Now);
             InStartString();
             InStart3(int.Parse(Console.ReadLine()));

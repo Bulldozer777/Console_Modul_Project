@@ -1,0 +1,21 @@
+            int[] nums = new int[4];
+            try
+            {
+                nums[5] = 10;
+                //вылетит ошибка IndexOutOfRange , без обработчика исключений try catch
+                int x = 0;
+                int y = 9 / x;
+                Console.WriteLine("End of try block");
+            }
+            catch (Exception ex1)
+            // объект исключения можно передовать в блок catch в скобках
+
+
+            //  общий тип исключений Exception ex входят все исключения
+            {
+                Console.WriteLine($"Error occured { ex1.Message}");
+                // в консоль выведится , вместо ошибки IndexOutOfRange
+
+
+                //  ex.Message - даст сообщение Индекс находится вне границ массива
+            }

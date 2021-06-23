@@ -1,0 +1,13 @@
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7 };
+            ref int nRef = ref Variables_Links(numbers, 4);
+
+            //элемент массива numbers по 3 индексу
+            //numbers[3]
+
+            Console.WriteLine(Variables_Links(numbers, 5));
+            Console.WriteLine(numbers[3]);
+            nRef = 45;
+            Console.WriteLine(numbers[3]);
+
+            //поменяли элемент в массиве т к nRef = 45;
+            //и указывает на тоже место в памяти что и элемент массива numbers[3]

@@ -1,0 +1,15 @@
+Теперь рассмотрим более изощренный пример, когда внутри структуры у нас может быть переменная ссылочного типа, например, какого-нибудь класса:
+   
+            State state1 = new State();
+            State state2 = new State();
+
+            state2.country = new Country();
+            state2.country.x = 5;
+            state1 = state2;
+            state2.country.x = 8; // теперь и state1.country.x=8, так как state1.country и state2.country
+                                  // указывают на один объект в хипе
+            Console.WriteLine(state1.country.x); // 8
+            Console.WriteLine(state2.country.x); // 8
+           
+Переменные ссылочных типов в структурах также сохраняют в стеке ссылку на объект в хипе. И при присвоении двух структур state1 = state2; структура state1 также получит ссылку на объект country в хипе. Поэтому изменение state2.country повлечет за собой также изменение state1.country.
+

@@ -1,0 +1,14 @@
+ var tuple = (5, 10); //определение кортежа 
+                                 //использовали неявную типизацию
+            (int, int) tuple1 = (5, 10); 
+            //явная типизация //имена в данном случае явнро не задаются
+            var tuple2 = (count: 5, sum: 10);
+            //присвоение названия
+            Console.WriteLine(tuple2.count);
+            Console.WriteLine($"{tuple1.Item1} - {tuple1.Item2}" );
+            //вывод кортежа tuple1 c явной типизацией
+            Console.WriteLine(tuple.Item1); 
+            // вывод элементов по имени по умолчанию Item
+            Console.WriteLine(tuple.Item2);
+            tuple.Item1 += 20; //увеличение элемента кортежа на 20;
+            Console.WriteLine(tuple.Item1);

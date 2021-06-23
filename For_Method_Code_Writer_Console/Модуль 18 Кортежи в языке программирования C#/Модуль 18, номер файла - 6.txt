@@ -1,0 +1,10 @@
+ var tuple3 = GetValue_Tuples1(("Tom", 25),10);
+            Console.WriteLine(tuple3.Item1); 
+            Console.WriteLine(tuple3.Item2);   //35
+
+  public static (string, int) GetValue_Tuples1((string, int) tuple, int x) //надо изменить чиловое значение параметра кортежа int на значение int x
+        {
+            var result = (name:tuple.Item1,age:tuple.Item2 + x); //можно использовать в построении методов для модулей программы
+                                                                 //чтобы не переопределять методы, а сразу отправлять готовые кортежи
+            return result;
+        }

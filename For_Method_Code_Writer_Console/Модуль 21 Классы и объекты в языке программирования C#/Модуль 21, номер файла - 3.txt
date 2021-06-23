@@ -1,0 +1,30 @@
+   User_Person tom = new User_Person("Bob", 30);
+
+            //использование опредленного конструктора
+
+            tom.Info();
+
+            User_Person tom1 = new User_Person("Artur");
+
+            //не заполнено поле возраст 
+
+            tom1.Info();           
+
+ class User_Person
+    {
+        public string name;
+        public int age;
+
+        public User_Person(string name) 
+
+//1 конструктор
+
+        {
+            this.name = name;
+        }
+    public void Info()
+        {
+                Console.WriteLine($"{name}");
+                Console.WriteLine($"{age}");  
+        }
+}

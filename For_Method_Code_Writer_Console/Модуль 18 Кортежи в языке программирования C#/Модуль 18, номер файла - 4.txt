@@ -1,0 +1,6 @@
+ public static void TuplesCreate()
+        {
+            var (name, age) = ("Tom", 25); //переменным присваиваем кортеж
+            Console.WriteLine(name);
+            Console.WriteLine(age);
+        }

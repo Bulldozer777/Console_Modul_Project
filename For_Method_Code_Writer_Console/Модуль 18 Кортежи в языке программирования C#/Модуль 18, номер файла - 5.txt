@@ -1,0 +1,9 @@
+            var tuple3 = GetValue_Tuples();
+            Console.WriteLine(tuple3.Item1); //1
+            Console.WriteLine(tuple3.Item2);   //3
+ public static (int, int) GetValue_Tuples()  //в качестве возвращаемного типа метода, возвращаемый кортеж типа int
+        {
+            int result = 1;
+            int result2 = 3;
+            return (result, result2); //кортеж представляет способ возвращения сразу нескольких значений
+        }

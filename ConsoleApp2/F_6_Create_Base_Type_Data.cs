@@ -10,7 +10,6 @@ namespace Training_Csharp
     {
         public static void TypeCreate(int i)
         {
-            Console.WriteLine("Mодуль 6");
             if (i == 6)
             {
                 Modul_Struct Six = new F_6_Create_Base_Type_Data();   //нужно создавать объект класса наследника, после ключевого слова new

@@ -1,0 +1,21 @@
+   /* User_Person tom;*/ //чтобы работать с переменной надо создать объект
+
+            User_Person tom = new User_Person("Bob"); 
+
+//создание объекта
+//User_Person()- конструктор по умолчанию
+//Если конструктор создан, то контруктор по умолчанию уже нельзя использовать и
+//надо заполнять при создании конструктор созданный в классе
+
+            tom.name = "Tom";
+            tom.age = 22;
+            tom.Info();
+
+   class User_Person
+    {
+        public string name;
+        public int age;
+  public void Info()
+        {
+            Console.WriteLine($"{name} - {age}");
+        }

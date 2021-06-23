@@ -1,0 +1,6 @@
+
+            User_Person bob = new User_Person("Tom") { age = 26 }; //инициализатор { age = 26 }
+            bob.Info();
+
+            User_Person bob1 = new User_Person{ name = "Bob", age = 26 }; //инициализатор { age = 26 }
+            bob1.Info();

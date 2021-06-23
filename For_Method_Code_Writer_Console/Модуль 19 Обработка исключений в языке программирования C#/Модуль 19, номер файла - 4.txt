@@ -1,0 +1,14 @@
+            try
+            {
+                Console.WriteLine("Введите строку");
+                string message = Console.ReadLine();
+                if(message.Length > 6)
+                {
+                    throw new Exception("Длинна строки больше 6 символов"); // генерируется исключение типа Exception , при условии что строка длиннее 6 символов
+                }
+                Console.WriteLine("End of try block");
+            }
+            catch
+            {
+                Console.WriteLine();
+            }
