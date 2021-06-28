@@ -1,0 +1,20 @@
+Person_W_23 person1 = new Person_W_23 { name = "Dadlick", age = 25 };
+ChangePerson(person1); 
+
+// метод сработает т к это объект класса, а класс это ссылочный тип ,
+// переменная person1 хранит ссылку на объект в куче (heat)
+
+Console.WriteLine($"{person1.name} - {person1.age}");
+
+        static void ChangePerson(Person_W_23 person)
+        {
+            person.name = "Bob";
+            person.age = 33;
+            person = new Person_W_23 { name = "Down", age = 45 }; 
+
+//конструктор не сработает , инициализация никак не сказлась, 
+// когда мы используем конструктор для создания объекта в куче создается новый объект ,
+// параметр person будет указывать на новый объект в куче, а выше созданный person1 указывает на старый объект в куче
+//поэтому вызов конструктора ни как не повлияет на переменную person1
+
+        }

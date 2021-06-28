@@ -1,0 +1,25 @@
+Person_X_24 person = new Person_X_24();
+person.name = "Tom";
+person.Display();
+
+Employee_X_24 p = new Employee_X_24();
+p.Display_Employee_X_24();
+
+  class Person_X_24
+    {
+        public int age; //если не определно модификаторов то по умолчанию стоит модификатор private 
+        public string name;
+        protected string horda; //наследование horda
+        public void Display()
+        {
+            Console.WriteLine($"{name}\n");
+        }
+     }
+class Employee_X_24 : Person_X_24 // по умолчанию класс имеет модификатор internal 
+    {
+        public void Display_Employee_X_24()
+        {
+            Console.WriteLine($"{horda}"); //наследование horda
+        }
+    }
+

@@ -1,0 +1,13 @@
+Person_W_23 person1 = new Person_W_23 { name = "Dadlick", age = 25 };
+ChangePerson1(ref person1);
+Console.WriteLine($"{person1.name} - {person1.age}");
+
+    static void ChangePerson1(ref Person_W_23 person)
+        {
+            person.name = "Bob";
+            person.age = 33;
+            person = new Person_W_23 { name = "Down", age = 45 }; 
+
+            //конструктор сработает , при передачи парметра по ссылке мы можем изменить не только поля 
+            // но и сам объект в памяти            
+        }

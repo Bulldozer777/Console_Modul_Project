@@ -1,0 +1,21 @@
+  Person_X_24 o = new Person_X_24();
+  o.Method_Modificator_private();
+
+ class Person_X_24
+    {
+        public void Method_Modificator_private()
+        {
+           Person_X_24_Account o = new Person_X_24_Account();
+           o.Modificator_private();
+        }
+
+ private class Person_X_24_Account
+       {
+            private string password;
+            public void Modificator_private()
+            {
+                password = "root";
+                Console.WriteLine(password + "\n");
+            }
+        }
+}

@@ -1,0 +1,18 @@
+X_24_Account_User m = new X_24_Account_User();
+m.Display_1();
+
+//другой проект
+
+public class User_Accounts
+    {
+        protected internal int age1;//доступность из любого места в проекте
+    {
+
+public class X_24_Account_User : User_Accounts
+{          
+            public void Display_1()
+            {
+                age1 = 45;
+                Console.WriteLine($"{age1}\n");
+            }
+}

@@ -224,21 +224,21 @@ namespace Training_Csharp
             Console.WriteLine("\n");
             if (operation_Info_Method_1 != null)
             {
-                Console.WriteLine($"Чтобы запустить Info_Method нажмите 1 ");
+                Console.WriteLine($"Чтобы запустить Info_Method, нажмите 1 ");
             }
             if (operation_Create_Method_1 != null)
             {
-                Console.WriteLine($"Чтобы запустить Create_Method нажмите 2 ");
+                Console.WriteLine($"Чтобы запустить Create_Method, нажмите 2 ");
             }
             if (operation_Tasks_Method_1 != null)
             {
-                Console.WriteLine($"Чтобы запустить Tasks_Method нажмите 3 ");
+                Console.WriteLine($"Чтобы запустить Tasks_Method, нажмите 3 ");
             }
             if (operation_Examples_Method_1 != null)
             {
-                Console.WriteLine($"Чтобы запустить Examples_Method нажмите 4 ");
+                Console.WriteLine($"Чтобы запустить Examples_Method, нажмите 4 ");
             }
-            Console.WriteLine("Чтобы перейти в выбору другого модуля нажмите 5");
+            Console.WriteLine("Чтобы перейти в выбору другого модуля, нажмите 5");
 
         }
         public static object M1(string Modul_Struct)
@@ -298,30 +298,30 @@ namespace Training_Csharp
         {
             if (name_Create_Method_1 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Create_Method_1} нажмите 1 ");
+                Console.WriteLine($"Чтобы запустить {name_Create_Method_1}, нажмите 1 ");
             }
             if (name_Create_Method_2 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Create_Method_2} нажмите 2 ");
+                Console.WriteLine($"Чтобы запустить {name_Create_Method_2}, нажмите 2 ");
             }
             if (name_Create_Method_3 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Create_Method_3} нажмите 3 ");
+                Console.WriteLine($"Чтобы запустить {name_Create_Method_3}, нажмите 3 ");
             }
             if (name_Create_Method_4 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Create_Method_4} нажмите 4 ");
+                Console.WriteLine($"Чтобы запустить {name_Create_Method_4}, нажмите 4 ");
             }
             if (name_Create_Method_5 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Create_Method_5} нажмите 5 ");
+                Console.WriteLine($"Чтобы запустить {name_Create_Method_5}, нажмите 5 ");
             }
             if (Name_Create_Method_7 != null)
             {
-                Console.WriteLine($"Чтобы запустить {Name_Create_Method_7} нажмите 6 ");
+                Console.WriteLine($"Чтобы запустить {Name_Create_Method_7}, нажмите 6 ");
             }
-            Console.WriteLine("Чтобы перейти в выбору другогой темы модуля модуля нажмите 7");
-            Console.WriteLine("Чтобы перейти в выбору другого модуля модуля нажмите 8");
+            Console.WriteLine("Чтобы перейти в выбору другогой темы модуля модуля, нажмите 7");
+            Console.WriteLine("Чтобы перейти в выбору другого модуля модуля, нажмите 8");
             int x = int.Parse(Console.ReadLine());
             if (x == 1)
             {
@@ -458,26 +458,26 @@ namespace Training_Csharp
         {
             if (name_Examples_Method_1 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Examples_Method_1} нажмите 1 ");
+                Console.WriteLine($"Чтобы запустить {name_Examples_Method_1}, нажмите 1 ");
             }
             if (name_Examples_Method_2 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Examples_Method_2} нажмите 2 ");
+                Console.WriteLine($"Чтобы запустить {name_Examples_Method_2}, нажмите 2 ");
             }
             if (name_Examples_Method_3 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Examples_Method_3} нажмите 3 ");
+                Console.WriteLine($"Чтобы запустить {name_Examples_Method_3}, нажмите 3 ");
             }
             if (name_Examples_Method_4 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Examples_Method_4} нажмите 4 ");
+                Console.WriteLine($"Чтобы запустить {name_Examples_Method_4}, нажмите 4 ");
             }
             if (name_Examples_Method_5 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Examples_Method_5} нажмите 5 ");
+                Console.WriteLine($"Чтобы запустить {name_Examples_Method_5}, нажмите 5 ");
             }
-            Console.WriteLine("Чтобы перейти в выбору другогой темы модуля модуля нажмите 6");
-            Console.WriteLine("Чтобы перейти в выбору другого модуля модуля нажмите 7");
+            Console.WriteLine("Чтобы перейти в выбору другогой темы модуля модуля, нажмите 6");
+            Console.WriteLine("Чтобы перейти в выбору другого модуля модуля, нажмите 7");
             int x = int.Parse(Console.ReadLine());
             if (x == 1)
             {

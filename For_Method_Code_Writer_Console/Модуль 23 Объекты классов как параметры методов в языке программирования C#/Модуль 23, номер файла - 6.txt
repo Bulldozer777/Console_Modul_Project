@@ -1,0 +1,15 @@
+User_W_23 user1 = new User_W_23 { name = "Tom", age = 23 };
+ChangeUser1(ref user1);
+
+// метод сработает т к параметр передается по ссылке с помощью ключевого слово ref, меняется сам объект в памяти,
+// объект user1 изменился
+
+Console.WriteLine($"{user1.name} - {user1.age}");
+
+ // Bob 33
+
+ static void ChangeUser1(ref User_W_23 user)
+        {
+            user.name = "Bob";
+            user.age = 33;
+        }

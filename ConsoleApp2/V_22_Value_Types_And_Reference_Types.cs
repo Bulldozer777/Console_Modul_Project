@@ -24,7 +24,7 @@ namespace Training_Csharp
             //Program.ModulRegistr(a);
             if (a == 22)
             {
-                Modul_Struct twenty_two = new U_21_Class_And_Object();
+                Modul_Struct twenty_two = new V_22_Value_Types_And_Reference_Types();
                 Modul_Struct_Start_With_DB(a, twenty_two,                 // использовать именнованные параметры, пример (x:2, y:3)
                     OperationInfo1_p: Structures_Create(Code_Writer_Console(a, 1)),
                     NameCreate1_p: "Типы значений, метод Calculate",

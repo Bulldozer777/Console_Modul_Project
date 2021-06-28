@@ -1,0 +1,14 @@
+User_W_23 user1 = new User_W_23 { name = "Tom", age = 23 };
+ChangeUser(user1);  
+
+// метод ничего не сделает т к работает с копией 
+
+Console.WriteLine($"{user1.name} - {user1.age}"); 
+
+// Tom 23
+
+static void ChangeUser(User_W_23 user)
+        {
+            user.name = "Bob";
+            user.age = 33;
+        }

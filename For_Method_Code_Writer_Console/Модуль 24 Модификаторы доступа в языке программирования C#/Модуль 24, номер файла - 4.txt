@@ -1,0 +1,16 @@
+ User_Accounts user = new User_Accounts();
+
+//user.name1 = "Tom"; ошибка т к мы объявляем переменную вне проекта Accounts
+
+X_24_Account_User m = new X_24_Account_User();
+Console.WriteLine(m.User_Accounts_Create() + "\n");
+
+  public class X_24_Account_User 
+        {
+            public string User_Accounts_Create()
+            {
+                User_Accounts user = new User_Accounts();
+                user.name1 = "Tom";
+                return user.name1;
+            }
+        } 

@@ -33,4 +33,8 @@
     <Folder Include="Log_Training_Csharp_Base\Training_Scharp_Debug_LOG\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Accounts\Accounts.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,27 @@
+using Accounts;
+User_Accounts user = new User_Accounts();
+
+            //класс наследник может находиться в другом преокте 
+
+            user.age = 10;
+            user.Display();
+
+//другой проект
+
+namespace Accounts
+{
+    public class User_Accounts
+    {
+        public int age; //если не определно модификаторов то по умолчанию стоит модификатор private 
+        protected string name;
+        protected string horda; //наследование horda
+        public void Display()
+        {
+            Console.WriteLine($"{age}\n");
+        }
+        private class Person_X_24_Account //класс можно определить внутри другого класса и тогда можно использовать для класса модификатор доступа private
+        {
+            private string password;
+        }
+    }
+}
