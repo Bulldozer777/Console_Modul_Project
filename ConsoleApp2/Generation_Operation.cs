@@ -138,7 +138,7 @@ namespace Training_Csharp
             if (a == 26)
             {
                 ModulRegistr(a);
-                Z_26_Property.Z_26_Property_Create(a);
+                Z_26_Property.Z_26_Property_Info(a);
             }
             if (a == 27)
             {

@@ -1,0 +1,16 @@
+       public static void Z_A_27_Add(int x, int y) 
+
+//методы работают, с одним и тем же именем, 
+//если различаются по типу параметров или их количеству, 
+//назвается версия метода
+
+        {
+            int result = x + y;
+            Console.WriteLine($"Result - {result}\n");
+        }
+
+  Console.WriteLine("Введите 1 число");
+  int key1 = int.Parse(Console.ReadLine());
+  Console.WriteLine("Введите 2 число");
+  int key2 = int.Parse(Console.ReadLine());
+  Z_A_27_Add(key1, key2);

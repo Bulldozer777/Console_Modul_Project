@@ -6,53 +6,126 @@ using System.Threading.Tasks;
 
 namespace Training_Csharp
 {
-    class Z_B_28_Modifier_static_Class_and_members
+    class Z_B_28_Modifier_static_Class_and_members : Modul_Struct
     {
         public static void Z_B_28_Modifier_static_Class_and_members_Info(int a)
         {
             if (a == 28)
             {
-              //  Math.Min(4,6);
-               // Math o = new Math(); статический класс, нельзя создать объект класса
+                Modul_Struct twenty_eight = new Z_B_28_Modifier_static_Class_and_members();
+                Modul_Struct_Start_With_DB(a, twenty_eight,                 // использовать именнованные параметры, пример (x:2, y:3)
+                    OperationInfo1_p: Structures_Create(Code_Writer_Console(a, 1)),
+                    NameCreate1_p: "Модификатор static для представления общего поведения для всех объектов класса Account",
+                    OperationCreate1_p: Code_Writer_Console(a, 1));
+                //  Math.Min(4,6);
+                // Math o = new Math(); статический класс, нельзя создать объект класса
 
-                Account acc1 = new Account(1000, 6);
-                Account acc2 = new Account(900, 5);
-                Account.MinSum = 200;
-                Console.WriteLine( Account.GetSum(1000, 10, 5));
+             
                 //Console.WriteLine(acc1.GetSum(1000,10,5));
                 //Console.WriteLine(acc1.GetSum(1000, 10, 5));
                 //for (int i = 0; i < 10; i++)  //можно циклом фор создавать объекты класса
                 //{
                 //    Z_B_28_User user1 = new Z_B_28_User();
-                //}
-                  Z_B_28_User user1 = new Z_B_28_User();
-                Z_B_28_User user2 = new Z_B_28_User();
-                Z_B_28_User user3 = new Z_B_28_User();
-                Z_B_28_User user4 = new Z_B_28_User();
-                Z_B_28_User user5 = new Z_B_28_User();
-                Z_B_28_User.Z_B_28_Display();
-                Console.WriteLine(user1.Id);   //можно переделать структуру всей программы
-                Console.WriteLine(user2.Id);
-                Console.WriteLine(user3.Id);
-                Console.WriteLine(user4.Id);
-                Console.WriteLine(user5.Id);
-
+                //}            
             }
             Generation_Operation.EndInStart();
         }
+        public override void Coddition_Create_Type_Method_1()
+        {
+            Account acc1 = new Account(1000, 6);
+            Account acc2 = new Account(900, 5);
+            Account.MinSum = 200; 
+
+            //меняется значение поля minSum для всех объектов Account т к
+            //cвойство MinSum и поле minSum имеет модификатор static
+            //нельзя использовать нестатические свойства в статических методах
+            //нельзя использовать ключевое слово this
+            //т к метод статические и работает для всех объектов в целом
+
+            Console.WriteLine(Account.GetSum(1000, 10, 5));
+        }
+        public override void Coddition_Create_Type_Method_2()
+        {
+            Z_B_28_User user1 = new Z_B_28_User();
+            Z_B_28_User user2 = new Z_B_28_User();
+            Z_B_28_User user3 = new Z_B_28_User();
+            Z_B_28_User user4 = new Z_B_28_User();
+            Z_B_28_User user5 = new Z_B_28_User();
+            Z_B_28_User.Z_B_28_Display();
+            Console.WriteLine(user1);   //можно переделать структуру всей программы
+            //Console.WriteLine(user2.Id);
+            //Console.WriteLine(user3.Id);
+            //Console.WriteLine(user4.Id);
+            Console.WriteLine(Z_B_28_User.Id);
+            Modul_Struct twenty_eight = new Modul_Struct();
+            twenty_eight.Name_Create_Method_1 = "1";
+            //Z_B_28_User.Create_Modul_Name_Method_1(Z_B_28_User.Id, out Name_Create_Method_1);
+        }
+
     }
     class Z_B_28_User
     {
         private static int counter = 0;
         public Z_B_28_User()
         {
-           Id = ++counter;
+            Id = ++counter;
         }
         public static void Z_B_28_Display()
         {
-             Console.WriteLine($"{counter}");
+            Console.WriteLine($"{counter}");
         }
-        public int Id { get; set; } //свойство записывается prob + двойной tab
+        public static int Id { get; set; } //свойство записывается prob + двойной tab
+
+        //public static void Create_Modul_Name_Method_1(int Id, out string name_Create_Method_1)
+        //{
+        //    string f = "в языке программирования C#";
+        //    List<string> numbers = new List<string>(){ "Первая программа", "Компиляция в командной строке", "Переменные и типы данных"
+        //            , "Арифметические операции", "Поразрядные операции", "Преобразования базовых типов данных",
+        //        "Условные выражения", "Условные конструкции", "Циклы", "Массивы", "Методы", "Параметры метода",
+        //    "Ключевое слово params и массив параметров", "Область видимости переменных", "Рекурсивные функции",
+        //    "Перечисления enum", "Структуры", "Кортежи", "Обработка исключений", "Переменные-ссылки и получение ссылки",
+        //   "Классы и объекты", "Типы значений и ссылочные типы", "Объекты классов как параметры методов",
+        //    "Модификаторы доступа", "Константы и поля для чтения", "Свойства", "Перегрузка методов",
+        //        "Модификатор static. Статические классы и члены классов", "Перегрузка операторов",
+        //   "Перегрузка операций преобразования типов","Наследование","Полиморфизм и переопределение методов",
+        //   "Абстрактные классы и методы","Класс Object и его методы","Преобразование типов","Обобщения (generics)",
+        //   "Ограничения обобщений","Null и типы Nullable","Интерфейсы","Делегаты","События","Анонимные методы",
+        //   "Лямбда-выражения","Перегрузка операторов"   };
+        //    string Modul_Name = "";
+        //    //ref string nRef_1 = ref Variables_Links(numbers, 1);
+        //    if (Id > 0 && Id < 45)
+        //    {
+        //        for (int i = 0; i < numbers.Count; i++)
+        //        {
+        //            numbers[i] = numbers[i] + " " + f;
+        //            Modul_Name = "\n" + "Модуль" + " " + Id + "\n" + Variables_Links_1(numbers, Id) + "\n";
+        //            List<Modul_Struct> Modul_Struct = new List<Modul_Struct>()
+        //    {
+        //      new Modul_Struct {name_Create_Method_1 = Modul_Name}
+        //    };
+
+        //        }
+        //    }
+        //    //List<Modul_Struct> Modul_Struct = new List<Modul_Struct>()
+        //    //{
+        //    //  new Modul_Struct {name_Create_Method_1 = Modul_Name}
+        //    //};
+
+        //}
+        //public static string Variables_Links_1(List<string> numbers, int Id)
+        //{
+        //    for (int i = 0; i < numbers.Count; i++)
+        //    {
+        //        if (i + 1 == Id)
+        //        {
+        //            return numbers[i];
+        //        }
+        //    }
+        //    throw new Exception("число не найдено");
+        //    //не все ветви кода возвращают значение
+        //    //поэтому сгенерируем исключение
+        //    //передав в конструктор Exception("число не найдено")
+        //}
     }
     class Account
     {

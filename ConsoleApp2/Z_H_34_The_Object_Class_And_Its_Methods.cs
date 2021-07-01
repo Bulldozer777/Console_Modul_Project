@@ -12,9 +12,11 @@ namespace Training_Csharp
         {
             if (a == 34)
             {
-                Modul_Struct Thirty_four = new Z_H_34_The_Object_Class_And_Its_Methods();
-                //Modul_Struct Ten1 = new Modul_Struct("Имя", "код метода", "сам метод в работе");
-                Thirty_four.Method_Modul_Start_1();
+                Modul_Struct thirty_four = new Z_H_34_The_Object_Class_And_Its_Methods();             
+                Modul_Struct_Start_With_DB(a, thirty_four,                 // использовать именнованные параметры, пример (x:2, y:3)
+                    OperationInfo1_p: Code_Writer_Console(a, 1),
+                    NameCreate1_p: "3 версии методов",
+                    OperationCreate1_p: Code_Writer_Console(a, 1));
             }
             Generation_Operation.EndInStart();
         }

@@ -1,0 +1,45 @@
+            Person_Z_26 person = new Person_Z_26();
+            person.Age1 = 45;
+            int r = person.Age1;
+
+            //person.Age5 = 35; некорректначя запись, блок set недоступен
+
+            person.Age2 = 10;
+            int i = person.Age2;
+            Console.WriteLine($"person.Age1 - {r} \n person.Age2 - {i}");
+
+class Person_Z_26
+    {
+        //возможна запись конструктора ctor + двойной tab
+        public Person_Z_26() //констурктор, будет нужен в случае, если поле set будет с модификатором private для заполнения поля класса Age
+        {
+            Age = 34;
+        }
+        public int Age1 { get; set; } = 56;
+
+        //сокращенная запись свойства подобное Age2
+        // можно присваивать значения в свойство таким образом как выше, тоже самое что 
+        // private int age3 = 56;
+        // public int Age3
+        // {
+        //    get { return age3; }
+        //    set { age3 = value; }
+        // }
+        // можно использовать модификаторы доступа для его блоков get и set , пример age4
+        //private int age4 = 56;
+        //public int Age4
+        //{
+        //    get { return age4; }
+        //    private set { age4 = value; } из вне класса person мы не сможем установить свойство age
+        //}
+        //можем убрать блок get или set в сокращенной записи
+        //public int Age6 { get; } = 56;
+
+        public int Age5 { get; private set; } = 56;//тоже самое модификаторы ставятся для блоков свойства в сокращенной записи
+        private int age;
+        public int Age2
+        {
+            get { return age; }
+            set { age = value; }
+        }
+}

@@ -1,0 +1,11 @@
+public static void Z_A_27_Add(double x, double y)
+        {
+            double result = x + y;
+            Console.WriteLine($"Result - {result}\n");
+        }
+
+  Console.WriteLine("Введите 1 число");
+  double key1 = double.Parse(Console.ReadLine());
+  Console.WriteLine("Введите 2 число");
+  double key2 = double.Parse(Console.ReadLine());
+  Z_A_27_Add(key1, key2);

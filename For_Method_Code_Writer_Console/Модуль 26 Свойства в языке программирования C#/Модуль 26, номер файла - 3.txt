@@ -1,0 +1,28 @@
+Person_Z_26 person = new Person_Z_26();
+person.FirstName = "Tom";
+string name = person.FirstName;
+Console.WriteLine(name + "\n");
+
+class Person_Z_26
+    {
+        private string firstName; 
+
+        //поле приватное 
+        public string FirstName  
+
+            //свойство 
+            // как правило с большой буквы
+
+        {
+            get { return firstName; } 
+
+            //возвращение значение свойства блок get 
+            // т к свойство управляет дотупом к полю то 
+
+            set { firstName = value; } 
+
+            //установка значения блок set 
+            // то значение которое пердается свойству доступно через ключевое слово value 
+        }
+
+     }

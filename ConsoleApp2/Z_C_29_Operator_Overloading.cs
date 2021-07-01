@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace Training_Csharp
 {
-    class Z_C_29_Operator_Overloading
+    class Z_C_29_Operator_Overloading : Modul_Struct
     {
         public static void Z_C_29_Operator_Overloading_Info(int a)
         {
             if (a == 29)
             {
+                Modul_Struct twenty_nine = new Z_C_29_Operator_Overloading();
+                Modul_Struct_Start_With_DB(a, twenty_nine,                 // использовать именнованные параметры, пример (x:2, y:3)
+                    OperationInfo1_p: Code_Writer_Console(a, 1),
+                    NameCreate1_p: "3 версии методов",
+                    OperationCreate1_p: Code_Writer_Console(a, 1));
+
+
                 Z_C_29_Counter c1 = new Z_C_29_Counter {Value = 4 };
                 Z_C_29_Counter c2 = new Z_C_29_Counter { Value = 45 };
                 bool result = c1 > c2; //некорректная запись 

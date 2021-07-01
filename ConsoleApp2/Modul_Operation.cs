@@ -198,7 +198,7 @@ namespace Training_Csharp
           
                 Y_25_Constants_And_Read_Fields.Y_25_Constants_And_Read_Fields_Info(a);
            
-                Z_26_Property.Z_26_Property_Create(a);
+                Z_26_Property.Z_26_Property_Info(a);
       
         }
 

@@ -1,0 +1,20 @@
+Person_Z_26 person = new Person_Z_26();
+            person.Age = 23;
+            person.Age = 20000;
+
+            //недопустимое значение
+
+            Console.WriteLine(person.Age + "\n");
+
+            //будет возвращать предудущие значение, которые допустимы, исходя из условия
+
+class Person_Z_26
+    {
+        public int Age {
+            get { return age; }
+            set { if (value >= 0 && value < 99)
+                {
+
+                    age = value;
+                } }
+        }

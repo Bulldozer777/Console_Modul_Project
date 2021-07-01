@@ -1,0 +1,21 @@
+        
+
+
+      Person_Z_26 person = new Person_Z_26();
+      person.LastName = "Smith";
+
+      //string name1 = person.LastName; 
+      // некорректная запись т к определен только блок set в свойстве
+            
+      Console.WriteLine("Смотреть код метода, вывод \"person.LastName\" невозможен\n");      
+  
+      private string firstName; 
+
+      //поле приватное 
+
+        public string lastName;
+        public string LastName   //свойство 
+                                  // как правило с большой буквы
+        {
+            set { lastName = value; }      
+        }

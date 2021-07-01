@@ -10,6 +10,8 @@ namespace Training_Csharp
 {
     class Modul_Struct
     {
+        public string Name_Create_Method_1 = " ";
+
         public static object m2;   // для данного поля пока не написана логика     
         public string name_Info_Method_1 { get; set; }    // для данного поля пока не написана логика 
         //используется для сопоставление темы и записи в базе данных 

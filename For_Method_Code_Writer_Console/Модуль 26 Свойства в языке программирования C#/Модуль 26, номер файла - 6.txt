@@ -1,0 +1,23 @@
+ Person_Z_26 person = new Person_Z_26();
+  
+//string name1 = person.LastName; 
+// некорректная запись т к определен только блок set в свойстве           
+//person.FullName = "Tom Smith";
+// некорректная запись т к мы можем только получить get
+
+Console.WriteLine(person.FullName + "\n");
+
+//получаем значение 
+        
+ public string lastName;
+ private string firstName; 
+
+
+        public string FullName   //свойство 
+                                 // как правило с большой буквы
+
+        {
+
+            get { return $"{firstName} {lastName}"; } 
+           
+        }
