@@ -1,0 +1,15 @@
+public static Z_C_29_Counter operator +(Z_C_29_Counter c1, Z_C_29_Counter c2) //определение перегрузки
+        {
+            return new Z_C_29_Counter { Value = -(c1.Value - c2.Value) }; //можно переопределить опертор + и он будет работать как минус
+        }
+
+            Z_C_29_Counter c1 = new Z_C_29_Counter { Value = 4 };
+            Z_C_29_Counter c2 = new Z_C_29_Counter { Value = 45 };
+            Console.WriteLine($"\n_C_29_Counter c1 =  = {c1}");
+            Console.WriteLine($"Z_C_29_Counter c2 = {c2}");
+            Z_C_29_Counter c3 = c2 + c1;
+
+            //некорректная запись, стала доступной
+            //только после определения перегрузки в классе Z_C_29_Counter 
+
+            Console.WriteLine($"c1 + c2 = {c3}\n");

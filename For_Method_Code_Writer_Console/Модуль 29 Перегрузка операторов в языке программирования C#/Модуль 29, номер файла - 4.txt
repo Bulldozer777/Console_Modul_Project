@@ -1,0 +1,19 @@
+ class Counter_1
+    {
+        public int Value { get; set; }
+        public static Counter_1 operator +(Counter_1 c1, Counter_1 c2) //определение перегрузки
+        {
+            //return new Z_C_29_Counter { Value = c1.Value + c2.Value };
+
+            return new Counter_1 { Value = (c1.Value - c2.Value) };
+
+            //можно переопределить опертор + и он будет работать как минус
+        }
+    }
+
+            Counter_1 a1 = new Counter_1() {Value = 10};
+            Counter_1 a2 = new Counter_1() { Value = 30 };
+            Console.WriteLine($"\nCounter_1 a1 = {a1}");
+            Console.WriteLine($"Counter_2 a2 = {a2}");
+            Counter_1 a3 = a1 + a2;
+            Console.WriteLine($"a1 + a2 = {a3}\n");

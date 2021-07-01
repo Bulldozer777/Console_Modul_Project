@@ -1,0 +1,27 @@
+public static bool operator >(Z_C_29_Counter c1, Z_C_29_Counter c2) //определение перегрузки
+        {
+            if (c1.Value > c2.Value)
+                return true;
+            else
+                return false;
+        }
+        public static bool operator <(Z_C_29_Counter c1, Z_C_29_Counter c2) //определение перегрузки
+        {
+            if (c1.Value < c2.Value)
+                return true;
+            else
+                return false;
+        }
+
+            Z_C_29_Counter c1 = new Z_C_29_Counter { Value = 4 };
+            Z_C_29_Counter c2 = new Z_C_29_Counter { Value = 45 };
+
+            //Без переопредление операторов
+            //некорректная запись , сравнение объектов
+
+            Console.WriteLine($"\n_C_29_Counter c1 =  = {c1}");
+            Console.WriteLine($"Z_C_29_Counter c2 = {c2}");
+            bool c3 = c2 > c1;
+            bool c4 = c2 < c1;
+            Console.WriteLine($"bool c3 = c2 > c1 : {c3}");
+            Console.WriteLine($"bool c3 = c2 < c1 : {c4}");

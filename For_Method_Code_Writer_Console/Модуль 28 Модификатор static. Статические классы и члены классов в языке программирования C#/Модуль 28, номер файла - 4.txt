@@ -1,0 +1,23 @@
+            Z_B_28_User user1 = new Z_B_28_User();
+            for (int i = 0; i < 10; i++)  //можно циклом фор создавать объекты класса
+            {
+                user1 = new Z_B_28_User();
+            }
+            Console.WriteLine("Значение счетчика создания объектов класса \"Z_B_28_User\"\n");
+            Z_B_28_User.Z_B_28_Display();
+            Console.WriteLine("\nВывод значения свойства Id для объекта user1\n");
+            Console.WriteLine(user1.Id);
+
+class Z_B_28_User
+    {
+        private static int counter = 0;
+        public Z_B_28_User()
+        {
+            Id = ++counter;
+        }
+        public static void Z_B_28_Display()
+        {
+            Console.WriteLine($"{counter}");
+        }
+        public int Id { get; set; } 
+    }

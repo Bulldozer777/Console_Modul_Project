@@ -13,13 +13,13 @@ namespace Training_Csharp
             if (i == 6)
             {
                 Modul_Struct Six = new F_6_Create_Base_Type_Data();   //нужно создавать объект класса наследника, после ключевого слова new
-                Six.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(i, 3));
+                Six.operation_Info_Method_1 = Structures_Create(Code_Writer_Console(i, 3));
                 Six.operation_Create_Method_1 = Code_Writer_Console(i, 1);
-                Six.create_Create_Method_1 = Check();
+                Six.create_Create_Method_1 = "\nРезультат работы метода \"Check:\"\n" + Check();
                 Six.operation_Info_Method_1 = Code_Writer_Console(i, 2);
-                Six.operation_Tasks_Method_3 = Code_Writer_Console(i, 5);
-                Six.operation_Tasks_Method_4 = Code_Writer_Console(i, 6);
-                Six.operation_Examples_Method_4 = Code_Writer_Console(i, 4) + "\n" + "Результат работы тренировочного метода" + Examples(); 
+                Six.operation_Tasks_Method_1 = Code_Writer_Console(i, 5);
+                Six.operation_Tasks_Method_2 = Code_Writer_Console(i, 6);
+                Six.operation_Examples_Method_1 = Code_Writer_Console(i, 4) + "\n" + "Результат работы тренировочного метода" + Examples(); 
                 Six.Method_Modul_Start_1();
                 Generation_Operation.EndInStart();
             }
@@ -52,12 +52,12 @@ namespace Training_Csharp
         }
         public override void Tasks_Method()
         {
-            Console.WriteLine($"{operation_Tasks_Method_3}"  );
+            Console.WriteLine($"{operation_Tasks_Method_1}"  );
             Console.WriteLine("Введите 1, чтобы узнать ответы на вопросы");
             int y = int.Parse(Console.ReadLine());
             if (y== 1)
             {
-                Console.WriteLine($"{operation_Tasks_Method_4}");
+                Console.WriteLine($"{operation_Tasks_Method_2}");
             }
             else
             {        
@@ -89,7 +89,10 @@ namespace Training_Csharp
             short b1 = (short)(a + 70);//byte/short/int - при произведении операции используется тип int
                                        //изначально в byte переменной при созданиии 1 байт а при операции типа int там уже 4 байта 
            string a2 = Convert.ToString(b1);
-            return   a1 + "\n" + a2 + "\n" + a11 + "\n" + a12 + "\n";
+            return "\nПример явного преобразования (int) в (byte)\n" + a1 
+                +"\n" + "Пример явного преобразования (int) в (short)\n" + a2 + "\n" 
+                +"Проверка словом \"checked\"\n" + a11 + "\n" 
+                +"Проверка не пройдена\n" + a12 + "\n";
         }
         public static string Examples()
         {
@@ -125,8 +128,7 @@ namespace Training_Csharp
             else
             {
                 Six.Method_Modul_Start_1();
-                return "Вы ввели неверное число";
-                
+                return "Вы ввели неверное число";              
             }             
         }
     }

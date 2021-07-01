@@ -16,17 +16,14 @@ namespace Training_Csharp
                 Modul_Struct_Start_With_DB(a, twenty_eight,                 // использовать именнованные параметры, пример (x:2, y:3)
                     OperationInfo1_p: Structures_Create(Code_Writer_Console(a, 1)),
                     NameCreate1_p: "Модификатор static для представления общего поведения для всех объектов класса Account",
-                    OperationCreate1_p: Code_Writer_Console(a, 1));
+                    OperationCreate1_p: Code_Writer_Console(a, 2),
+                     NameCreate2_p: "Модификатор static для представления общего поведения для всех объектов класса Account",
+                    OperationCreate2_p: Code_Writer_Console(a, 3),
+                    NameExamples1_p: "Модификатор static для представления общего поведения для всех объектов класса Account",
+                    OperationExamples1_p: Code_Writer_Console(a, 4)
+                    );
                 //  Math.Min(4,6);
-                // Math o = new Math(); статический класс, нельзя создать объект класса
-
-             
-                //Console.WriteLine(acc1.GetSum(1000,10,5));
-                //Console.WriteLine(acc1.GetSum(1000, 10, 5));
-                //for (int i = 0; i < 10; i++)  //можно циклом фор создавать объекты класса
-                //{
-                //    Z_B_28_User user1 = new Z_B_28_User();
-                //}            
+                // Math o = new Math(); статический класс, нельзя создать объект класса                  
             }
             Generation_Operation.EndInStart();
         }
@@ -52,16 +49,29 @@ namespace Training_Csharp
             Z_B_28_User user4 = new Z_B_28_User();
             Z_B_28_User user5 = new Z_B_28_User();
             Z_B_28_User.Z_B_28_Display();
-            Console.WriteLine(user1);   //можно переделать структуру всей программы
-            //Console.WriteLine(user2.Id);
-            //Console.WriteLine(user3.Id);
-            //Console.WriteLine(user4.Id);
-            Console.WriteLine(Z_B_28_User.Id);
-            Modul_Struct twenty_eight = new Modul_Struct();
-            twenty_eight.Name_Create_Method_1 = "1";
+            Console.WriteLine(user1.Id);   //можно переделать структуру всей программы
+            Console.WriteLine(user2.Id);
+            Console.WriteLine(user3.Id);
+            Console.WriteLine(user4.Id);
+            Console.WriteLine(user5.Id);
+            //Console.WriteLine(Z_B_28_User.Id);
+            //Modul_Struct twenty_eight = new Modul_Struct();
+            //twenty_eight.Name_Create_Method_1 = "1";
             //Z_B_28_User.Create_Modul_Name_Method_1(Z_B_28_User.Id, out Name_Create_Method_1);
         }
+        public override void Coddition_Examples_Type_Method_1()
+        {
+            Z_B_28_User user1 = new Z_B_28_User();
+            for (int i = 0; i < 10; i++)  //можно циклом фор создавать объекты класса
+            {
+                user1 = new Z_B_28_User();
+            }
+            Console.WriteLine("Значение счетчика создания объектов класса \"Z_B_28_User\"\n");
+            Z_B_28_User.Z_B_28_Display();
+            Console.WriteLine("\nВывод значения свойства Id для объекта user1\n");
+            Console.WriteLine($"{user1.Id}\n");
 
+        }
     }
     class Z_B_28_User
     {
@@ -74,7 +84,7 @@ namespace Training_Csharp
         {
             Console.WriteLine($"{counter}");
         }
-        public static int Id { get; set; } //свойство записывается prob + двойной tab
+        public int Id { get; set; } //свойство записывается prob + двойной tab
 
         //public static void Create_Modul_Name_Method_1(int Id, out string name_Create_Method_1)
         //{

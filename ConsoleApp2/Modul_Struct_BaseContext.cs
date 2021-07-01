@@ -15,6 +15,7 @@ namespace Training_Csharp
         public Modul_Struct_BaseContext(DbContextOptions<Modul_Struct_BaseContext> options)
             : base(options)
         {
+
         }
 
         public virtual DbSet<ModulStructBasis> ModulStructBases { get; set; }

@@ -23,7 +23,8 @@ namespace Training_Csharp
                 string identification_name = Generation_Operation.BaseModul(a);
                 Console.WriteLine(" Введите 1 для заполнения базы," +
                     "\n Введите 2 для получения данных из базы, исходя из совпадения значения столбца Id" +
-                    "\n Введите 3 для получения данных из базы, исходя из совпадения значения столбца NameInfo1");
+                    "\n Введите 3 для получения данных из базы, исходя из совпадения значения столбца NameInfo1"+
+                    "\n Введите 4 для удаления данных из базы, исходя из совпадения значения столбца NameInfo1");
                 int Key = int.Parse(Console.ReadLine());                          
                 if (Key == 1)
                 {
@@ -63,7 +64,7 @@ namespace Training_Csharp
                                 Fifteen.operation_Create_Method_2 = u.OperationCreate2;
                                 Fifteen.name_Create_Method_1 = u.NameCreate1;
                                 Fifteen.name_Create_Method_2 = u.NameCreate2;
-                                Q_17_Structures.Structures_Create(Fifteen.operation_Info_Method_1);
+                                Structures_Create(Fifteen.operation_Info_Method_1);
                                 Fifteen.Method_Modul_Start_1();
                             }                       
                         }
@@ -85,10 +86,33 @@ namespace Training_Csharp
                                 Fifteen.operation_Create_Method_2 = u.OperationCreate2;
                                 Fifteen.name_Create_Method_1 = u.NameCreate1;
                                 Fifteen.name_Create_Method_2 = u.NameCreate2;
-                                Q_17_Structures.Structures_Create(Fifteen.operation_Info_Method_1);
+                                Structures_Create(Fifteen.operation_Info_Method_1);
                                 Fifteen.Method_Modul_Start_1();
                             }
                         }
+                    }
+                }
+                if(Key == 4)
+                {
+                    using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
+                    {
+                        int count = 0;
+                        var Modul_16_1 = db.Modul_Struct_Bases.ToList();
+                        Console.WriteLine("Получение данных из базы:");
+                        foreach (Modul_Struct_Base u in Modul_16_1)
+                        {
+                            count++;
+                            Console.Clear();
+                            Console.WriteLine($"Выполняется {count} поиск строк с полем NameInfo1 = {Generation_Operation.BaseModul(a)}");
+                            if (u.NameInfo1 == Generation_Operation.BaseModul(a))
+                            {
+                                Console.WriteLine($"Проиходит удаление всех строк с NameInfo1 = {Generation_Operation.BaseModul(a)}");
+                                db.Modul_Struct_Bases.Remove(u);
+                                Console.WriteLine("Выполняется сохранение изменений в базу");
+                                db.SaveChanges();
+                            }
+                        }
+                        Console.WriteLine("Удаление записи, по имени темы выполнено");
                     }
                 }
             }          

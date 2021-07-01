@@ -69,10 +69,21 @@ namespace Training_Csharp
 
         public static void Start_Modul_Create()
         {
-            Console.WriteLine(" Введите 1 для заполнения базы," +
-                "\n Введите 2 для получения данных из базы, исходя из совпадения значения столбца NameInfo1" +
-                "\n Введите 3 для удаления данных из базы, исходя из совпадения значения столбца NameInfo1");
+            Console.WriteLine(" Введите 1, для заполнения базы," +
+                "\n Введите 2, для получения данных из базы, исходя из совпадения значения столбца NameInfo1" +
+                "\n Введите 3, для удаления данных из базы, исходя из совпадения значения столбца NameInfo1" +
+                "\n Введите 4, чтобы перейти назад к выбору модуля");
         }
+
+        //public static void List_Modul_Struct()
+        //{
+        //    using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
+        //    {
+
+        //        List < Modul_Struct_Base > = new List<Modul_Struct_Base>();
+        //    }
+        //    return List < Modul_Struct > nameof;
+        //}
         public static void Modul_Struct_Start_With_DB(int a, Modul_Struct Name, string OperationInfo1_p = null, string NameCreate1_p = null,
             string NameCreate2_p = null, string NameCreate3_p = null, string NameCreate4_p = null, string NameCreate5_p = null,
             string NameExamples1_p = null, string NameExamples2_p = null, string NameExamples3_p = null, string NameExamples4_p = null,
@@ -84,142 +95,192 @@ namespace Training_Csharp
             string OperationExamples1_p = null, string OperationExamples2_p = null, string OperationExamples3_p = null,
             string OperationExamples4_p = null, string OperationExamples5_p = null, string OperationExamples6_p = null,
             string OperationExamples7_p = null,
-             string CreateCreate1_p = null, string CreateCreate2_p = null, string CreateCreate3_p = null,
-              string CreateCreate4_p = null, string CreateCreate5_p = null, string CreateCreate6_p = null,
-              string CreateExamples1_p = null, string CreateExamples2_p = null,
-              string CreateExamples3_p = null, string CreateExamples4_p = null,
+            string CreateCreate1_p = null, string CreateCreate2_p = null, string CreateCreate3_p = null,
+            string CreateCreate4_p = null, string CreateCreate5_p = null, string CreateCreate6_p = null,
+            string CreateExamples1_p = null, string CreateExamples2_p = null,
+            string CreateExamples3_p = null, string CreateExamples4_p = null,
               string CreateExamples5_p = null, string CreateExamples6_p = null)
         {
             Start_Modul_Create();
             int key = int.Parse(Console.ReadLine());
-            if (key == 1)
+            switch (key)
             {
-                using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
-                {
-                    Modul_Struct_Base Razen = new Modul_Struct_Base
+                case 1:
                     {
-                        NameInfo1 = Generation_Operation.BaseModul(a),
-                        NameCreate1 = NameCreate1_p,
-                        NameCreate2 = NameCreate2_p,
-                        NameCreate3 = NameCreate3_p,
-                        NameCreate4 = NameCreate4_p,
-                        NameCreate5 = NameCreate5_p,
-                        NameExamples1 = NameExamples1_p, //сюда вводятся имена методов, используемые в Examples_Method()
-                        NameExamples2 = NameExamples2_p,
-                        NameExamples3 = NameExamples3_p,
-                        NameExamples4 = NameExamples4_p,
-                        NameExamples5 = NameExamples5_p,
-                        OperationInfo1 = OperationInfo1_p,
-                        OperationCreate1 = OperationCreate1_p,
-                        OperationCreate2 = OperationCreate2_p,
-                        OperationCreate3 = OperationCreate3_p,
-                        OperationCreate4 = OperationCreate4_p,
-                        OperationCreate5 = OperationCreate5_p,
-                        OperationTasks1 = OperationTasks1_p,
-                        OperationTasks2 = OperationTasks2_p,
-                        OperationTasks3 = OperationTasks3_p,
-                        OperationTasks4 = OperationTasks4_p,
-                        OperationTasks5 = OperationTasks5_p,
-                        OperationExamples1 = OperationExamples1_p,   //сюда вводятся методы, работа которых используется в Examples_Method()
-                        OperationExamples2 = OperationExamples2_p,
-                        OperationExamples3 = OperationExamples3_p,
-                        OperationExamples4 = OperationExamples4_p,
-                        OperationExamples5 = OperationExamples5_p,
-                        OperationExamples6 = OperationExamples6_p,
-                        OperationExamples7 = OperationExamples7_p,
-                        CreateCreate1 = CreateCreate1_p,
-                        CreateCreate2 = CreateCreate2_p,
-                        CreateCreate3 = CreateCreate3_p,
-                        CreateCreate4 = CreateCreate4_p,
-                        CreateCreate5 = CreateCreate5_p,
-                        CreateCreate6 = CreateCreate6_p,
-                        CreateExamples1 = CreateExamples1_p,
-                        CreateExamples2 = CreateExamples2_p,
-                        CreateExamples3 = CreateExamples3_p,
-                        CreateExamples4 = CreateExamples4_p,
-                        CreateExamples5 = CreateExamples5_p,
-                        CreateExamples6 = CreateExamples6_p,
-                    };
-                    O_15_Recursive_Functions.Add_Modul_Struct_Bases(Razen, Program.Base_Configuration_On_File_Json());
-                    Console.WriteLine("\nДобавление данных в базу выполненено успешно");
-                }
-            }
-            if (key == 2)
-            {
-                using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
-                {
-                    var Razen = db.Modul_Struct_Bases.ToList();
-                    Console.WriteLine("\nПолучение данных из базы:");
-                    foreach (Modul_Struct_Base u in Razen)
-                    {
-                        if (u.NameInfo1 == Generation_Operation.BaseModul(a))
+                        using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
                         {
-                            // Modul_Struct Defined_Modul = new Modul_Struct();
-                            Name.name_Create_Method_1 = u.NameCreate1;
-                            Name.name_Create_Method_2 = u.NameCreate2;
-                            Name.name_Create_Method_3 = u.NameCreate3;
-                            Name.name_Create_Method_4 = u.NameCreate4;
-                            Name.name_Create_Method_5 = u.NameCreate5;
-                            Name.name_Examples_Method_1 = u.NameExamples1; //сюда вводятся имена методов, используемые в Examples_Method()
-                            Name.name_Examples_Method_2 = u.NameExamples2;
-                            Name.name_Examples_Method_3 = u.NameExamples3;
-                            Name.name_Examples_Method_4 = u.NameExamples4;
-                            Name.name_Examples_Method_5 = u.NameExamples5;
-                            Name.operation_Info_Method_1 = u.OperationInfo1;
-                            Name.operation_Create_Method_1 = u.OperationCreate1;
-                            Name.operation_Create_Method_2 = u.OperationCreate2;
-                            Name.operation_Create_Method_3 = u.OperationCreate3;
-                            Name.operation_Create_Method_4 = u.OperationCreate4;
-                            Name.operation_Create_Method_5 = u.OperationCreate5;
-                            Name.operation_Tasks_Method_1 = u.OperationTasks1;
-                            Name.operation_Tasks_Method_2 = u.OperationTasks2;
-                            Name.operation_Tasks_Method_3 = u.OperationTasks3;
-                            Name.operation_Tasks_Method_4 = u.OperationTasks4;
-                            Name.operation_Tasks_Method_5 = u.OperationTasks5;
-                            Name.operation_Examples_Method_1 = u.OperationExamples1;   //сюда вводятся методы, работа которых используется в Examples_Method()
-                            Name.operation_Examples_Method_2 = u.OperationExamples2;
-                            Name.operation_Examples_Method_3 = u.OperationExamples3;
-                            Name.operation_Examples_Method_4 = u.OperationExamples4;
-                            Name.operation_Examples_Method_5 = u.OperationExamples5;
-                            Name.operation_Examples_Method_6 = u.OperationExamples6;
-                            Name.operation_Examples_Method_7 = u.OperationExamples7;
-                            Name.create_Create_Method_1 = u.CreateCreate1;
-                            Name.create_Create_Method_2 = u.CreateCreate2;
-                            Name.create_Create_Method_3 = u.CreateCreate3;
-                            Name.create_Create_Method_4 = u.CreateCreate4;
-                            Name.create_Create_Method_5 = u.CreateCreate5;
-                            Name.create_Create_Method_6 = u.CreateCreate6;
-                            Name.create_Examples_Method_1 = u.CreateExamples1;
-                            Name.create_Examples_Method_2 = u.CreateExamples2;
-                            Name.create_Examples_Method_3 = u.CreateExamples3;
-                            Name.create_Examples_Method_4 = u.CreateExamples4;
-                            Name.create_Examples_Method_5 = u.CreateExamples5;
-                            Name.create_Examples_Method_6 = u.CreateExamples6;
-                            Name.Method_Modul_Start_1();
+                            Modul_Struct_Base Razen = new Modul_Struct_Base
+                            {
+                                NameInfo1 = Generation_Operation.BaseModul(a),
+                                NameCreate1 = NameCreate1_p,
+                                NameCreate2 = NameCreate2_p,
+                                NameCreate3 = NameCreate3_p,
+                                NameCreate4 = NameCreate4_p,
+                                NameCreate5 = NameCreate5_p,
+                                NameExamples1 = NameExamples1_p, //сюда вводятся имена методов, используемые в Examples_Method()
+                                NameExamples2 = NameExamples2_p,
+                                NameExamples3 = NameExamples3_p,
+                                NameExamples4 = NameExamples4_p,
+                                NameExamples5 = NameExamples5_p,
+                                OperationInfo1 = OperationInfo1_p,
+                                OperationCreate1 = OperationCreate1_p,
+                                OperationCreate2 = OperationCreate2_p,
+                                OperationCreate3 = OperationCreate3_p,
+                                OperationCreate4 = OperationCreate4_p,
+                                OperationCreate5 = OperationCreate5_p,
+                                OperationTasks1 = OperationTasks1_p,
+                                OperationTasks2 = OperationTasks2_p,
+                                OperationTasks3 = OperationTasks3_p,
+                                OperationTasks4 = OperationTasks4_p,
+                                OperationTasks5 = OperationTasks5_p,
+                                OperationExamples1 = OperationExamples1_p,   //сюда вводятся методы, работа которых используется в Examples_Method()
+                                OperationExamples2 = OperationExamples2_p,
+                                OperationExamples3 = OperationExamples3_p,
+                                OperationExamples4 = OperationExamples4_p,
+                                OperationExamples5 = OperationExamples5_p,
+                                OperationExamples6 = OperationExamples6_p,
+                                OperationExamples7 = OperationExamples7_p,
+                                CreateCreate1 = CreateCreate1_p,
+                                CreateCreate2 = CreateCreate2_p,
+                                CreateCreate3 = CreateCreate3_p,
+                                CreateCreate4 = CreateCreate4_p,
+                                CreateCreate5 = CreateCreate5_p,
+                                CreateCreate6 = CreateCreate6_p,
+                                CreateExamples1 = CreateExamples1_p,
+                                CreateExamples2 = CreateExamples2_p,
+                                CreateExamples3 = CreateExamples3_p,
+                                CreateExamples4 = CreateExamples4_p,
+                                CreateExamples5 = CreateExamples5_p,
+                                CreateExamples6 = CreateExamples6_p,
+                            };
+                            O_15_Recursive_Functions.Add_Modul_Struct_Bases(Razen, Program.Base_Configuration_On_File_Json());
+                            Console.WriteLine("\nДобавление данных в базу выполненено успешно");
+                            Generation_Operation.InStart3(a);
                         }
                     }
-                }
-            }
-            if (key == 3)
-            {
-                using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
-                {
-                    var Modul_16_1 = db.Modul_Struct_Bases.ToList();
-                    Console.WriteLine("Получение данных из базы:");
-                    foreach (Modul_Struct_Base u in Modul_16_1)
+                    break;
+                case 2:
                     {
-                        Console.WriteLine($"Выполняется поиск строк с полем NameInfo1 = {Generation_Operation.BaseModul(a)}");
-                        if (u.NameInfo1 == Generation_Operation.BaseModul(a))
+                        using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
                         {
-                            Console.WriteLine($"Проиходит удаление всех строк с NameInfo1 = {Generation_Operation.BaseModul(a)}");
-                            db.Modul_Struct_Bases.Remove(u);
-                            Console.WriteLine("Выполняется сохранение изменений в базу");
-                            db.SaveChanges();
+                            var Razen = db.Modul_Struct_Bases.ToList();
+                            Console.WriteLine("\nПолучение данных из базы:");
+                            foreach (Modul_Struct_Base u in Razen)
+                            {
+                                if (u.NameInfo1 == Generation_Operation.BaseModul(a))
+                                {
+                                    Name.name_Create_Method_1 = u.NameCreate1;
+                                    Name.name_Create_Method_2 = u.NameCreate2;
+                                    Name.name_Create_Method_3 = u.NameCreate3;
+                                    Name.name_Create_Method_4 = u.NameCreate4;
+                                    Name.name_Create_Method_5 = u.NameCreate5;
+                                    Name.name_Examples_Method_1 = u.NameExamples1; //сюда вводятся имена методов, используемые в Examples_Method()
+                                    Name.name_Examples_Method_2 = u.NameExamples2;
+                                    Name.name_Examples_Method_3 = u.NameExamples3;
+                                    Name.name_Examples_Method_4 = u.NameExamples4;
+                                    Name.name_Examples_Method_5 = u.NameExamples5;
+                                    Name.operation_Info_Method_1 = u.OperationInfo1;
+                                    Name.operation_Create_Method_1 = u.OperationCreate1;
+                                    Name.operation_Create_Method_2 = u.OperationCreate2;
+                                    Name.operation_Create_Method_3 = u.OperationCreate3;
+                                    Name.operation_Create_Method_4 = u.OperationCreate4;
+                                    Name.operation_Create_Method_5 = u.OperationCreate5;
+                                    Name.operation_Tasks_Method_1 = u.OperationTasks1;
+                                    Name.operation_Tasks_Method_2 = u.OperationTasks2;
+                                    Name.operation_Tasks_Method_3 = u.OperationTasks3;
+                                    Name.operation_Tasks_Method_4 = u.OperationTasks4;
+                                    Name.operation_Tasks_Method_5 = u.OperationTasks5;
+                                    Name.operation_Examples_Method_1 = u.OperationExamples1;   //сюда вводятся методы, работа которых используется в Examples_Method()
+                                    Name.operation_Examples_Method_2 = u.OperationExamples2;
+                                    Name.operation_Examples_Method_3 = u.OperationExamples3;
+                                    Name.operation_Examples_Method_4 = u.OperationExamples4;
+                                    Name.operation_Examples_Method_5 = u.OperationExamples5;
+                                    Name.operation_Examples_Method_6 = u.OperationExamples6;
+                                    Name.operation_Examples_Method_7 = u.OperationExamples7;
+                                    Name.create_Create_Method_1 = u.CreateCreate1;
+                                    Name.create_Create_Method_2 = u.CreateCreate2;
+                                    Name.create_Create_Method_3 = u.CreateCreate3;
+                                    Name.create_Create_Method_4 = u.CreateCreate4;
+                                    Name.create_Create_Method_5 = u.CreateCreate5;
+                                    Name.create_Create_Method_6 = u.CreateCreate6;
+                                    Name.create_Examples_Method_1 = u.CreateExamples1;
+                                    Name.create_Examples_Method_2 = u.CreateExamples2;
+                                    Name.create_Examples_Method_3 = u.CreateExamples3;
+                                    Name.create_Examples_Method_4 = u.CreateExamples4;
+                                    Name.create_Examples_Method_5 = u.CreateExamples5;
+                                    Name.create_Examples_Method_6 = u.CreateExamples6;
+                                    Name.Method_Modul_Start_1();
+                                }
+                            }
                         }
                     }
-                    Console.WriteLine("Удаление записи, по имени темы выполнено");
-                }
+                    break;
+                case 3:
+                    {
+                        using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
+                        {
+//                            string[] mass_count = new string[] {"Первый", "Второй", "Третий", "Четвертый", "Пятый", "Шестой", "Седьмой",
+//"восьмое ", "девятое ", "десятый ", "одиннадцатый ", "двенадцатые ", "тринадцатые ",
+//"четырнадцатый ", "пятнадцатый ", "шестнадцатый ", "семнадцатый ", "восемнадцать ", "девятнадцать ",
+//"двадцатый ", "двадцать первый ", "двадцать вторый ", "двадцать третье ", "двадцать четвёртый ", "двадцать пятый ",
+//"двадцать шестый ", "двадцать седьмый ", "двадцать восьмый ", "двадцать девятое ", "тридцатое ", "тридцать первое ",
+//"тридцать второй", "тридцать третий", "тридцать четвертый", "тридцать пятый", "тридцать шестой", "тридцать седьмой",
+//" ", " ", " ", " ", " ", " ",
+//" ", " ", " ", " ", " ", " "
+//                            };
+                            //int count = mass_count.Length;
+                            int count = 0;
+                            //int count1 = mass_count.Length;
+                            //mass_count.Length = count;
+                            var Modul_16_1 = db.Modul_Struct_Bases.ToList();
+                            Console.WriteLine("Получение данных из базы:");
+                            foreach (Modul_Struct_Base u in Modul_16_1)
+                            {
+                                count++;
+                                //count1 = count - 1 ;
+                                Console.Clear();
+                                Console.WriteLine($"Выполняется {count} поиск строк с полем NameInfo1 = {Generation_Operation.BaseModul(a)}");
+                                //Console.Clear();
+                                if (u.NameInfo1 == Generation_Operation.BaseModul(a))
+                                {
+                                    Console.WriteLine($"Проиходит удаление всех строк с NameInfo1 = {Generation_Operation.BaseModul(a)}");
+                                    db.Modul_Struct_Bases.Remove(u);
+                                    Console.WriteLine("Выполняется сохранение изменений в базу");
+                                    db.SaveChanges();
+                                }
+                            }
+                            Console.WriteLine("Удаление записи, по имени темы выполнено");
+                            Generation_Operation.InStart3(a);
+                        }
+                    }
+                    break;
+                case 4:
+                    {
+                        Generation_Operation.InStartString();
+                        Generation_Operation.InStart3(int.Parse(Console.ReadLine()));
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Введите число от 1 - 3 чтобы перейти к выбору действия");
+                    //Start_Modul_Create();
+                    //key = int.Parse(Console.ReadLine());
+                    //switch(key)
+                    //{
+                    //    case 1:
+                    //    case 2:
+                    //    case 3:
+                    //        {
+
+                    //        }
+                    break;
+                    //}
+                    //goto case 2;
+                    //goto case 3;
             }
+        }
+        public void Adding_data_to_the_database(Modul_Struct Name)
+        {
+            
         }
         public void Method_Modul_Start()
         {
@@ -373,7 +434,7 @@ namespace Training_Csharp
         {
             Console.Clear();
             Console.WriteLine($"{operation_Create_Method_1}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_1}\" на консоль \n");
+            Console.WriteLine($"\nВывод результата работы метода \"{name_Create_Method_1}\" на консоль \n");
             Coddition_Create_Type_Method_1();
             Create_Method();
         }
@@ -385,7 +446,7 @@ namespace Training_Csharp
         {
             Console.Clear();
             Console.WriteLine($"{operation_Create_Method_2}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_2}\" на консоль \n");
+            Console.WriteLine($"\nВывод результата работы метода \"{name_Create_Method_2}\" на консоль \n");
             Coddition_Create_Type_Method_2();
             Create_Method();
         }
@@ -397,7 +458,7 @@ namespace Training_Csharp
         {
             Console.Clear();
             Console.WriteLine($"{operation_Create_Method_3}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_3}\" на консоль \n");
+            Console.WriteLine($"\nВывод результата работы метода \"{name_Create_Method_3}\" на консоль \n");
             Coddition_Create_Type_Method_3();
             Create_Method();
         }
@@ -409,7 +470,7 @@ namespace Training_Csharp
         {
             Console.Clear();
             Console.WriteLine($"{operation_Create_Method_4}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_4}\" на консоль \n");
+            Console.WriteLine($"\nВывод результата работы метода \"{name_Create_Method_4}\" на консоль \n");
             Coddition_Create_Type_Method_4();
             Create_Method();
         }
@@ -421,7 +482,7 @@ namespace Training_Csharp
         {
             Console.Clear();
             Console.WriteLine($"{operation_Create_Method_5}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_5}\" на консоль \n");
+            Console.WriteLine($"\nВывод результата работы метода \"{name_Create_Method_5}\" на консоль \n");
             Coddition_Create_Type_Method_5();
             Create_Method();
         }
@@ -433,7 +494,7 @@ namespace Training_Csharp
         {
             Console.Clear();
             Console.WriteLine($"{Operation_Create_Method_7}");
-            Console.WriteLine($"Вывод результата работы метода \"{Name_Create_Method_7}\" на консоль \n");
+            Console.WriteLine($"\nВывод результата работы метода \"{Name_Create_Method_7}\" на консоль \n");
             //if (Create_Create_Method_7_int != 0)
             //{
             Console.WriteLine(Create_Create_Method_7_string);
@@ -522,7 +583,7 @@ namespace Training_Csharp
         {
             Console.Clear();
             Console.WriteLine($"{operation_Examples_Method_1}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_1}\" на консоль \n");
+            Console.WriteLine($"\nВывод результата работы метода \"{name_Examples_Method_1}\" на консоль \n");
             Coddition_Examples_Type_Method_1();
             Examples_Method();
         }
@@ -534,7 +595,7 @@ namespace Training_Csharp
         {
             Console.Clear();
             Console.WriteLine($"{operation_Examples_Method_2}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_2}\" на консоль \n");
+            Console.WriteLine($"\nВывод результата работы метода \"{name_Examples_Method_2}\" на консоль \n");
             Coddition_Examples_Type_Method_2();
             Examples_Method();
         }
@@ -546,7 +607,7 @@ namespace Training_Csharp
         {
             Console.Clear();
             Console.WriteLine($"{operation_Examples_Method_3}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_3}\" на консоль \n");
+            Console.WriteLine($"\nВывод результата работы метода \"{name_Examples_Method_3}\" на консоль \n");
             Coddition_Examples_Type_Method_3();
             Examples_Method();
         }
@@ -558,7 +619,7 @@ namespace Training_Csharp
         {
             Console.Clear();
             Console.WriteLine($"{operation_Examples_Method_4}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_4}\" на консоль \n");
+            Console.WriteLine($"\nВывод результата работы метода \"{name_Examples_Method_4}\" на консоль \n");
             Coddition_Examples_Type_Method_4();
             Examples_Method();
         }
@@ -570,7 +631,7 @@ namespace Training_Csharp
         {
             Console.Clear();
             Console.WriteLine($"{operation_Examples_Method_5}");
-            Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_5}\" на консоль \n");
+            Console.WriteLine($"\nВывод результата работы метода \"{name_Examples_Method_5}\" на консоль \n");
             Coddition_Examples_Type_Method_5();
             Examples_Method();
         }
@@ -578,70 +639,78 @@ namespace Training_Csharp
         {
             Console.WriteLine($"{create_Examples_Method_5}");
         }
-        public static string Structures_Create(string a) // метод, который переносит строку на следующию строчку дойдя до заданной длины строк,
-                                                         // записанной в переменную klenhth 
+        public static string Structures_Create(string a) // метод, который переносит строку на следующию строчку дойдя до заданной длины строк,                                                      // записанной в переменную klenhth 
         {
-            string result = "";
-            if (a.Length < 70)
+            try
             {
-                Console.WriteLine(a);
-            }
-            else
-            {
-                int klenhth = 94; // максимальный символ до которого будет доступен перенос строки 
-
-                do
+                string result = "";
+                if (a.Length < 70)
                 {
-                    for (int i = klenhth; i < a.Length; i--)
+                    Console.WriteLine(a);
+                    //throw new Exception("Пустая строка");
+                }
+                else
+                {
+                    int klenhth = 94; // максимальный символ до которого будет доступен перенос строки 
+
+                    do
                     {
-                        char[] charArr1 = { a[i] };  // идет поиск пробела в строке, создается массив типа char, который принимает элементы заданной строки (а)
-                                                     // благодаря циклу for мы проходим по каждому элементу строки с идексами от klenhth = 94 до нулевого элемента
-
-                        string str1 = new string(charArr1);  // создается строка, в которую записывается каждый элемент заданной в методе строки
-                        string str2 = " ";                   // создается строка, с символом пробел, для поиске пробела в заданной строке
-                        if (str1 == str2)                    // сравнивается каждый элемент заданной строки и строка с символом пробел
+                        for (int i = klenhth; i < a.Length; i--)
                         {
-                            result = result + a.Substring(0, i) + "\n";   //пустой строке присваивается значение самой себя, плюс значение заданной строки, 
-                                                                          //к которой применен метод Substring (0, i) и прибавляется символ переноса строки
-                                                                          //Substing обрезает строку до ближайшего символа " " (пробел)
-                                                                          //и записывает в переменную result плюс символ переноса строки
-                                                                          //
-                                                                          // первый случай срабатывания условия на 91 длинне 
-                                                                          // в result записано от нуля до 91 строка 
-                                                                          // а а записывается текст все что остается после 92 длины и из всей длины вычетается 92 ,
-                                                                          // строка становиться длинной в 326-92 = 234 (a.Length) и начинается с 92 символа
-                                                                          // цикл брейкнулся, но цикл while запускает for снова,
-                                                                          // но строка уже обновилась и имеет 234 длину
-                                                                          // дальше в новой строке имеющей длину 234 идет поиск пробела в диапазоне со 91+94=185 
-                                                                          // со 185 символа и опускается вниз пока не найдет ближайший пробел
-                                                                          // совпало на 84 длине теперь у нас в result уже две строки с переносом и символом /n
-                                                                          // в начальную строку записалось 326-(91+84)-1 -1  = 149 
-                                                                          // опять начинается поиск пробела длина строки для поиска 149
-                                                                          //
+                            char[] charArr1 = { a[i] };  // идет поиск пробела в строке, создается массив типа char, который принимает элементы заданной строки (а)
+                                                         // благодаря циклу for мы проходим по каждому элементу строки с идексами от klenhth = 94 до нулевого элемента
 
-                            a = a.Substring(i + 1);                       //заданной строке присваивается заданная строка с примененным метом Substring
-                                                                          //метод обрезает строку на еденицу больше от символа,
-                                                                          //по номеру которого найден ближайший пробел
-                                                                          //от заданного значения по длине переноса строки klenhth
-                            break;                                        //оператор break останавливает цикл
-                        }
-                        if (i == 1)                                       //редко выполнимое условие строка должна иметь слово в 94 символа без пробелов 
-                                                                          //можно принебречь т к самое длинное слово на русском
-                                                                          //превысокомногорассмотрительствующий - 35 символов
-                                                                          //используется для обрезки с условием что длина обрезки klenhth будет равна 35
-                                                                          //как длина самого длинного русского слова 
-                                                                          //английское самое длинное слово Pneumonoultramicroscopicsilicovolcanoconiosis 
-                                                                          //45 символов
-                        {
-                            result = result + a.Substring(0, klenhth) + "\n";
-                            a = a.Substring(klenhth + 1);
+                            string str1 = new string(charArr1);  // создается строка, в которую записывается каждый элемент заданной в методе строки
+                            string str2 = " ";                   // создается строка, с символом пробел, для поиске пробела в заданной строке
+                            if (str1 == str2)                    // сравнивается каждый элемент заданной строки и строка с символом пробел
+                            {
+                                result = result + a.Substring(0, i) + "\n";   //пустой строке присваивается значение самой себя, плюс значение заданной строки, 
+                                                                              //к которой применен метод Substring (0, i) и прибавляется символ переноса строки
+                                                                              //Substing обрезает строку до ближайшего символа " " (пробел)
+                                                                              //и записывает в переменную result плюс символ переноса строки
+                                                                              //
+                                                                              // первый случай срабатывания условия на 91 длинне 
+                                                                              // в result записано от нуля до 91 строка 
+                                                                              // а а записывается текст все что остается после 92 длины и из всей длины вычетается 92 ,
+                                                                              // строка становиться длинной в 326-92 = 234 (a.Length) и начинается с 92 символа
+                                                                              // цикл брейкнулся, но цикл while запускает for снова,
+                                                                              // но строка уже обновилась и имеет 234 длину
+                                                                              // дальше в новой строке имеющей длину 234 идет поиск пробела в диапазоне со 91+94=185 
+                                                                              // со 185 символа и опускается вниз пока не найдет ближайший пробел
+                                                                              // совпало на 84 длине теперь у нас в result уже две строки с переносом и символом /n
+                                                                              // в начальную строку записалось 326-(91+84)-1 -1  = 149 
+                                                                              // опять начинается поиск пробела длина строки для поиска 149
+                                                                              //
+
+                                a = a.Substring(i + 1);                       //заданной строке присваивается заданная строка с примененным метом Substring
+                                                                              //метод обрезает строку на еденицу больше от символа,
+                                                                              //по номеру которого найден ближайший пробел
+                                                                              //от заданного значения по длине переноса строки klenhth
+                                break;                                        //оператор break останавливает цикл
+                            }
+                            if (i == 1)                                       //редко выполнимое условие строка должна иметь слово в 94 символа без пробелов 
+                                                                              //можно принебречь т к самое длинное слово на русском
+                                                                              //превысокомногорассмотрительствующий - 35 символов
+                                                                              //используется для обрезки с условием что длина обрезки klenhth будет равна 35
+                                                                              //как длина самого длинного русского слова 
+                                                                              //английское самое длинное слово Pneumonoultramicroscopicsilicovolcanoconiosis 
+                                                                              //45 символов
+                            {
+                                result = result + a.Substring(0, klenhth) + "\n";
+                                a = a.Substring(klenhth + 1);
+                            }
                         }
                     }
+                    while (a.Length > klenhth);
+                    result = result + a;
                 }
-                while (a.Length > klenhth);
-                result = result + a;
+                return result;
             }
-            return result;
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine($"Блок catch:\n {ex}");
+            }
+            throw new Exception("Строка не найдена");
         }
         public static string Code_Writer_Console(int x, int e)
         {

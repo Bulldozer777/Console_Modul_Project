@@ -53,6 +53,8 @@ namespace Training_Csharp.EntityFrameworkCore.Modul_Csharp_Base
         public string CreateExamples5 { get; set; }
         public string CreateExamples6 { get; set; }
 
+        public bool IsMarried { get; set; }
+
     }
 
 }

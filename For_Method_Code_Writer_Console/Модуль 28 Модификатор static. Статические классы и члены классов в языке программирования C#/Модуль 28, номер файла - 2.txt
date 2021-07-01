@@ -1,0 +1,38 @@
+            Account acc1 = new Account(1000, 6);
+            Account acc2 = new Account(900, 5);
+            Account.MinSum = 200; 
+
+            //меняется значение поля minSum для всех объектов Account т к
+            //cвойство MinSum и поле minSum имеет модификатор static
+            //нельзя использовать нестатические свойства в статических методах
+            //нельзя использовать ключевое слово this
+            //т к метод статические и работает для всех объектов в целом
+
+            Console.WriteLine(Account.GetSum(1000, 10, 5));
+
+class Account
+    {
+        private static decimal minSum = 100; //минимальная сумма для счетов
+        public Account(decimal sum, decimal rate) //конструктор принмает сумму на счет и процентную ставку
+        {
+            if (sum < MinSum) throw new Exception("Недопустимая сумма"); //если меньше, то выбрасывается исключение
+            //иначе
+            Sum = sum; Rate = rate; //устанавливаем значения для sum и rate
+        }
+        public static decimal MinSum //для того чтоб управлять доступом к переменной
+        {
+            get { return minSum; }
+            set { if (value > 0) minSum = value; }
+        }
+        public decimal Sum { get; private set; }
+        public decimal Rate { get; private set; } //свойство процентной ставки 
+        public static decimal GetSum(decimal sum, decimal rate, int period) // посчет суммы через определенный период по некоторой процентной ставке
+        {
+            decimal result = sum;
+            for (int i = 0; i <= period; i++)
+            {
+                result = result + result * rate / 100;
+            }
+            return result;
+        }
+    }

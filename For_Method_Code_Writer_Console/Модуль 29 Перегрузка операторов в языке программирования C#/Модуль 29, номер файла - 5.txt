@@ -1,0 +1,12 @@
+            Z_C_29_Counter c1 = new Z_C_29_Counter { Value = 4 };
+            Z_C_29_Counter c2 = new Z_C_29_Counter { Value = 45 };
+            c1++;
+            c2++;
+            Console.WriteLine($"\nc1++ = {c1++}\n");
+            Console.WriteLine($"\nc2++ = {c2++}\n");
+
+ public static Z_C_29_Counter operator ++(Z_C_29_Counter c2)
+        {
+          
+            return new Z_C_29_Counter { Value = c2.Value + 1 };
+        }
