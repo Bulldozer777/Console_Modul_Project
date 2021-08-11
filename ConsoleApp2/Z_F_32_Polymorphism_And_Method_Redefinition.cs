@@ -20,6 +20,10 @@ namespace Training_Csharp
             }
             Generation_Operation.EndInStart();
         }
+        public override void Coddition_Create_Type_Method_1()
+        {
+
+        }
         public static void Z_F_32_Polymorphism_And_Method_Redefinition_Create()
         {
 

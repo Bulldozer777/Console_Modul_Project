@@ -1,0 +1,30 @@
+            Counter counter1 = new Counter { Seconds = 115 };
+
+            //Timer timer1 = counter1; некорректно
+            //Counter counter2 = timer1; некорректно 
+            //до операции преобразования типов
+
+            Timer timer1 = counter1; 
+            Counter counter2 = (Counter)timer1; 
+Console.WriteLine($"Timer timer1 = counter1; timer1 = " +
+$"{timer1.Hours} : {timer1.Minutes} : {timer1.Seconds} ");
+Console.WriteLine($"Counter counter2 = (Counter)timer1;" +
+$" counter2 = {counter2.Seconds}\n");
+
+  public static explicit operator Counter(Timer timer)
+            {
+                int h = timer.Hours * 3600;
+                int m = timer.Minutes * 60;
+                return new Counter { Seconds = h + m + timer.Seconds };
+            }
+  public static implicit operator Timer(Counter counter)  
+
+                //неявное
+                //Timer(Counter counter) преобразование от Counter к Timer
+
+            {
+                int h = counter.Seconds / 3600;
+                int m = (counter.Seconds - h * 3600)/60;
+                int s = counter.Seconds - h * 3600 - m * 60;
+                return new Timer { Hours = h, Minutes = m, Seconds = s };
+            }

@@ -13,16 +13,16 @@ namespace Training_Csharp
             if (a == 8)
             {
                 Modul_Struct Eight = new H_8_Conditional_Constructions();   //нужно создавать объект класса наследника, после ключевого слова new
-                Eight.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 2));
-                Eight.operation_Create_Method_1 = Code_Writer_Console(a, 1);
-                Eight.Method_Modul_Start_1();
+                Eight.Operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 2));
+                Eight.Operation_Create_Method_1 = Code_Writer_Console(a, 1);
+                Eight.Method_Modul_Start_1(a);
                 Generation_Operation.EndInStart();
             }           
         }
-        public override void Create_Method()
+        public override void Create_Method(int a)
         {
             Console.WriteLine("Код метода H_8_Conditional_Constructions_Create()\n");
-            Console.WriteLine($"{operation_Create_Method_1}");
+            Console.WriteLine($"{Operation_Create_Method_1}");
             Console.WriteLine("Чтобы запустить метод H_8_Conditional_Constructions_Create()\nНажмите 1\n");
             int y = int.Parse(Console.ReadLine());
             if (y == 1)
@@ -79,7 +79,7 @@ namespace Training_Csharp
             //Если бы пользователь ввел - то выполнилось (x - y) т е третий операнд
                 Console.WriteLine(z);
         }
-        public override void Examples_Method()
+        public override void Examples_Method(int a)
         {
             Console.WriteLine("Работу с операторами if и else\n можно рассмотреть на примере работы метода Calculating_The_Volume_Of_A_Box()\n который рассчитывает объем короба при выполнении опеределенных условий");
             Console.WriteLine(G_7_If_Else_Operation.Calculating_The_Volume_Of_A_Box());

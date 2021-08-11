@@ -268,7 +268,7 @@ namespace Training_Csharp
         }
         public static void InStartString()
         {
-            Console.WriteLine("\nВведите номер модуля необходимый для вывода в консоль, ведите 99 для информации по модулям с#");
+            Console.WriteLine("\nВведите номер модуля необходимый для вывода в консоль, введите 99 для информации по модулям с#");
         }
         public static string BaseModul(int a)
         {

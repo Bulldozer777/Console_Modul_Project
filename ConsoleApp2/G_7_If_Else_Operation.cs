@@ -14,44 +14,44 @@ namespace Training_Csharp
             if (a == 7)
             {
                 Modul_Struct Seven = new G_7_If_Else_Operation();   //нужно создавать объект класса наследника, после ключевого слова new
-                Seven.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
-                Seven.name_Create_Method_1 = "Операции сравнения";
-                Seven.name_Create_Method_2 = "Логическое операции";
-                Seven.operation_Create_Method_1 = Code_Writer_Console(a, 2);
-                Seven.operation_Create_Method_2 = Code_Writer_Console(a, 3);
-                Seven.create_Create_Method_1 = Comparison_Operations();
-                Seven.create_Create_Method_2 = Logical_Operations();
-                Seven.Method_Modul_Start_1();
+                Seven.Operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
+                Seven.Name_Create_Method_1 = "Операции сравнения";
+                Seven.Name_Create_Method_2 = "Логическое операции";
+                Seven.Operation_Create_Method_1 = Code_Writer_Console(a, 2);
+                Seven.Operation_Create_Method_2 = Code_Writer_Console(a, 3);
+                Seven.Create_Create_Method_1 = Comparison_Operations();
+                Seven.Create_Create_Method_2 = Logical_Operations();
+                Seven.Method_Modul_Start_1(a);
                 Generation_Operation.EndInStart();
             }
         }
-        public override void Create_Method()
-        {
-            Console.WriteLine($"Чтобы запустить {name_Create_Method_1} нажмите 1 ");
-            Console.WriteLine($"Чтобы запустить {name_Create_Method_2} нажмите 2 ");
+        public override void Create_Method(int a)
+        {          
+            Console.WriteLine($"Чтобы запустить {Name_Create_Method_1} нажмите 1 ");
+            Console.WriteLine($"Чтобы запустить {Name_Create_Method_2} нажмите 2 ");
             Console.WriteLine("Чтобы перейти в выбору другогой темы модуля модуля нажмите 6");
             Console.WriteLine("Чтобы перейти в выбору другого модуля модуля нажмите 7");
             int x = int.Parse(Console.ReadLine());
             if (x == 1)
             {
                 //Console.Clear();
-                Console.WriteLine($"{operation_Create_Method_1}");
-                Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_1}\" на консоль ");
-                Console.WriteLine($"{create_Create_Method_1}");
-                Create_Method();
+                Console.WriteLine($"{Operation_Create_Method_1}");
+                Console.WriteLine($"Вывод результата работы метода \"{Name_Create_Method_1}\" на консоль ");
+                Console.WriteLine($"{Create_Create_Method_1}");
+                Create_Method(a);
             }
             if (x == 2)
             {
                 //  Console.Clear();
-                Console.WriteLine($"{operation_Create_Method_2}");
-                Console.WriteLine($"Вывод результата работы метода \"{name_Create_Method_2}\" на консоль");
-                Console.WriteLine($"{create_Create_Method_2}");
-                Create_Method();
+                Console.WriteLine($"{Operation_Create_Method_2}");
+                Console.WriteLine($"Вывод результата работы метода \"{Name_Create_Method_2}\" на консоль");
+                Console.WriteLine($"{Create_Create_Method_2}");
+                Create_Method(a);
             }
             if (x == 6)
             {
                 Console.Clear();
-                Method_Modul_Start_1();
+                Method_Modul_Start_1(a);
             }
             if (x == 7)
             {
@@ -62,7 +62,7 @@ namespace Training_Csharp
             if (x > 7 || x < 1)
             {
                 Console.WriteLine("Вы ввели неверное число, введите число от 1-5, чтобы запустить необходимый метод");
-                Method_Modul_Start_1();
+                Method_Modul_Start_1(a);
             }
         }
             public static string Comparison_Operations()
@@ -181,7 +181,7 @@ namespace Training_Csharp
                 GetEnd(i);
             }
         }
-        public override void Examples_Method()
+        public override void Examples_Method(int a)
         {
             Console.WriteLine(Calculating_The_Volume_Of_A_Box()); 
         }

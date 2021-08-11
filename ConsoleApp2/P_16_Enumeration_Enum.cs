@@ -108,13 +108,13 @@ namespace Training_Csharp
                             if (u.NameInfo1 == identification_name)
                             {
                                 Modul_Struct Sixteen = new P_16_Enumeration_Enum();
-                                Sixteen.operation_Info_Method_1 = u.OperationInfo1;
-                                Sixteen.operation_Create_Method_1 = u.OperationCreate1;
-                                Sixteen.operation_Create_Method_2 = u.OperationCreate2;
-                                Sixteen.name_Create_Method_1 = u.NameCreate1;
-                                Sixteen.name_Create_Method_2 = u.NameCreate2;
-                                Q_17_Structures.Structures_Create(Sixteen.operation_Info_Method_1);
-                                Sixteen.Method_Modul_Start_1();
+                                Sixteen.Operation_Info_Method_1 = u.OperationInfo1;
+                                Sixteen.Operation_Create_Method_1 = u.OperationCreate1;
+                                Sixteen.Operation_Create_Method_2 = u.OperationCreate2;
+                                Sixteen.Name_Create_Method_1 = u.NameCreate1;
+                                Sixteen.Name_Create_Method_2 = u.NameCreate2;
+                                Q_17_Structures.Structures_Create(Sixteen.Operation_Info_Method_1);
+                                Sixteen.Method_Modul_Start_1(a);
                             }
                         }
                     }

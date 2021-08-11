@@ -1,0 +1,36 @@
+            Counter counter1 = new Counter { Seconds = 115 };
+            int x = counter1.Seconds;
+
+            //int x = counter1; некорректно
+            //Counter counter2 = x;  некорректно
+
+            Counter counter2 = x;
+
+            //после неявного преобразования логика которого описана в классе Counter
+
+             x = (int)counter2;
+
+            //после явного преобразования логика которого описана в классе Counter
+
+            Console.WriteLine($"Counter counter2 = x; counter2.Seconds = {counter2.Seconds}");
+
+            Console.WriteLine($"int x = (int)counter2; x = {x}\n");
+
+   public static implicit operator Counter (int x)
+
+            //слово explicit (если преобразование явное,
+            //то есть нужна операция приведения типов)
+            //или implicit (если преобразование неявное)
+
+            {
+                return new Counter { Seconds = x };
+            }
+   public static explicit operator int(Counter counter)
+
+            //слово explicit (если преобразование явное,
+            //то есть нужна операция приведения типов)
+            //или implicit (если преобразование неявное)
+
+            {
+                return counter.Seconds;
+            }

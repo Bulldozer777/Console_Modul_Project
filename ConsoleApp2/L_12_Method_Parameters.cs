@@ -13,18 +13,18 @@ namespace Training_Csharp
             if (a == 12)
             {
                 Modul_Struct Twelve = new L_12_Method_Parameters();   //нужно создавать объект класса наследника, после ключевого слова new
-                Twelve.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
-                Twelve.name_Create_Method_1 = "Передача параметров по значению и по ссылке";
-                Twelve.operation_Create_Method_1 = Code_Writer_Console(a, 2);
-                Twelve.name_Create_Method_2 = "Выходные параметры. Модификатор out ";
-                Twelve.operation_Create_Method_2 = Code_Writer_Console(a, 3);
-                Twelve.name_Create_Method_3 = "Необязательные параметры";
-                Twelve.operation_Create_Method_3 = Code_Writer_Console(a, 4);
-                Twelve.name_Create_Method_4 = "Именованные параметры";
-                Twelve.operation_Create_Method_4 = Code_Writer_Console(a, 5);
-                Twelve.name_Examples_Method_1 = "Расчет короба под сабвуфер";
-                Twelve.operation_Examples_Method_1 = Code_Writer_Console(a, 6);
-                Twelve.Method_Modul_Start_1();
+                Twelve.Operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
+                Twelve.Name_Create_Method_1 = "Передача параметров по значению и по ссылке";
+                Twelve.Operation_Create_Method_1 = Code_Writer_Console(a, 2);
+                Twelve.Name_Create_Method_2 = "Выходные параметры. Модификатор out ";
+                Twelve.Operation_Create_Method_2 = Code_Writer_Console(a, 3);
+                Twelve.Name_Create_Method_3 = "Необязательные параметры";
+                Twelve.Operation_Create_Method_3 = Code_Writer_Console(a, 4);
+                Twelve.Name_Create_Method_4 = "Именованные параметры";
+                Twelve.Operation_Create_Method_4 = Code_Writer_Console(a, 5);
+                Twelve.Name_Examples_Method_1 = "Расчет короба под сабвуфер";
+                Twelve.Operation_Examples_Method_1 = Code_Writer_Console(a, 6);
+                Twelve.Method_Modul_Start_1(a);
                 Console.WriteLine("Именованные параметры");
                 Generation_Operation.EndInStart();
             }

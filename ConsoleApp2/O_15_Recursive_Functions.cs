@@ -59,13 +59,13 @@ namespace Training_Csharp
                             if (u.Id == identification)
                             {
                                 Modul_Struct Fifteen = new O_15_Recursive_Functions();
-                                Fifteen.operation_Info_Method_1 = u.OperationInfo1;
-                                Fifteen.operation_Create_Method_1 = u.OperationCreate1;
-                                Fifteen.operation_Create_Method_2 = u.OperationCreate2;
-                                Fifteen.name_Create_Method_1 = u.NameCreate1;
-                                Fifteen.name_Create_Method_2 = u.NameCreate2;
-                                Structures_Create(Fifteen.operation_Info_Method_1);
-                                Fifteen.Method_Modul_Start_1();
+                                Fifteen.Operation_Info_Method_1 = u.OperationInfo1;
+                                Fifteen.Operation_Create_Method_1 = u.OperationCreate1;
+                                Fifteen.Operation_Create_Method_2 = u.OperationCreate2;
+                                Fifteen.Name_Create_Method_1 = u.NameCreate1;
+                                Fifteen.Name_Create_Method_2 = u.NameCreate2;
+                                Structures_Create(Fifteen.Operation_Info_Method_1);
+                                Fifteen.Method_Modul_Start_1(a);
                             }                       
                         }
                     }
@@ -81,13 +81,13 @@ namespace Training_Csharp
                             if (u.NameInfo1 == identification_name)
                             {
                                 Modul_Struct Fifteen = new O_15_Recursive_Functions();
-                                Fifteen.operation_Info_Method_1 = u.OperationInfo1;
-                                Fifteen.operation_Create_Method_1 = u.OperationCreate1;
-                                Fifteen.operation_Create_Method_2 = u.OperationCreate2;
-                                Fifteen.name_Create_Method_1 = u.NameCreate1;
-                                Fifteen.name_Create_Method_2 = u.NameCreate2;
-                                Structures_Create(Fifteen.operation_Info_Method_1);
-                                Fifteen.Method_Modul_Start_1();
+                                Fifteen.Operation_Info_Method_1 = u.OperationInfo1;
+                                Fifteen.Operation_Create_Method_1 = u.OperationCreate1;
+                                Fifteen.Operation_Create_Method_2 = u.OperationCreate2;
+                                Fifteen.Name_Create_Method_1 = u.NameCreate1;
+                                Fifteen.Name_Create_Method_2 = u.NameCreate2;
+                                Structures_Create(Fifteen.Operation_Info_Method_1);
+                                Fifteen.Method_Modul_Start_1(a);
                             }
                         }
                     }

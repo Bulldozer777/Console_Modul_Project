@@ -10,52 +10,50 @@ namespace Training_Csharp
 {
     class Modul_Struct
     {
-        public string Name_Create_Method_1 = " ";
-
         public static object m2;   // для данного поля пока не написана логика     
-        public string name_Info_Method_1 { get; set; }    // для данного поля пока не написана логика 
+        public string Name_Info_Method_1 { get; set; }    // для данного поля пока не написана логика 
         //используется для сопоставление темы и записи в базе данных 
-        public string operation_Info_Method_1 { get; set; }  //поле для ввода текста - объяснения или вступленния, по теме модуля
-        public string name_Create_Method_1 { get; set; } //сюда вводятся имена методов, используемые в CreateMethod()
-        public string name_Create_Method_2 { get; set; }
-        public string name_Create_Method_3 { get; set; }
-        public string name_Create_Method_4 { get; set; }
-        public string name_Create_Method_5 { get; set; }
-        public string name_Tasks_Method_3 { get; set; }   // для данного поля пока не написана логика 
-        public string name_Examples_Method_1 { get; set; } //сюда вводятся имена методов, используемые в Examples_Method()
-        public string name_Examples_Method_2 { get; set; }
-        public string name_Examples_Method_3 { get; set; }
-        public string name_Examples_Method_4 { get; set; }
-        public string name_Examples_Method_5 { get; set; }
-        public string operation_Create_Method_1 { get; set; }     //сюда вводится код методов CreateMethod()
-        public string operation_Create_Method_2 { get; set; }
-        public string operation_Create_Method_3 { get; set; }
-        public string operation_Create_Method_4 { get; set; }
-        public string operation_Create_Method_5 { get; set; }
-        public string operation_Tasks_Method_1 { get; set; }
-        public string operation_Tasks_Method_2 { get; set; }
-        public string operation_Tasks_Method_3 { get; set; }
-        public string operation_Tasks_Method_4 { get; set; }
-        public string operation_Tasks_Method_5 { get; set; }
-        public string operation_Examples_Method_1 { get; set; } //сюда вводятся методы, работа которых используется в Examples_Method()
-        public string operation_Examples_Method_2 { get; set; }
-        public string operation_Examples_Method_3 { get; set; }
-        public string operation_Examples_Method_4 { get; set; }
-        public string operation_Examples_Method_5 { get; set; }
-        public string operation_Examples_Method_6 { get; set; }
-        public string operation_Examples_Method_7 { get; set; }
-        public string create_Create_Method_1 { get; set; }
-        public string create_Create_Method_2 { get; set; }
-        public string create_Create_Method_3 { get; set; }
-        public string create_Create_Method_4 { get; set; }
-        public string create_Create_Method_5 { get; set; }
-        public string create_Create_Method_6 { get; set; }
-        public string create_Examples_Method_1 { get; set; }
-        public string create_Examples_Method_2 { get; set; }
-        public string create_Examples_Method_3 { get; set; }
-        public string create_Examples_Method_4 { get; set; }
-        public string create_Examples_Method_5 { get; set; }
-        public string create_Examples_Method_6 { get; set; }
+        public string Operation_Info_Method_1 { get; set; }  //поле для ввода текста - объяснения или вступленния, по теме модуля
+        public string Name_Create_Method_1 { get; set; } //сюда вводятся имена методов, используемые в CreateMethod()
+        public string Name_Create_Method_2 { get; set; }
+        public string Name_Create_Method_3 { get; set; }
+        public string Name_Create_Method_4 { get; set; }
+        public string Name_Create_Method_5 { get; set; }
+        public string Name_Tasks_Method_3 { get; set; }   // для данного поля пока не написана логика 
+        public string Name_Examples_Method_1 { get; set; } //сюда вводятся имена методов, используемые в Examples_Method()
+        public string Name_Examples_Method_2 { get; set; }
+        public string Name_Examples_Method_3 { get; set; }
+        public string Name_Examples_Method_4 { get; set; }
+        public string Name_Examples_Method_5 { get; set; }
+        public string Operation_Create_Method_1 { get; set; }     //сюда вводится код методов CreateMethod()
+        public string Operation_Create_Method_2 { get; set; }
+        public string Operation_Create_Method_3 { get; set; }
+        public string Operation_Create_Method_4 { get; set; }
+        public string Operation_Create_Method_5 { get; set; }
+        public string Operation_Tasks_Method_1 { get; set; }
+        public string Operation_Tasks_Method_2 { get; set; }
+        public string Operation_Tasks_Method_3 { get; set; }
+        public string Operation_Tasks_Method_4 { get; set; }
+        public string Operation_Tasks_Method_5 { get; set; }
+        public string Operation_Examples_Method_1 { get; set; } //сюда вводятся методы, работа которых используется в Examples_Method()
+        public string Operation_Examples_Method_2 { get; set; }
+        public string Operation_Examples_Method_3 { get; set; }
+        public string Operation_Examples_Method_4 { get; set; }
+        public string Operation_Examples_Method_5 { get; set; }
+        public string Operation_Examples_Method_6 { get; set; }
+        public string Operation_Examples_Method_7 { get; set; }
+        public string Create_Create_Method_1 { get; set; }
+        public string Create_Create_Method_2 { get; set; }
+        public string Create_Create_Method_3 { get; set; }
+        public string Create_Create_Method_4 { get; set; }
+        public string Create_Create_Method_5 { get; set; }
+        public string Create_Create_Method_6 { get; set; }
+        public string Create_Examples_Method_1 { get; set; }
+        public string Create_Examples_Method_2 { get; set; }
+        public string Create_Examples_Method_3 { get; set; }
+        public string Create_Examples_Method_4 { get; set; }
+        public string Create_Examples_Method_5 { get; set; }
+        public string Create_Examples_Method_6 { get; set; }
 
         public string Name_Create_Method_7 { get; set; }
         public string Operation_Create_Method_7 { get; set; }
@@ -109,6 +107,7 @@ namespace Training_Csharp
                     {
                         using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
                         {
+                            Console.Clear();
                             Modul_Struct_Base Razen = new Modul_Struct_Base
                             {
                                 NameInfo1 = Generation_Operation.BaseModul(a),
@@ -153,8 +152,10 @@ namespace Training_Csharp
                                 CreateExamples5 = CreateExamples5_p,
                                 CreateExamples6 = CreateExamples6_p,
                             };
+                            Console.Clear();
                             O_15_Recursive_Functions.Add_Modul_Struct_Bases(Razen, Program.Base_Configuration_On_File_Json());
                             Console.WriteLine("\nДобавление данных в базу выполненено успешно");
+                            //Console.Clear();
                             Generation_Operation.InStart3(a);
                         }
                     }
@@ -163,53 +164,73 @@ namespace Training_Csharp
                     {
                         using (ApplicationContext db = new ApplicationContext(Program.Base_Configuration_On_File_Json()))
                         {
+                            Console.Clear();
                             var Razen = db.Modul_Struct_Bases.ToList();
-                            Console.WriteLine("\nПолучение данных из базы:");
+                            Console.WriteLine("\nПолучение данных из базы \"Modul_Struct_Base\":\n");
+                            Console.WriteLine($"{Generation_Operation.BaseModul(a)}");
                             foreach (Modul_Struct_Base u in Razen)
                             {
                                 if (u.NameInfo1 == Generation_Operation.BaseModul(a))
                                 {
-                                    Name.name_Create_Method_1 = u.NameCreate1;
-                                    Name.name_Create_Method_2 = u.NameCreate2;
-                                    Name.name_Create_Method_3 = u.NameCreate3;
-                                    Name.name_Create_Method_4 = u.NameCreate4;
-                                    Name.name_Create_Method_5 = u.NameCreate5;
-                                    Name.name_Examples_Method_1 = u.NameExamples1; //сюда вводятся имена методов, используемые в Examples_Method()
-                                    Name.name_Examples_Method_2 = u.NameExamples2;
-                                    Name.name_Examples_Method_3 = u.NameExamples3;
-                                    Name.name_Examples_Method_4 = u.NameExamples4;
-                                    Name.name_Examples_Method_5 = u.NameExamples5;
-                                    Name.operation_Info_Method_1 = u.OperationInfo1;
-                                    Name.operation_Create_Method_1 = u.OperationCreate1;
-                                    Name.operation_Create_Method_2 = u.OperationCreate2;
-                                    Name.operation_Create_Method_3 = u.OperationCreate3;
-                                    Name.operation_Create_Method_4 = u.OperationCreate4;
-                                    Name.operation_Create_Method_5 = u.OperationCreate5;
-                                    Name.operation_Tasks_Method_1 = u.OperationTasks1;
-                                    Name.operation_Tasks_Method_2 = u.OperationTasks2;
-                                    Name.operation_Tasks_Method_3 = u.OperationTasks3;
-                                    Name.operation_Tasks_Method_4 = u.OperationTasks4;
-                                    Name.operation_Tasks_Method_5 = u.OperationTasks5;
-                                    Name.operation_Examples_Method_1 = u.OperationExamples1;   //сюда вводятся методы, работа которых используется в Examples_Method()
-                                    Name.operation_Examples_Method_2 = u.OperationExamples2;
-                                    Name.operation_Examples_Method_3 = u.OperationExamples3;
-                                    Name.operation_Examples_Method_4 = u.OperationExamples4;
-                                    Name.operation_Examples_Method_5 = u.OperationExamples5;
-                                    Name.operation_Examples_Method_6 = u.OperationExamples6;
-                                    Name.operation_Examples_Method_7 = u.OperationExamples7;
-                                    Name.create_Create_Method_1 = u.CreateCreate1;
-                                    Name.create_Create_Method_2 = u.CreateCreate2;
-                                    Name.create_Create_Method_3 = u.CreateCreate3;
-                                    Name.create_Create_Method_4 = u.CreateCreate4;
-                                    Name.create_Create_Method_5 = u.CreateCreate5;
-                                    Name.create_Create_Method_6 = u.CreateCreate6;
-                                    Name.create_Examples_Method_1 = u.CreateExamples1;
-                                    Name.create_Examples_Method_2 = u.CreateExamples2;
-                                    Name.create_Examples_Method_3 = u.CreateExamples3;
-                                    Name.create_Examples_Method_4 = u.CreateExamples4;
-                                    Name.create_Examples_Method_5 = u.CreateExamples5;
-                                    Name.create_Examples_Method_6 = u.CreateExamples6;
-                                    Name.Method_Modul_Start_1();
+                                    db.Modul_Struct_Bases.Update(u);
+                                    Name.Name_Create_Method_1 = u.NameCreate1;
+                                    Name.Name_Create_Method_2 = u.NameCreate2;
+                                    Name.Name_Create_Method_3 = u.NameCreate3;
+                                    Name.Name_Create_Method_4 = u.NameCreate4;
+                                    Name.Name_Create_Method_5 = u.NameCreate5;
+                                    Name.Name_Examples_Method_1 = u.NameExamples1; //сюда вводятся имена методов, используемые в Examples_Method()
+                                    Name.Name_Examples_Method_2 = u.NameExamples2;
+                                    Name.Name_Examples_Method_3 = u.NameExamples3;
+                                    Name.Name_Examples_Method_4 = u.NameExamples4;
+                                    Name.Name_Examples_Method_5 = u.NameExamples5;
+                                    Name.Operation_Info_Method_1 = u.OperationInfo1;
+                                    Name.Operation_Create_Method_1 = u.OperationCreate1;
+                                    Name.Operation_Create_Method_2 = u.OperationCreate2;
+                                    Name.Operation_Create_Method_3 = u.OperationCreate3;
+                                    Name.Operation_Create_Method_4 = u.OperationCreate4;
+                                    Name.Operation_Create_Method_5 = u.OperationCreate5;
+                                    Name.Operation_Tasks_Method_1 = u.OperationTasks1;
+                                    Name.Operation_Tasks_Method_2 = u.OperationTasks2;
+                                    Name.Operation_Tasks_Method_3 = u.OperationTasks3;
+                                    Name.Operation_Tasks_Method_4 = u.OperationTasks4;
+                                    Name.Operation_Tasks_Method_5 = u.OperationTasks5;
+                                    Name.Operation_Examples_Method_1 = u.OperationExamples1;   //сюда вводятся методы, работа которых используется в Examples_Method()
+                                    Name.Operation_Examples_Method_2 = u.OperationExamples2;
+                                    Name.Operation_Examples_Method_3 = u.OperationExamples3;
+                                    Name.Operation_Examples_Method_4 = u.OperationExamples4;
+                                    Name.Operation_Examples_Method_5 = u.OperationExamples5;
+                                    Name.Operation_Examples_Method_6 = u.OperationExamples6;
+                                    Name.Operation_Examples_Method_7 = u.OperationExamples7;
+                                    Name.Create_Create_Method_1 = u.CreateCreate1;
+                                    Name.Create_Create_Method_2 = u.CreateCreate2;
+                                    Name.Create_Create_Method_3 = u.CreateCreate3;
+                                    Name.Create_Create_Method_4 = u.CreateCreate4;
+                                    Name.Create_Create_Method_5 = u.CreateCreate5;
+                                    Name.Create_Create_Method_6 = u.CreateCreate6;
+                                    Name.Create_Examples_Method_1 = u.CreateExamples1;
+                                    Name.Create_Examples_Method_2 = u.CreateExamples2;
+                                    Name.Create_Examples_Method_3 = u.CreateExamples3;
+                                    Name.Create_Examples_Method_4 = u.CreateExamples4;
+                                    Name.Create_Examples_Method_5 = u.CreateExamples5;
+                                    Name.Create_Examples_Method_6 = u.CreateExamples6;
+                                    Name.Method_Modul_Start_1(a);
+                                    Generation_Operation.InStart3(a);
+                                }
+                            }
+                            foreach (Modul_Struct_Base u in Razen)
+                            {
+                                if (u.NameInfo1 == Generation_Operation.BaseModul(a))
+                                {
+                                    Name.Method_Modul_Start_1(a);
+                                }
+                                if (u.NameInfo1 == null)
+                                {
+                                    db.Modul_Struct_Bases.Update(u);
+                                    string name_of_modul = Generation_Operation.BaseModul(a);
+                                    string modul = "Модуль " + a + "\n";
+                                    name_of_modul = name_of_modul.Replace(modul, "");
+                                    Console.WriteLine($"\nВ базе Modul_Struct_Base по теме:\n\"{name_of_modul}\" - нет данных :(");
+                                    Generation_Operation.InStart3(a);
                                 }
                             }
                         }
@@ -285,24 +306,24 @@ namespace Training_Csharp
         public void Method_Modul_Start()
         {
             Console.WriteLine("\n");
-            if (operation_Info_Method_1 != null)
+            if (Operation_Info_Method_1 != null)
             {
                 Console.WriteLine($"Чтобы запустить Info_Method, нажмите 1 ");
             }
-            if (operation_Create_Method_1 != null)
+            if (Operation_Create_Method_1 != null)
             {
                 Console.WriteLine($"Чтобы запустить Create_Method, нажмите 2 ");
             }
-            if (operation_Tasks_Method_1 != null)
+            if (Operation_Tasks_Method_1 != null)
             {
                 Console.WriteLine($"Чтобы запустить Tasks_Method, нажмите 3 ");
             }
-            if (operation_Examples_Method_1 != null)
+            if (Operation_Examples_Method_1 != null)
             {
                 Console.WriteLine($"Чтобы запустить Examples_Method, нажмите 4 ");
             }
             Console.WriteLine("Чтобы перейти в выбору другого модуля, нажмите 5");
-
+            Console.WriteLine("Чтобы перейти назад, нажмите 6");
         }
         public static object M1(string Modul_Struct)
         {
@@ -310,9 +331,9 @@ namespace Training_Csharp
 
             return Modul_Struct;
         }
-        public virtual void Method_Modul_Start_1()
+        public virtual void Method_Modul_Start_1(int a)
         {
-            if (operation_Info_Method_1 == null & operation_Create_Method_1 == null & operation_Tasks_Method_1 == null & operation_Examples_Method_1 == null)
+            if (Operation_Info_Method_1 == null & Operation_Create_Method_1 == null & Operation_Tasks_Method_1 == null & Operation_Examples_Method_1 == null)
             {
                 Console.WriteLine("\nПустой модуль");
                 Console.WriteLine("Не заполнено ни одно поле класса Modul_Struct, заполните поля класса для запуска модуля");
@@ -323,92 +344,96 @@ namespace Training_Csharp
             {
                 Console.Clear();
                 Info_Method();
-                Method_Modul_Start_1();
+                Method_Modul_Start_1(a);
             }
             if (x == 2)
             {
                 Console.Clear();
-                Create_Method();
-                Method_Modul_Start_1();
+                Create_Method(a);
+                Method_Modul_Start_1(a);
             }
             if (x == 3)
             {
                 Console.Clear();
                 Tasks_Method();
-                Method_Modul_Start_1();
+                Method_Modul_Start_1(a);
             }
             if (x == 4)
             {
                 Console.Clear();
-                Examples_Method();
-                Method_Modul_Start_1();
+                Examples_Method(a);
+                Method_Modul_Start_1(a);
             }
             if (x == 5)
             {
                 Generation_Operation.EndInStart();
             }
-            if (x > 5 || x < 1)
+            if (x == 6)
             {
-                Console.WriteLine("Вы ввели неверное число, введите число от 1-5, чтобы запустить необходимый метод");
-                Method_Modul_Start_1();
+                Generation_Operation.InStart3(a);
+            }
+            if (x > 6 || x < 1)
+            {
+                Console.WriteLine("Вы ввели неверное число, введите число от 1-6, чтобы запустить необходимый метод");
+                Method_Modul_Start_1(a);
             }
         }
         public void Info_Method()
         {
-            Console.WriteLine($"{Structures_Create(operation_Info_Method_1)}");
+            Console.WriteLine($"{Structures_Create(Operation_Info_Method_1)}");
         }
-        public virtual void Create_Method()
+        public virtual void Create_Method(int a)
         {
-            if (name_Create_Method_1 != null)
+            if (Name_Create_Method_1 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Create_Method_1}, нажмите 1 ");
+                Console.WriteLine($"Чтобы запустить {Name_Create_Method_1}, нажмите 1 ");
             }
-            if (name_Create_Method_2 != null)
+            if (Name_Create_Method_2 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Create_Method_2}, нажмите 2 ");
+                Console.WriteLine($"Чтобы запустить {Name_Create_Method_2}, нажмите 2 ");
             }
-            if (name_Create_Method_3 != null)
+            if (Name_Create_Method_3 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Create_Method_3}, нажмите 3 ");
+                Console.WriteLine($"Чтобы запустить {Name_Create_Method_3}, нажмите 3 ");
             }
-            if (name_Create_Method_4 != null)
+            if (Name_Create_Method_4 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Create_Method_4}, нажмите 4 ");
+                Console.WriteLine($"Чтобы запустить {Name_Create_Method_4}, нажмите 4 ");
             }
-            if (name_Create_Method_5 != null)
+            if (Name_Create_Method_5 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Create_Method_5}, нажмите 5 ");
+                Console.WriteLine($"Чтобы запустить {Name_Create_Method_5}, нажмите 5 ");
             }
             if (Name_Create_Method_7 != null)
             {
                 Console.WriteLine($"Чтобы запустить {Name_Create_Method_7}, нажмите 6 ");
             }
-            Console.WriteLine("Чтобы перейти в выбору другогой темы модуля модуля, нажмите 7");
-            Console.WriteLine("Чтобы перейти в выбору другого модуля модуля, нажмите 8");
+            Console.WriteLine("Чтобы перейти в выбору другого метода модуля, нажмите 7");
+            Console.WriteLine("Чтобы перейти в выбору другого модуля, нажмите 8");
             int x = int.Parse(Console.ReadLine());
             if (x == 1)
             {
-                Coddition_Create_1();
+                Coddition_Create_1(a);
             }
             if (x == 2)
             {
-                Coddition_Create_2();
+                Coddition_Create_2(a);
             }
             if (x == 3)
             {
-                Coddition_Create_3();
+                Coddition_Create_3(a);
             }
             if (x == 4)
             {
-                Coddition_Create_4();
+                Coddition_Create_4(a);
             }
             if (x == 5)
             {
-                Coddition_Create_5();
+                Coddition_Create_5(a);
             }
             if (x == 6)
             {
-                Coddition_Create_6();
+                Coddition_Create_6(a);
                 //var tuple = Coddition_Create_Type_Method_6();
                 //Console.WriteLine(tuple.Item1);
                 //Console.WriteLine(tuple.Item2);
@@ -416,7 +441,7 @@ namespace Training_Csharp
             if (x == 7)
             {
                 Console.Clear();
-                Method_Modul_Start_1();
+                Method_Modul_Start_1(a);
             }
             if (x == 8)
             {
@@ -427,74 +452,74 @@ namespace Training_Csharp
             if (x > 8 || x < 1)
             {
                 Console.WriteLine("Вы ввели неверное число, введите число от 1-7, чтобы запустить необходимый метод");
-                Method_Modul_Start_1();
+                Method_Modul_Start_1(a);
             }
         }
-        public virtual void Coddition_Create_1()
+        public virtual void Coddition_Create_1(int a)
         {
             Console.Clear();
-            Console.WriteLine($"{operation_Create_Method_1}");
-            Console.WriteLine($"\nВывод результата работы метода \"{name_Create_Method_1}\" на консоль \n");
+            Console.WriteLine($"{Operation_Create_Method_1}");
+            Console.WriteLine($"\nВывод результата работы метода: \n\"{Name_Create_Method_1}\" на консоль \n");
             Coddition_Create_Type_Method_1();
-            Create_Method();
+            Create_Method(a);
         }
         public virtual void Coddition_Create_Type_Method_1()
         {
-            Console.WriteLine($"{create_Create_Method_1}");
+            Console.WriteLine($"{Create_Create_Method_1}");
         }
-        public virtual void Coddition_Create_2()
+        public virtual void Coddition_Create_2(int a)
         {
             Console.Clear();
-            Console.WriteLine($"{operation_Create_Method_2}");
-            Console.WriteLine($"\nВывод результата работы метода \"{name_Create_Method_2}\" на консоль \n");
+            Console.WriteLine($"{Operation_Create_Method_2}");
+            Console.WriteLine($"\nВывод результата работы метода:\n\"{Name_Create_Method_2}\" на консоль \n");
             Coddition_Create_Type_Method_2();
-            Create_Method();
+            Create_Method(a);
         }
         public virtual void Coddition_Create_Type_Method_2()
         {
-            Console.WriteLine($"{create_Create_Method_2}");
+            Console.WriteLine($"{Create_Create_Method_2}");
         }
-        public virtual void Coddition_Create_3()
+        public virtual void Coddition_Create_3(int a)
         {
             Console.Clear();
-            Console.WriteLine($"{operation_Create_Method_3}");
-            Console.WriteLine($"\nВывод результата работы метода \"{name_Create_Method_3}\" на консоль \n");
+            Console.WriteLine($"{Operation_Create_Method_3}");
+            Console.WriteLine($"\nВывод результата работы метода:\n\"{Name_Create_Method_3}\" на консоль \n");
             Coddition_Create_Type_Method_3();
-            Create_Method();
+            Create_Method(a);
         }
         public virtual void Coddition_Create_Type_Method_3()
         {
-            Console.WriteLine($"{create_Create_Method_3}");
+            Console.WriteLine($"{Create_Create_Method_3}");
         }
-        public virtual void Coddition_Create_4()
+        public virtual void Coddition_Create_4(int a)
         {
             Console.Clear();
-            Console.WriteLine($"{operation_Create_Method_4}");
-            Console.WriteLine($"\nВывод результата работы метода \"{name_Create_Method_4}\" на консоль \n");
+            Console.WriteLine($"{Operation_Create_Method_4}");
+            Console.WriteLine($"\nВывод результата работы метода:\n\"{Name_Create_Method_4}\" на консоль \n");
             Coddition_Create_Type_Method_4();
-            Create_Method();
+            Create_Method(a);
         }
         public virtual void Coddition_Create_Type_Method_4()
         {
-            Console.WriteLine($"{create_Create_Method_4}");
+            Console.WriteLine($"{Create_Create_Method_4}");
         }
-        public virtual void Coddition_Create_5()
+        public virtual void Coddition_Create_5(int a)
         {
             Console.Clear();
-            Console.WriteLine($"{operation_Create_Method_5}");
-            Console.WriteLine($"\nВывод результата работы метода \"{name_Create_Method_5}\" на консоль \n");
+            Console.WriteLine($"{Operation_Create_Method_5}");
+            Console.WriteLine($"\nВывод результата работы метода:\n\"{Name_Create_Method_5}\" на консоль \n");
             Coddition_Create_Type_Method_5();
-            Create_Method();
+            Create_Method(a);
         }
         public virtual void Coddition_Create_Type_Method_5()
         {
-            Console.WriteLine($"{create_Create_Method_5}");
+            Console.WriteLine($"{Create_Create_Method_5}");
         }
-        public virtual void Coddition_Create_6()
+        public virtual void Coddition_Create_6(int a)
         {
             Console.Clear();
             Console.WriteLine($"{Operation_Create_Method_7}");
-            Console.WriteLine($"\nВывод результата работы метода \"{Name_Create_Method_7}\" на консоль \n");
+            Console.WriteLine($"\nВывод результата работы метода:\n\"{Name_Create_Method_7}\" на консоль \n");
             //if (Create_Create_Method_7_int != 0)
             //{
             Console.WriteLine(Create_Create_Method_7_string);
@@ -502,7 +527,7 @@ namespace Training_Csharp
             Console.WriteLine(tuple.Item1);
             Console.WriteLine(tuple.Item2);             //разобраться
             //}
-            Create_Method();
+            Create_Method(a);
         }
         public virtual (string, int?, int) Coddition_Create_Type_Method_6()
         {
@@ -515,57 +540,57 @@ namespace Training_Csharp
 
         public virtual void Tasks_Method()
         {
-            Console.WriteLine($"{operation_Tasks_Method_3}");
+            Console.WriteLine($"{Operation_Tasks_Method_3}");
         }
-        public virtual void Examples_Method()
+        public virtual void Examples_Method(int a)
         {
-            if (name_Examples_Method_1 != null)
+            if (Name_Examples_Method_1 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Examples_Method_1}, нажмите 1 ");
+                Console.WriteLine($"Чтобы запустить {Name_Examples_Method_1}, нажмите 1 ");
             }
-            if (name_Examples_Method_2 != null)
+            if (Name_Examples_Method_2 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Examples_Method_2}, нажмите 2 ");
+                Console.WriteLine($"Чтобы запустить {Name_Examples_Method_2}, нажмите 2 ");
             }
-            if (name_Examples_Method_3 != null)
+            if (Name_Examples_Method_3 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Examples_Method_3}, нажмите 3 ");
+                Console.WriteLine($"Чтобы запустить {Name_Examples_Method_3}, нажмите 3 ");
             }
-            if (name_Examples_Method_4 != null)
+            if (Name_Examples_Method_4 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Examples_Method_4}, нажмите 4 ");
+                Console.WriteLine($"Чтобы запустить {Name_Examples_Method_4}, нажмите 4 ");
             }
-            if (name_Examples_Method_5 != null)
+            if (Name_Examples_Method_5 != null)
             {
-                Console.WriteLine($"Чтобы запустить {name_Examples_Method_5}, нажмите 5 ");
+                Console.WriteLine($"Чтобы запустить {Name_Examples_Method_5}, нажмите 5 ");
             }
-            Console.WriteLine("Чтобы перейти в выбору другогой темы модуля модуля, нажмите 6");
-            Console.WriteLine("Чтобы перейти в выбору другого модуля модуля, нажмите 7");
+            Console.WriteLine("Чтобы перейти в выбору другогой темы модуля, нажмите 6");
+            Console.WriteLine("Чтобы перейти в выбору другого метода модуля, нажмите 7");
             int x = int.Parse(Console.ReadLine());
             if (x == 1)
             {
-                Coddition_Examples_1();
+                Coddition_Examples_1(a);
             }
             if (x == 2)
             {
-                Coddition_Examples_2();
+                Coddition_Examples_2(a);
             }
             if (x == 3)
             {
-                Coddition_Examples_3();
+                Coddition_Examples_3(a);
             }
             if (x == 4)
             {
-                Coddition_Examples_4();
+                Coddition_Examples_4(a);
             }
             if (x == 5)
             {
-                Coddition_Examples_5();
+                Coddition_Examples_5(a);
             }
             if (x == 6)
             {
                 Console.Clear();
-                Method_Modul_Start_1();
+                Method_Modul_Start_1(a);
             }
             if (x == 7)
             {
@@ -576,68 +601,68 @@ namespace Training_Csharp
             if (x > 7 || x < 1)
             {
                 Console.WriteLine("Вы ввели неверное число, введите число от 1-7, чтобы запустить необходимый метод");
-                Method_Modul_Start_1();
+                Method_Modul_Start_1(a);
             }
         }
-        public virtual void Coddition_Examples_1()
+        public virtual void Coddition_Examples_1(int a)
         {
             Console.Clear();
-            Console.WriteLine($"{operation_Examples_Method_1}");
-            Console.WriteLine($"\nВывод результата работы метода \"{name_Examples_Method_1}\" на консоль \n");
+            Console.WriteLine($"{Operation_Examples_Method_1}");
+            Console.WriteLine($"\nВывод результата работы метода:\n\"{Name_Examples_Method_1}\" на консоль \n");
             Coddition_Examples_Type_Method_1();
-            Examples_Method();
+            Examples_Method(a);
         }
         public virtual void Coddition_Examples_Type_Method_1()
         {
-            Console.WriteLine($"{create_Examples_Method_1}");
+            Console.WriteLine($"{Create_Examples_Method_1}");
         }
-        public virtual void Coddition_Examples_2()
+        public virtual void Coddition_Examples_2(int a)
         {
             Console.Clear();
-            Console.WriteLine($"{operation_Examples_Method_2}");
-            Console.WriteLine($"\nВывод результата работы метода \"{name_Examples_Method_2}\" на консоль \n");
+            Console.WriteLine($"{Operation_Examples_Method_2}");
+            Console.WriteLine($"\nВывод результата работы метода:\n\"{Name_Examples_Method_2}\" на консоль \n");
             Coddition_Examples_Type_Method_2();
-            Examples_Method();
+            Examples_Method(a);
         }
         public virtual void Coddition_Examples_Type_Method_2()
         {
-            Console.WriteLine($"{create_Examples_Method_2}");
+            Console.WriteLine($"{Create_Examples_Method_2}");
         }
-        public virtual void Coddition_Examples_3()
+        public virtual void Coddition_Examples_3(int a)
         {
             Console.Clear();
-            Console.WriteLine($"{operation_Examples_Method_3}");
-            Console.WriteLine($"\nВывод результата работы метода \"{name_Examples_Method_3}\" на консоль \n");
+            Console.WriteLine($"{Operation_Examples_Method_3}");
+            Console.WriteLine($"\nВывод результата работы метода:\n\"{Name_Examples_Method_3}\" на консоль \n");
             Coddition_Examples_Type_Method_3();
-            Examples_Method();
+            Examples_Method(a);
         }
         public virtual void Coddition_Examples_Type_Method_3()
         {
-            Console.WriteLine($"{create_Examples_Method_3}");
+            Console.WriteLine($"{Create_Examples_Method_3}");
         }
-        public virtual void Coddition_Examples_4()
+        public virtual void Coddition_Examples_4(int a)
         {
             Console.Clear();
-            Console.WriteLine($"{operation_Examples_Method_4}");
-            Console.WriteLine($"\nВывод результата работы метода \"{name_Examples_Method_4}\" на консоль \n");
+            Console.WriteLine($"{Operation_Examples_Method_4}");
+            Console.WriteLine($"\nВывод результата работы метода:\n\"{Name_Examples_Method_4}\" на консоль \n");
             Coddition_Examples_Type_Method_4();
-            Examples_Method();
+            Examples_Method(a);
         }
         public virtual void Coddition_Examples_Type_Method_4()
         {
-            Console.WriteLine($"{create_Examples_Method_4}");
+            Console.WriteLine($"{Create_Examples_Method_4}");
         }
-        public virtual void Coddition_Examples_5()
+        public virtual void Coddition_Examples_5(int a)
         {
             Console.Clear();
-            Console.WriteLine($"{operation_Examples_Method_5}");
-            Console.WriteLine($"\nВывод результата работы метода \"{name_Examples_Method_5}\" на консоль \n");
+            Console.WriteLine($"{Operation_Examples_Method_5}");
+            Console.WriteLine($"\nВывод результата работы метода:\n\"{Name_Examples_Method_5}\" на консоль \n");
             Coddition_Examples_Type_Method_5();
-            Examples_Method();
+            Examples_Method(a);
         }
         public virtual void Coddition_Examples_Type_Method_5()
         {
-            Console.WriteLine($"{create_Examples_Method_5}");
+            Console.WriteLine($"{Create_Examples_Method_5}");
         }
         public static string Structures_Create(string a) // метод, который переносит строку на следующию строчку дойдя до заданной длины строк,                                                      // записанной в переменную klenhth 
         {

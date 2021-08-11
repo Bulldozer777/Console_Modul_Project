@@ -13,12 +13,12 @@ namespace Training_Csharp
             if (a == 11)
             {
                 Modul_Struct Eleven = new K_11_Methods();   //нужно создавать объект класса наследника, после ключевого слова new
-                Eleven.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
-                Eleven.name_Create_Method_1 = "Виды методов - void, int, string; модификатор static";
-                Eleven.operation_Create_Method_1 = Code_Writer_Console(a, 2);
-                Eleven.name_Examples_Method_1 = "Метод на вывод массива FizzBizz";
-                Eleven.operation_Examples_Method_1 = Code_Writer_Console(a, 3);
-                Eleven.Method_Modul_Start_1();
+                Eleven.Operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
+                Eleven.Name_Create_Method_1 = "Виды методов - void, int, string; модификатор static";
+                Eleven.Operation_Create_Method_1 = Code_Writer_Console(a, 2);
+                Eleven.Name_Examples_Method_1 = "Метод на вывод массива FizzBizz";
+                Eleven.Operation_Examples_Method_1 = Code_Writer_Console(a, 3);
+                Eleven.Method_Modul_Start_1(a);
             }
             Generation_Operation.EndInStart();
         }

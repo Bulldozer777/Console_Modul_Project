@@ -27,6 +27,7 @@ namespace Training_Csharp
         }
         public override void Coddition_Create_Type_Method_1()
         {
+            int a = 27;
             Console.WriteLine("Введите 1 чтобы перейти к 1 версии метода Z_A_27_Add (int x, int y)");
             Console.WriteLine("Введите 2 чтобы перейти к 2 версии метода Z_A_27_Add (int x, int y, int z)");
             Console.WriteLine("Введите 3 чтобы перейти к 3 версии метода Z_A_27_Add (double x, double y)");
@@ -164,7 +165,7 @@ namespace Training_Csharp
                 //}
             }
             else
-                Create_Method();
+                Create_Method(a);
         }     
         public static void Z_A_27_Add(int x, int y)  //методы работают, с одним и тем же именем, если различаются по типу параметров или их количеству, 
             //назвается версия метода

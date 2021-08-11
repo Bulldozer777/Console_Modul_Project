@@ -18,27 +18,27 @@ namespace Training_Csharp
                     "\ndo ... while" +
                     "\nforeach");
                 Modul_Struct Nine = new I_9_Cycles();   //нужно создавать объект класса наследника, после ключевого слова new
-                Nine.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
-                Nine.operation_Create_Method_1 = Code_Writer_Console(a, 2);
-                Nine.operation_Create_Method_2 = Code_Writer_Console(a, 3);
-                Nine.name_Examples_Method_1 = "Cоздание рандомной строки"; //сюда вводятся имена методов, используемые в Examples_Method()
-                Nine.name_Examples_Method_2 = "Вычисление числа Фиббоначи по порядковому номеру";
-                Nine.name_Examples_Method_3 = "Группа методов введите пароль \"root\" с помощью разных циклов";
-                Nine.name_Examples_Method_4 = "Последовательность";
+                Nine.Operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
+                Nine.Operation_Create_Method_1 = Code_Writer_Console(a, 2);
+                Nine.Operation_Create_Method_2 = Code_Writer_Console(a, 3);
+                Nine.Name_Examples_Method_1 = "Cоздание рандомной строки"; //сюда вводятся имена методов, используемые в Examples_Method()
+                Nine.Name_Examples_Method_2 = "Вычисление числа Фиббоначи по порядковому номеру";
+                Nine.Name_Examples_Method_3 = "Группа методов введите пароль \"root\" с помощью разных циклов";
+                Nine.Name_Examples_Method_4 = "Последовательность";
                 //name_Examples_Method_5 = ;
-                Nine.operation_Examples_Method_1 = Code_Writer_Console(a, 4);
-                Nine.operation_Examples_Method_2 = Code_Writer_Console(a, 5);
-                Nine.operation_Examples_Method_3 = Code_Writer_Console(a, 6);
-                Nine.operation_Examples_Method_4 = Code_Writer_Console(a, 7);
-                Nine.operation_Examples_Method_5 = Code_Writer_Console(a, 8);
-                Nine.operation_Examples_Method_6 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 9));
-                Nine.operation_Examples_Method_7 = Code_Writer_Console(a, 10);
-                Nine.Method_Modul_Start_1();
+                Nine.Operation_Examples_Method_1 = Code_Writer_Console(a, 4);
+                Nine.Operation_Examples_Method_2 = Code_Writer_Console(a, 5);
+                Nine.Operation_Examples_Method_3 = Code_Writer_Console(a, 6);
+                Nine.Operation_Examples_Method_4 = Code_Writer_Console(a, 7);
+                Nine.Operation_Examples_Method_5 = Code_Writer_Console(a, 8);
+                Nine.Operation_Examples_Method_6 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 9));
+                Nine.Operation_Examples_Method_7 = Code_Writer_Console(a, 10);
+                Nine.Method_Modul_Start_1(a);
                 Generation_Operation.EndInStart();
             }
             Generation_Operation.EndInStart();
         }
-        public override void Create_Method()
+        public override void Create_Method(int a)
         {
             Console.WriteLine("Чтобы запустить метод I_9_Cycles_Create() Нажмите 1\n");
             Console.WriteLine("Чтобы запустить метод Factorial_in_Cycles() и увидеть его код Нажмите 2\n");
@@ -48,23 +48,23 @@ namespace Training_Csharp
             if (y == 1)
             {
                 Console.WriteLine("Код метода I_9_Cycles_Create()");
-                Console.WriteLine($"{operation_Create_Method_1}");
+                Console.WriteLine($"{Operation_Create_Method_1}");
                 Console.WriteLine("\nРабота метода:\n");
                 I_9_Cycles_Create();
-                Create_Method();
+                Create_Method(a);
             }
             if (y == 2)
             {
                 Console.WriteLine("Код метода Factorial_in_Cycles()");
-                Console.WriteLine($"{operation_Create_Method_2}");
+                Console.WriteLine($"{Operation_Create_Method_2}");
                 Console.WriteLine("Работа метода");
                 Factorial_in_Cycles();
-                Create_Method();
+                Create_Method(a);
             }
             if (y == 3)
             {
                 Console.Clear();
-                Method_Modul_Start_1();
+                Method_Modul_Start_1(a);
             }
             if (y == 4)
             {
@@ -75,38 +75,38 @@ namespace Training_Csharp
             if (y > 5 || y < 1)
             {
                 Console.WriteLine("Вы ввели неверное число, введите число от 1-7, чтобы запустить необходимый метод");
-                Method_Modul_Start_1();
+                Method_Modul_Start_1(a);
             }
             else
             {
                 Console.WriteLine("Вы ввели неверное число");
             }
         }
-        public override void Examples_Method()
+        public override void Examples_Method(int a)
         {
-            Console.WriteLine($"\nЧтобы запустить {name_Examples_Method_1} нажмите 1 ");
-            Console.WriteLine($"Чтобы запустить {name_Examples_Method_2} нажмите 2 ");
-            Console.WriteLine($"Чтобы запустить {name_Examples_Method_3} нажмите 3 ");
-            Console.WriteLine($"Чтобы запустить {name_Examples_Method_4} нажмите 4 ");
+            Console.WriteLine($"\nЧтобы запустить {Name_Examples_Method_1} нажмите 1 ");
+            Console.WriteLine($"Чтобы запустить {Name_Examples_Method_2} нажмите 2 ");
+            Console.WriteLine($"Чтобы запустить {Name_Examples_Method_3} нажмите 3 ");
+            Console.WriteLine($"Чтобы запустить {Name_Examples_Method_4} нажмите 4 ");
             Console.WriteLine("Чтобы перейти в выбору другогой темы модуля модуля нажмите 5");
             Console.WriteLine("Чтобы перейти в выбору другого модуля модуля нажмите 6");
             int x = int.Parse(Console.ReadLine());
             if (x == 1)
             {
                 Console.Clear();
-                Console.WriteLine($"{operation_Examples_Method_1}");
-                Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_1}\" на консоль ");
+                Console.WriteLine($"{Operation_Examples_Method_1}");
+                Console.WriteLine($"Вывод результата работы метода \"{Name_Examples_Method_1}\" на консоль ");
                 RandomString();
                
-                Examples_Method();
+                Examples_Method(a);
             }
             if (x == 2)
             {
                 Console.Clear();
-                Console.WriteLine($"{operation_Examples_Method_2}");
-                Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_2}\" на консоль");
+                Console.WriteLine($"{Operation_Examples_Method_2}");
+                Console.WriteLine($"Вывод результата работы метода \"{Name_Examples_Method_2}\" на консоль");
                 FibbCreate();
-                Examples_Method();
+                Examples_Method(a);
             }
             if (x == 3)
             {
@@ -117,33 +117,33 @@ namespace Training_Csharp
                 int e = int.Parse(Console.ReadLine());
                 if (e == 1)
                 {
-                    Console.WriteLine($"{operation_Examples_Method_3}");
+                    Console.WriteLine($"{Operation_Examples_Method_3}");
                     Password_Cycles_1();
                 }
                 if (e == 2)
                 {
-                    Console.WriteLine($"{operation_Examples_Method_4}");
+                    Console.WriteLine($"{Operation_Examples_Method_4}");
                     Password_Cycles_2();
                 }
                 if (e == 3)
                 {
-                    Console.WriteLine($"{operation_Examples_Method_5}");
+                    Console.WriteLine($"{Operation_Examples_Method_5}");
                     Password_Cycles_3();
                 }
-                Examples_Method();
+                Examples_Method(a);
             }
             if (x == 4)
             {
                 Console.Clear();
-                Console.WriteLine($"{operation_Examples_Method_4}");
-                Console.WriteLine($"Вывод результата работы метода \"{name_Examples_Method_4}\" на консоль");
+                Console.WriteLine($"{Operation_Examples_Method_4}");
+                Console.WriteLine($"Вывод результата работы метода \"{Name_Examples_Method_4}\" на консоль");
                 Sequence(); //нормально не работает
-                Examples_Method();
+                Examples_Method(a);
             }
             if (x == 5)
             {
                 Console.Clear();
-                Method_Modul_Start_1();
+                Method_Modul_Start_1(a);
             }
             if (x == 6)
             {
@@ -154,7 +154,7 @@ namespace Training_Csharp
             if (x > 6 || x < 1)
             {
                 Console.WriteLine("Вы ввели неверное число, введите число от 1-6, чтобы запустить необходимый метод");
-                Method_Modul_Start_1();
+                Method_Modul_Start_1(a);
             }
         }
         public static void RandomString()

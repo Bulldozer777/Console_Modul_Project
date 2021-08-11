@@ -82,7 +82,7 @@ namespace Training_Csharp
                 o.Method_Modificator_private();
             }
             else
-            Create_Method();
+            Create_Method(a);
         }
     }
     class Person_X_24

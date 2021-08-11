@@ -15,10 +15,10 @@ namespace Training_Csharp
                 Console.WriteLine("Hello World!");
               
                 Modul_Struct One = new A_1_First_Program();   //нужно создавать объект класса наследника, после ключевого слова new
-                One.operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
-                One.name_Create_Method_1 = "Отдельно код класса Calculator";
-                One.operation_Create_Method_1 = Code_Writer_Console(a, 2);            
-                One.Method_Modul_Start_1();
+                One.Operation_Info_Method_1 = Q_17_Structures.Structures_Create(Code_Writer_Console(a, 1));
+                One.Name_Create_Method_1 = "Отдельно код класса Calculator";
+                One.Operation_Create_Method_1 = Code_Writer_Console(a, 2);            
+                One.Method_Modul_Start_1(a);
                 Calculator.Add(2, 3);            
                 Generation_Operation.EndInStart();
             }

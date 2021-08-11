@@ -13,21 +13,21 @@ namespace Training_Csharp
             if (i == 6)
             {
                 Modul_Struct Six = new F_6_Create_Base_Type_Data();   //нужно создавать объект класса наследника, после ключевого слова new
-                Six.operation_Info_Method_1 = Structures_Create(Code_Writer_Console(i, 3));
-                Six.operation_Create_Method_1 = Code_Writer_Console(i, 1);
-                Six.create_Create_Method_1 = "\nРезультат работы метода \"Check:\"\n" + Check();
-                Six.operation_Info_Method_1 = Code_Writer_Console(i, 2);
-                Six.operation_Tasks_Method_1 = Code_Writer_Console(i, 5);
-                Six.operation_Tasks_Method_2 = Code_Writer_Console(i, 6);
-                Six.operation_Examples_Method_1 = Code_Writer_Console(i, 4) + "\n" + "Результат работы тренировочного метода" + Examples(); 
-                Six.Method_Modul_Start_1();
+                Six.Operation_Info_Method_1 = Structures_Create(Code_Writer_Console(i, 3));
+                Six.Operation_Create_Method_1 = Code_Writer_Console(i, 1);
+                Six.Create_Create_Method_1 = "\nРезультат работы метода \"Check:\"\n" + Check();
+                Six.Operation_Info_Method_1 = Code_Writer_Console(i, 2);
+                Six.Operation_Tasks_Method_1 = Code_Writer_Console(i, 5);
+                Six.Operation_Tasks_Method_2 = Code_Writer_Console(i, 6);
+                Six.Operation_Examples_Method_1 = Code_Writer_Console(i, 4) + "\n" + "Результат работы тренировочного метода" + Examples(); 
+                Six.Method_Modul_Start_1(i);
                 Generation_Operation.EndInStart();
             }
         }
-        public override void Create_Method()  //работает переопределение метода
+        public override void Create_Method(int a)  //работает переопределение метода
         {
-            Console.WriteLine($"{operation_Create_Method_1}");
-            Console.WriteLine($"{create_Create_Method_1}");
+            Console.WriteLine($"{Operation_Create_Method_1}");
+            Console.WriteLine($"{Create_Create_Method_1}");
         }       
         public static void Check_1()
         {
@@ -52,12 +52,12 @@ namespace Training_Csharp
         }
         public override void Tasks_Method()
         {
-            Console.WriteLine($"{operation_Tasks_Method_1}"  );
+            Console.WriteLine($"{Operation_Tasks_Method_1}"  );
             Console.WriteLine("Введите 1, чтобы узнать ответы на вопросы");
             int y = int.Parse(Console.ReadLine());
             if (y== 1)
             {
-                Console.WriteLine($"{operation_Tasks_Method_2}");
+                Console.WriteLine($"{Operation_Tasks_Method_2}");
             }
             else
             {        
@@ -119,7 +119,7 @@ namespace Training_Csharp
             string a2 = Convert.ToString(b1);
             return "\n" + a1 + "\n" + a2 + "\n" + a11 + "\n" + a12 + "\n";
         }
-        public static string Task(int h, Modul_Struct Six)
+        public static string Task(int h, Modul_Struct Six, int a)
         {
             if (h == 1 )
             {
@@ -127,7 +127,7 @@ namespace Training_Csharp
             }
             else
             {
-                Six.Method_Modul_Start_1();
+                Six.Method_Modul_Start_1(a);
                 return "Вы ввели неверное число";              
             }             
         }
