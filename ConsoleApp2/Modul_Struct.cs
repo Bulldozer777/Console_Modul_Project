@@ -378,9 +378,9 @@ namespace Training_Csharp
                 Method_Modul_Start_1(a);
             }
         }
-        public void Info_Method()
+        public virtual void Info_Method()
         {
-            Console.WriteLine($"{Structures_Create(Operation_Info_Method_1)}");
+            Console.WriteLine(Structures_Create(Operation_Info_Method_1));
         }
         public virtual void Create_Method(int a)
         {

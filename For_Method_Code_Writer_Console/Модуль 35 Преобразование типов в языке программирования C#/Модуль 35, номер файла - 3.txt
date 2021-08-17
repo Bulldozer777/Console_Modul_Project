@@ -1,0 +1,12 @@
+ Z_I_35_Person person1 = new Z_I_35_Employee("Tom", "Smith", "Microsoft"); //преобразование от производного класса к базовому
+            Z_I_35_Person person2 = new Z_I_35_Client("Bob", "Tompson", "SomeBank", 5000);
+            try
+            {
+                Z_I_35_Client client = (Z_I_35_Client)person1;
+                int sum = client.Sum;
+                Console.WriteLine(sum + "\n");
+            }
+            catch(InvalidCastException)
+            {
+                Console.WriteLine("Преобразование завершилось неудачно\n");
+            }

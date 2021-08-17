@@ -1,0 +1,14 @@
+            Z_K_37_Account_1 acc1 = new Z_K_37_Account_1(23) { Sum = 4500 }; //свойство Sum - из класса  Z_K_37_Account_1 
+            Z_K_37_Account_1 acc2 = new Z_K_37_Account_1(55) { Sum = 5000 };
+            Transact<Z_K_37_Account_1>(acc1, acc2, 900);
+
+   static void Transact<T>(T acc1, T acc2, int sum) where T : Z_K_37_Account_1
+        {
+            if (acc1.Sum > sum)
+            {
+                acc1.Sum -= sum;
+                acc2.Sum += sum;
+                Console.WriteLine($"{acc1.Id} : {acc1.Sum}\n" +
+                    $"{acc2.Id} : {acc2.Sum} \n");
+            }
+        }

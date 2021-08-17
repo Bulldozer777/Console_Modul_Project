@@ -89,8 +89,17 @@ namespace Training_Csharp
         {
             //Copy_Logs_EAS();
             Console.WriteLine(DateTime.Now);
-            InStartString();
-            InStart3(int.Parse(Console.ReadLine()));
+            try
+            {
+                InStartString();
+                InStart3(int.Parse(Console.ReadLine()));
+            }
+            catch (Exception ex1)
+            {
+                Console.WriteLine($"Ошибка: {ex1}");
+                InStartString();
+                InStart3(int.Parse(Console.ReadLine()));
+            }
         }
         public static DbContextOptions<ApplicationContext> Base_Configuration_On_File_Json()
         {

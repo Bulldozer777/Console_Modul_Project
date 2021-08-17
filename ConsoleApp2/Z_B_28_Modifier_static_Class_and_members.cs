@@ -31,7 +31,7 @@ namespace Training_Csharp
         {
             Account acc1 = new Account(1000, 6);
             Account acc2 = new Account(900, 5);
-            Account.MinSum = 200; 
+            Account.MinSum = 200;
 
             //меняется значение поля minSum для всех объектов Account т к
             //cвойство MinSum и поле minSum имеет модификатор static
@@ -39,7 +39,7 @@ namespace Training_Csharp
             //нельзя использовать ключевое слово this
             //т к метод статические и работает для всех объектов в целом
 
-            Console.WriteLine(Account.GetSum(1000, 10, 5));
+            Console.WriteLine(Account.GetSum(1000, 10, 5) + "\n"); 
         }
         public override void Coddition_Create_Type_Method_2()
         {

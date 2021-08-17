@@ -122,7 +122,7 @@ namespace Training_Csharp
         {
             using (ApplicationContext db = new ApplicationContext(o))
             {
-                db.Modul_Struct_Bases.Add(Name_Object_Base);
+                db.Modul_Struct_Bases.Add(Name_Object_Base);         
                 db.SaveChanges();
             }
         }

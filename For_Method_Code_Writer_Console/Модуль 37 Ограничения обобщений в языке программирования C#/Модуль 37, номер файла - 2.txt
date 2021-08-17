@@ -1,0 +1,20 @@
+            Z_K_37_Account_1 acc1 = new Z_K_37_Account_1(23) { Sum = 4500 }; //свойство Sum - из класса  Z_K_37_Account_1 
+            Z_K_37_Account_1 acc2 = new Z_K_37_Account_1(55) { Sum = 5000 };
+            Z_K_37_DemandAccount acc3 = new Z_K_37_DemandAccount(123) { Sum = 4000 }; //свойство Sum - из класса  Z_K_37_Account_1 
+            Z_K_37_DemandAccount acc4 = new Z_K_37_DemandAccount(125) { Sum = 3000 };
+            Z_K_37_Transaction<Z_K_37_Account_1> t1 = new Z_K_37_Transaction<Z_K_37_Account_1>
+            {
+                FromAccount = acc1,
+                ToAccount = acc2,
+                Sum = 700
+            };
+            Z_K_37_Transaction<Z_K_37_DemandAccount> t2 = new Z_K_37_Transaction<Z_K_37_DemandAccount>
+            {
+                FromAccount = acc3,
+                ToAccount = acc4,
+                Sum = 700   //свойство Sum - из класса  Z_K_37_Transaction
+            };
+            Z_K_37_DemandAccount u = t2.FromAccount;
+            t1.Execute();
+            t2.Execute();
+            Console.WriteLine($"{u}");

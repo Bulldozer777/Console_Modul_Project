@@ -1,0 +1,46 @@
+ class Z_K_37_Transaction<T> where T : Z_K_37_Account_1 //ограничение типа (тип только объекты класса аккаунт) 
+
+            //значит свойства FromAccount и ToAccount имеют тип Z_K_37_Account_1
+
+        {
+            public T FromAccount { get; set; }     //с какого счета перевод
+            public T ToAccount { get; set; }     // на какой счет перевод
+            public int Sum { get; set; } // сумма перевода
+            // выполняем перевод
+            public void Execute()
+            {
+                if(FromAccount.Sum > Sum)
+                {
+                    FromAccount.Sum -= Sum;
+                    ToAccount.Sum += Sum;
+                    Console.WriteLine($"{FromAccount.Id} : {FromAccount.Sum}\n" +
+                        $"{ToAccount.Id} : {ToAccount.Sum} ");
+                }
+            }
+        }
+
+ class Z_K_37_Account_1
+        {
+            public int Id { get; }
+            public int Sum { get; set; }
+
+            public Z_K_37_Account_1(int id)
+            {
+                Id = id;
+            }
+            public Z_K_37_Account_1()
+            {
+
+            }
+        }
+
+ class Z_K_37_DemandAccount : Z_K_37_Account_1
+        {
+            public Z_K_37_DemandAccount(int id) : base(id)
+            { }
+            public Z_K_37_DemandAccount() //конструктор по умолчанию, 
+                                          //обязателен, если в универсальный параметр передается new()
+            {
+
+            }
+        }

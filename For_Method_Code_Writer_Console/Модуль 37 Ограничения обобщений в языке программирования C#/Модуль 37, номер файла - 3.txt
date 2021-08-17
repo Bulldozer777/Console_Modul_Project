@@ -1,0 +1,27 @@
+            Z_K_37_Account_1 acc1 = new Z_K_37_Account_1(23) { Sum = 4500 };
+            Z_K_37_Account_1 acc2 = new Z_K_37_Account_1(55) { Sum = 5000 };
+            Z_K_37_DemandAccount acc3 = new Z_K_37_DemandAccount(123) { Sum = 4000 }; //свойство Sum - из класса  Z_K_37_Account_1 
+            Z_K_37_DemandAccount acc4 = new Z_K_37_DemandAccount(125) { Sum = 3000 }; //свойство Sum - из класса  Z_K_37_Account_1 
+            Z_K_37_Transaction_1<Z_K_37_Account_1, int> t3 = new Z_K_37_Transaction_1<Z_K_37_Account_1, int>
+            {
+                FromAccount = acc1,
+                ToAccount = acc2,
+                Sum = 700
+            };
+            Z_K_37_Transaction_1<Z_K_37_Account_1, int> t4 = new Z_K_37_Transaction_1<Z_K_37_Account_1, int>
+            {
+                FromAccount = acc3,
+                ToAccount = acc4,
+                Sum = 700 //свойство Sum - из класса  Z_K_37_Transaction_1
+            };
+            t3.Execute();
+            t4.Execute();
+
+ class Z_K_37_Transaction_1<T, K> 
+            where T : Z_K_37_Account_1
+            where K : struct
+        {
+           // логика неизменна
+        }
+
+Остальные классы будут в 1 методе - "Определение ограничения универсального параметра <Т>"

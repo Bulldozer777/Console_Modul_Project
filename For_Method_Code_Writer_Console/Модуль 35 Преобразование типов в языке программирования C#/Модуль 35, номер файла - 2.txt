@@ -1,0 +1,17 @@
+//восходящие преобразования
+            object person3 = new Z_I_35_Employee("Tom", "Smith", "Microsoft"); //преобразование от производного класса к базовому
+            Z_I_35_Person person1 = new Z_I_35_Employee("Tom", "Smith", "Microsoft"); //преобразование от производного класса к базовому
+            Z_I_35_Person person2 = new Z_I_35_Client("Bob", "Tompson", "SomeBank", 5000);
+            Z_I_35_Client client = person1 as Z_I_35_Client;
+            Z_I_35_Client client1 = person2 as Z_I_35_Client;
+            Console.WriteLine(client);
+            Console.WriteLine(client1);
+            if(client !=null)
+            {
+                int sum = client.Sum;
+                Console.WriteLine(sum);
+            }
+            else
+            {
+                Console.WriteLine("Преобразование завершилось неудачно");
+            }
