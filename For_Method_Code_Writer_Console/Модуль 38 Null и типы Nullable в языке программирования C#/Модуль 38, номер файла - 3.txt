@@ -1,0 +1,7 @@
+            int? age = 5;
+            int x = age.GetValueOrDefault();
+            Console.WriteLine(x);
+
+            int? age1 = null;
+            int x1 = age.GetValueOrDefault();
+            Console.WriteLine(x1); //ноль - значение по умолчанию для данного типа 

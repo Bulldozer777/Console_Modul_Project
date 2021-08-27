@@ -1,0 +1,37 @@
+Creating DbCommand for 'ExecuteNonQuery'.Created DbCommand for 'ExecuteNonQuery' (7ms).Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1Creating DbCommand for 'ExecuteScalar'.Created DbCommand for 'ExecuteScalar' (0ms).Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0Creating DbCommand for 'ExecuteReader'.Created DbCommand for 'ExecuteReader' (0ms).Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[CreateCreate1], [m].[CreateCreate2], [m].[CreateCreate3], [m].[CreateCreate4], [m].[CreateCreate5], [m].[CreateCreate6], [m].[CreateExamples1], [m].[CreateExamples2], [m].[CreateExamples3], [m].[CreateExamples4], [m].[CreateExamples5], [m].[CreateExamples6], [m].[NameCreate1], [m].[NameCreate2], [m].[NameCreate3], [m].[NameCreate4], [m].[NameCreate5], [m].[NameExamples1], [m].[NameExamples2], [m].[NameExamples3], [m].[NameExamples4], [m].[NameExamples5], [m].[NameInfo1], [m].[NameTasks3], [m].[OperationCreate1], [m].[OperationCreate2], [m].[OperationCreate3], [m].[OperationCreate4], [m].[OperationCreate5], [m].[OperationExamples1], [m].[OperationExamples2], [m].[OperationExamples3], [m].[OperationExamples4], [m].[OperationExamples5], [m].[OperationExamples6], [m].[OperationExamples7], [m].[OperationInfo1], [m].[OperationTasks1], [m].[OperationTasks2], [m].[OperationTasks3], [m].[OperationTasks4], [m].[OperationTasks5]
+FROM [Modul_Struct_Bases] AS [m]Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [m].[Id], [m].[CreateCreate1], [m].[CreateCreate2], [m].[CreateCreate3], [m].[CreateCreate4], [m].[CreateCreate5], [m].[CreateCreate6], [m].[CreateExamples1], [m].[CreateExamples2], [m].[CreateExamples3], [m].[CreateExamples4], [m].[CreateExamples5], [m].[CreateExamples6], [m].[NameCreate1], [m].[NameCreate2], [m].[NameCreate3], [m].[NameCreate4], [m].[NameCreate5], [m].[NameExamples1], [m].[NameExamples2], [m].[NameExamples3], [m].[NameExamples4], [m].[NameExamples5], [m].[NameInfo1], [m].[NameTasks3], [m].[OperationCreate1], [m].[OperationCreate2], [m].[OperationCreate3], [m].[OperationCreate4], [m].[OperationCreate5], [m].[OperationExamples1], [m].[OperationExamples2], [m].[OperationExamples3], [m].[OperationExamples4], [m].[OperationExamples5], [m].[OperationExamples6], [m].[OperationExamples7], [m].[OperationInfo1], [m].[OperationTasks1], [m].[OperationTasks2], [m].[OperationTasks3], [m].[OperationTasks4], [m].[OperationTasks5]
+FROM [Modul_Struct_Bases] AS [m]A data reader was disposed.

@@ -1,0 +1,8 @@
+    struct Z_L_38_Null_State //значение null может именть только ссылочный тип
+        {
+            public string Name { get; set; }
+        }
+        class Z_L_38_Null_Country
+        {
+            public string Name { get; set; }
+        }

@@ -1,0 +1,50 @@
+            string s = null;
+            Z_L_38_Null_Country country = null;
+
+            //значение null может именть только ссылочный тип, класс это ссылочный тип
+            //int age = null; int - не ссылочный тип, строка некорректна 
+            //тпи int имеет значение по умолчанию 0 
+
+            int? age1 = 5;
+            int x = age1.Value;
+
+            //теперь переменная представлет Nullable от int - полная запись System.Nullable<int>
+
+            System.Nullable<int> age2 = null;
+
+            double? d = null;
+            d = 3.4;
+            Nullable<double> d2 = null; //полная запись
+
+            Z_L_38_Null_State? stateNullable = null; 
+
+            //если оставить значение null то вылетит исключение при запуске
+
+            Nullable<Z_L_38_Null_State> k = null;
+            stateNullable = new Z_L_38_Null_State { Name = "Narnia" };
+
+            //Z_L_38_Null_Country? c = null;
+            //пременные ссылочных типов допускают null, класс ссылочный тип
+
+            Z_L_38_Null_State state = stateNullable.Value;
+
+            //т к переменная stateNullable представляет Nullable от Z_L_38_Null_State,
+            //то обратиться к свойству Name невозможно, можно обраться к свойству Value
+            //и присвоить Z_L_38_Null_State state = stateNullable.Value;
+            //если выводить stateNullable.Value без присваивания то вывведется
+            //Training_Csharp.Z_L_38_Null_And_Nullable_Types+Z_L_38_Null_State
+
+            Console.WriteLine($"{state.Name} \n");
+            Console.WriteLine($"{stateNullable.Value} \n"); 
+
+            //Training_Csharp.Z_L_38_Null_And_Nullable_Types+Z_L_38_Null_State
+
+            if(stateNullable.HasValue == true) //если значение определено, то 
+            {
+                Z_L_38_Null_State state1 = stateNullable.Value;
+                Console.WriteLine(state1.Name);
+            }
+            else
+            {
+                Console.WriteLine("stateNullable is equal to null");
+            }

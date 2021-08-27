@@ -1,0 +1,12 @@
+            int? age = 5;
+            //Оператор налл-объединения - ??
+
+            int x2 = age ?? 10;
+
+            //если age = null, то будет возвращаться 10, если age != null,
+            //то будет возвращaть значение переменной age
+
+            Console.WriteLine(x2);
+            age = null;
+            x2 = age ?? 12;
+            Console.WriteLine($"{x2}\n");
